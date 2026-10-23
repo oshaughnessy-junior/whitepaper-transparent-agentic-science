@@ -1,0 +1,147 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,booktabs,hyperref}
+\input{generated/macros_results.tex}
+\title{Transparent Agentic Science:\\ Reproducible Computation, Adversarial Review, and Human-Directed Writing}
+\author{Working draft assembled by AI under human direction}
+\date{October 23, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Scientific documentation is most useful when it lets a reader trace a claim to its assumptions, computation, and checks. We describe a working procedure developed through prior human--agent collaboration: bounded investigations, durable scientific notes, generated numerical evidence, independent adversarial review, and human-directed manuscript construction. A shared result record supplies numerical macros and tables, allowing a build to reject specified forms of transcription drift. An original synthetic calculation demonstrates this mechanism and its failure controls. Two companion manuscript trees provide the scientific case studies; public text grounds selected lessons from the methods paper, while complete run evidence has not been independently replicated here. Experience from the collaboration motivates treating agents as useful investigators of bugs and cross-case discrepancies while requiring substantial human guidance for scientific writing. These observations are not comparative performance measurements. The accompanying public repository is entirely assembled with AI, based on previous work with a human; all commits are performed by AI agents. Human scientific responsibility remains explicit.
+\end{abstract}
+
+\section{Purpose and scope}
+The purpose of this note is to make one research procedure inspectable from a single entry point. The relevant question for a reader is whether a scientific claim can be reconstructed and challenged. Repeated prose descriptions of the same calculation can become expensive to maintain while introducing contradictory versions of its results. We therefore organize documentation around the dependency between a claim and its evidence. This is a local method for reducing duplicated documentation; we do not establish that any particular journal's requirements are unnecessary.
+
+The procedure arose from investigations directed by a human scientist and executed with agents. It combines existing policies and skills with lessons from manuscript and run locations. The public repository contains newly written portable procedures, this note, provenance records, and an original tooling demonstration. It does not export private workspaces or manuscript histories. Its source inventory distinguishes an observed implementation, a reported lesson, a proposed improvement, and a completed validation.
+
+Our scope is computational science in which simulations or inference contribute quantitative claims. Reproducing saved bytes, reproducing a numerical conclusion within its uncertainty, and independently validating the scientific model are different accomplishments. A deterministic build can establish the first without establishing the others. Likewise, two agents can agree because they share a flawed library or assumption. We retain those distinctions throughout the procedure.
+
+The repository is entirely assembled with AI from prior work with a human, and all commits are performed by AI agents. This disclosure describes execution and provenance. It does not assign human authorship, certify the analysis, or imply that the human has approved each sentence. The eventual author list, affiliations, scientific sign-off, and submission remain human decisions. This version is a working technical note rather than a submission-ready research article.
+
+\section{The evidence chain}
+A scientific result passes through a series of representations:
+\[
+\text{question and assumptions}
+\longrightarrow \text{recorded computation}
+\longrightarrow \text{checked result record}
+\longrightarrow \text{scientific claim}.
+\]
+The manuscript presents that claim through equations, numerical statements, tables, and figures. Those presentations must retain the same evidence identity. A useful record identifies the data, configuration, code revision and local changes, environment, command, random seed where applicable, completed output, uncertainty definition, and scientific scope. Hashes identify bytes; interpretation explains why those bytes answer the question.
+
+We distinguish execution logs, scientific notes, and the manuscript. Logs preserve what happened. Durable notes integrate the question, derivation, comparison, uncertainty, and current interpretation into a coherent account. The manuscript distills supported claims for a scientific audience. A directory of chronological checkpoints does not replace a scientific explanation. Conversely, forcing all recovery information into manuscript prose obscures the argument.
+
+Before an expensive calculation, the investigator states the domain, observables, acceptance criteria, and plausible failure modes. A small pilot exercises the production entry point and estimates resource needs. The run record includes its termination state: a scheduled or running job is not evidence of a completed result. Checkpoints identify jobs and outputs so that a successor can determine whether work already completed before rerunning it.
+
+A claim ledger connects each substantive statement to its evidence and verdict. Useful states include provisional, accepted in a stated domain, refuted, and blocked. Evidence that is unavailable, inconclusive, or still running cannot count as acceptance. A well-supported null result is a valid scientific outcome. The ledger should make the scientific consequence of a failed check visible rather than recording only that a tool ran.
+
+\section{Numerical documentation without transcription drift}
+\subsection{A shared result record}
+The house writing procedure uses a generated result macro for each computed quantity. In LaTeX, the manuscript refers to \verb|\result{Name}| rather than typing its value. The producing analysis records the raw quantity and provenance; a generator emits the macro definition, table fragments, and any numerical figure annotations. Abstract, body, caption, and conclusion use the same semantic key when they discuss the same quantity. Companion papers share the pinned record or regenerate their presentations from exactly that record.
+
+A record must specify more than a printable value. Units, selection, estimator, interval convention, and result scope determine what the number means. A central value and its interval should have compatible precision and an explicit uncertainty definition. Constants and run settings are distinguished from computed findings. Curated inputs have a source; they do not become measured results by being put into a macro.
+
+Results also have a state. Current results refer to the declared analysis. Stale results require regeneration or an explicit historical freeze. A frozen historical result remains attached to its original input selection, with that selection stated to the reader. Automatically updating it to a new sample can make the historical argument false. A missing producer is a reproducibility gap, even if an existing value looks reasonable. These distinctions prevent a consistency sweep from silently rewriting history.
+
+\subsection{Build contract and limits}
+For a fixed result key and presentation rule, every occurrence is generated from the same record. Within that contract, independently typed versions of the same quantity cannot drift because there are no independently maintained versions. The build regenerates artifacts in a clean location and compares them with the committed artifacts. Changed inputs, changed producer code, edited generated files, and missing keys cause failure.
+
+This guarantee is conditional. A key can refer to the wrong quantity, a producer can compute the wrong statistic, or a figure can be generated from a different run. A check that only finds defined macro names establishes none of these properties. General TeX permits dynamic construction and arbitrary inclusion; a small regular-expression checker is not a proof for unrestricted TeX. Our demonstration therefore has a deliberately narrow source contract, documented in the repository. Extending the manuscript format requires extending and testing the checker.
+
+The present note permits only the generated macro and table fragments as included sources. Computed result literals belong in generated products; authored exposition uses symbolic expressions or words. The date, hyperlink targets, the named companion manuscript directory, and the explicitly registered integral specification are the only numeric-literal exceptions. For a larger paper, an explicit reviewed registry can cover physical constants and configuration settings, while recursive source traversal, figure-data checks, and citation audits cover the wider artifact graph. An exception registry must not become a way to hide untraced measured results.
+
+\subsection{An executable tooling case}
+The public demonstration evaluates
+\[
+I=\int_{0}^{1}x^2\,\mathrm{d}x
+\]
+by composite midpoint quadrature and by an antiderivative. The implementation uses exact rational arithmetic for the quadrature accumulation, so the comparison isolates discretization rather than stochastic variation. The two routes have different calculations but share the mathematical specification and the language runtime. This is limited computational independence, not an independent scientific validation.
+
+\begin{table}[ht]
+\centering
+\input{generated/comparison_table.tex}
+\caption{Synthetic calculation generated by the repository evidence tool. The result record supplies both the table and numerical prose. Input and producer hashes accompany the raw values. These are demonstration results, not findings from either scientific case study.}
+\label{tab:tooling}
+\end{table}
+The midpoint estimate is $\result{IntegralEstimate}$ and its absolute discrepancy from the antiderivative is $\result{IntegralError}$, below the registered threshold $\result{IntegralTolerance}$ (Table~\ref{tab:tooling}). Repeating these quantities elsewhere requires the same keys. The acceptance threshold is a declared setting of this synthetic example; it is not a general scientific accuracy requirement.
+
+The test suite deliberately corrupts generated artifacts, changes the input and producer identity, introduces an undefined result, inserts a typed numerical result, and adds an untracked source include. Each must be rejected. A deliberately incorrect quadrature result must also fail the numerical acceptance condition. A refinement test checks the expected convergence ratio. These controls demonstrate what the gate can detect. They do not measure the effectiveness of agents or prove that all manuscript inconsistencies have been excluded.
+
+\section{Running simulations and finding defects}
+Experience in this collaboration suggests that agents are particularly useful for enumerating cases, constructing cross-checks, tracing discrepancies, and finding bugs. The productive unit of work is a bounded falsifiable question: whether a normalization is preserved, whether a limiting case is recovered, or whether two implementations agree within their known errors. An unrestricted request to certify a pipeline invites a plausible narrative without a discriminating test.
+
+Validation uses several routes because each detects different defects. Analytic answers and planted truth test known outcomes. Limiting and boundary cases test conventions and domain handling. Grid or timestep refinement exposes approximation error. Multiple independent random seeds measure stochastic variation. Structurally different implementations can expose errors shared by a single code path. Observable-space predictive tests check whether the inferred description reproduces what was actually measured, including selection effects where relevant.
+
+These comparisons require matched definitions. A discrepancy can arise from units, input selection, normalization, estimators, or uncertainty conventions before it reflects a physical disagreement. The investigator records the reference lineage and checks the harness itself when a new comparison disagrees with a mature implementation. A configuration switch is verified by its effect on an intended quantity; absence of an error message is insufficient evidence that the switch is active.
+
+Convergence and uncertainty bound the claim. For stochastic calculations, one favorable seed does not establish a stable result. Precision follows the observed uncertainty rather than the available print format. An inference result may also require sampler diagnostics, effective sample size, boundary and identifiability checks, and stability relative to Monte Carlo noise. The required checks depend on the claim; no universal test count or fixed number of digits certifies science.
+
+A reference used for tuning becomes development evidence. After a failed check motivates a repair, the same case is useful for regression but has lost its status as untouched confirmation. Fresh cases are needed for a new confirmatory claim, or the conclusion remains provisional. We record shared assumptions as carefully as separate implementations: independent contexts do not imply independent numerical evidence.
+
+\subsection{Lessons found in project memory and run locations}
+A read-only inspection of cardassia recovered an existing cross-project lesson collection, project-memory records, early run-side plans, and references to corrective commits. These sources contribute failure mechanisms that a clean skill package can omit. Their provenance and inspection limits are recorded in the repository. Memories are treated as recorded observations; where feasible, the lesson was checked against a corrective commit or public paper passage.
+
+One recurring failure was a convention adopted in only part of the execution graph. The correct procedure is to enumerate callers, launchers, sidecars, plots, and manuscript summaries. The effective configuration must be written into the output and compared with the specification. A directory name or source comment can confidently describe a setting the launcher never used. A corrective commit in the methods-paper history explicitly replaced such an incorrectly configured run and its downstream presentations.
+
+Another corrective commit retracted sample-cache figures whose event identity came from scraped log output. Identity was instead assigned at construction, with a physical consistency assertion before writing the cache. This illustrates why a successful file write and an attractive plot are weak validation. The invariant should link the stored object to the scientific entity it claims to represent.
+
+Separate project memories record stale caches with incomplete dependency keys and reported fit values whose optimization restart schedule was not preserved. These are recorded lessons rather than newly reproduced defects. They motivate hashing calibration and input dependencies, rejecting unstamped products, preserving optimizer phases and checkpoints, and checking the rule that selects the reported iterate. File timestamps cannot supply this missing scientific identity.
+
+The inspection also exposed a reproducibility gap in the lessons themselves: a stability-script path cited by memory was absent at the stated checkout. That path is not advertised as an executable recipe here. A source pointer must be checked at the actual revision, just as a result must be checked against the actual run. Recovering the missing script is separate from acknowledging the validity of the general stability requirement.
+
+\section{Adversarial review and claim revision}
+Substantive claims receive separate science and code/numerics challenges on a pinned candidate. The shared packet states the scientific specification, domain, units, assumptions, acceptance conditions, input and output locations, and allowed resources. Reviewers need those facts. They do not need the implementer's advocacy, preferred verdict, or the other reviewer's first-pass conclusions. Exposure is recorded rather than described loosely as blindness.
+
+The science reviewer asks whether the conclusion follows in its stated domain. Useful work includes an independent derivation of a load-bearing result, a counterexample, a missing physical effect, an unjustified extrapolation, or a confounded comparison. The code/numerics reviewer traces the public execution path, examines conditioning and convergence, tests boundary behavior and silent defaults, and demonstrates that a representative broken candidate can fail. Where feasible, blind replication records its result before revealing the candidate values.
+
+Each report identifies the reviewer, candidate revision, evidence inspected or executed, reference lineage, shared dependencies, findings, limitations, and verdict. Changing the model provider is optional and does not establish independence. If the runtime cannot provide an independent context, the record says so. Self-review remains self-review, and the independent gate remains pending. The current repository has not yet received a completed independent science review.
+
+The coordinator preserves every objection and records its disposition. A supported defect is repaired and rechecked. A rejected finding receives contrary evidence. A narrowed claim states the changed scope; it does not silently complete the original broader objective. A reviewer who changes the candidate becomes an implementer for that change, requiring fresh review of the repair. Material revisions invalidate review of affected portions of an earlier candidate.
+
+Retraction is an explicit workflow. When a test defeats a claim, the originating note records the retraction, the killing test joins the standing diagnostics, and a scoped sweep identifies what fails and what survives. The sweep covers the abstract, main text, tables, figures, captions, conclusions, companion paper, and downstream notes. Historical records remain available with their superseded status. A clean narrative must not erase the evidence that changed the conclusion.
+
+\section{Writing under human scientific direction}
+The collaboration's experience is that current agents often produce weak scientific prose without substantial guidance. Typical defects include notebook chronology presented as an argument, inflated novelty, repeated caveats, confident claims from single comparisons, and fluent transitions that conceal missing evidence. This is a practical observation about the work informing these policies, not a claim about all models or a measured comparison with human authors.
+
+The human supplies the scientific brief: the question, contribution, audience, argument structure, intended claim strength, terminology, and exclusions. The agent can organize supported material within that brief, expose gaps, propose bounded alternatives, and implement revisions. It should not infer scientific importance from the amount of computation or replace a missing finding with polished prose. A public draft can be visibly incomplete without inventing results.
+
+Drafting proceeds from notes to claims. Equations develop the formalism, with symbols and assumptions defined. Figures and tables carry comparisons that the reader can inspect. Implementation identities and regeneration commands remain available in appropriate provenance locations without dominating the main scientific explanation. The abstract and conclusion summarize what the evidence establishes; they cannot serve as a place to strengthen an unsettled result.
+
+Style editing and scientific revision have different consequences. A clarity pass preserves numbers, units, inequalities, uncertainty statements, notation, citation scope, and claim strength. A semantic audit checks those protected elements after editing. If the text conflicts with the evidence, the agent flags the scientific decision and offers explicit alternatives rather than silently polishing away the conflict. The human decides the final thesis and the appropriate force of the conclusion.
+
+References require both identity and support. Resolving a DOI or bibliographic record establishes that a paper exists. Reading the relevant passage establishes whether it supports the attached claim. A real reference attached to an invented characterization is still a defect. Current venue requirements must be checked from official sources at submission time; this note does not treat assertions in inherited skills as authoritative publication rules.
+
+\section{The tooling case and two paper examples}
+The tooling source is the private \texttt{agent-skills} repository, whose writing package directs readers to the canonical \texttt{research-skills} repository. The inspected instructions contain result provenance, claim gates, independent review contracts, and writing discipline. The public skills here are newly written, portable summaries of those practices, with a public source map and method attribution recorded separately. They exclude host-specific access rules and private runtime state.
+
+The scientific examples are the \texttt{paper/} and \texttt{paper2\_with\_ns/} manuscript trees in \texttt{gwk-hierarchical-initial}. Inspection establishes a shared project containing analysis recipes, manuscript inputs, and result-collection procedures. The result-status documentation usefully distinguishes stale evidence, frozen historical results, curated constants, and missing producers. Those distinctions are lessons for a portable protocol rather than numerical findings we reproduce here.
+
+At present, the public case descriptions establish workflow structure and selected textual corrections. They do not establish successful end-to-end reruns, complete cross-paper numerical conformance, or independent validation of either paper's physics. The source project remains private, but a posted methods-paper counterpart supplies limited public grounding~\cite{methods}. Its appendix withdraws an interpretation after correcting the event-likelihood representation and uses a detected-tail test to delimit a model claim. Its discussion distinguishes a prior-bound limit from an identified measurement. We inspected these passages; we did not repeat the underlying fits. The second manuscript tree has no established public identifier in this inspection.
+
+Each completed case should supply a precise claim, minimal public-safe inputs, pinned producer and configuration, reproduction command, independent reference, observed failure or limitation, corrective change, and final reviewed result. The scientific examples are two manuscript scopes in one project, so they are not independent samples for a study of agent performance. A future evaluation could measure reviewer effort, detected inconsistencies, rerun success, and remaining public-access gaps, but those measurements have not been made here.
+
+\section{Release, responsibility, and remaining work}
+A release fixes the manuscript, evidence records, generated products, and reviewed code revision. The source archive is built from the same inputs and compiled, and its rendered content is compared with the reviewed draft. Visual inspection remains necessary for equations, table layout, figures, and reference rendering. Build success alone establishes neither readability nor scientific truth.
+
+The repository provides a source-bundle target for eventual arXiv preparation, not an automatic submission. Before posting, the human must settle authorship and consent, inspect the final claims and evidence, verify references and current official submission requirements~\cite{arxiv}, and approve the exact artifact. Public AI provenance is part of that artifact. It does not transfer responsibility for publication decisions to an agent.
+
+The remaining work is concrete: complete case-level reproduction and recover missing run-script locations; attach public-safe evidence for both paper cases; verify external attribution and references; obtain independent review of the final candidate; and revise the note under a human scientific brief. The procedure is useful insofar as it exposes those gaps while making already supported computations inexpensive to trace and challenge.
+
+\appendix
+\section{Artifact map and provenance}
+The repository README is the entry point. \texttt{PROVENANCE.md} identifies the public source map and external method lineage. Detailed private-source audit information remains local. \texttt{docs/workflow.md} states the operational contract. \texttt{cases/README.md} distinguishes observed workflow structure from completed reproduction. \texttt{tools/evidence.py} generates and checks the synthetic result record, macros, and table. The portable skills cover result provenance, simulation validation, adversarial review, and human-directed writing.
+
+Some acceptance, independence, planted-truth, and referee methods have a BootLoops lineage, attributed in the source skill to Anthropic, PBC and Matthew D. Schwartz. The repository records method attribution without importing the upstream implementation. Verification of the upstream license and a full release bibliography remains open. This note claims no endorsement by the upstream authors or by a journal.
+\begin{thebibliography}{A}
+\bibitem{methods}
+R.~O'Shaughnessy, M.~Zeeshan, and M.~Qazalbash,
+\emph{Autodifferentiable functional inference of hierarchical compact-binary populations},
+\href{https://arxiv.org/html/2609.06728v1}{posted methods paper, version one}.
+Relevant passages: Appendix D and the discussion of the natal cut-off.
+\bibitem{arxiv}
+arXiv, \emph{Submission Guidelines},
+\href{https://info.arxiv.org/help/submit/index.html}{official submission overview}.
+Consulted October twenty-third, twenty twenty-six; recheck before submission.
+\end{thebibliography}
+\end{document}

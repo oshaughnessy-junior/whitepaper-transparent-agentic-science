@@ -1,0 +1,21 @@
+{
+  "command": "python3 tools/evidence.py generate",
+  "environment": "Python 3.10+ standard library; exact rational quadrature",
+  "inputs": {
+    "cases/tooling/input.json": "d03372881718a55273f3cea0387ed47c353ea7026075117318a7ca4911f0363b"
+  },
+  "producer": {
+    "tools/evidence.py": "0ed155c326bfaaa04a09856e84f5b0b8b9323118b267c57b18beaa7977538169"
+  },
+  "schema_version": 1,
+  "scope": "synthetic integral, not an astrophysical result",
+  "seed": null,
+  "seed_reason": "deterministic, no random sampling",
+  "units": "dimensionless",
+  "values": {
+    "IntegralError": 5.086263020833333e-06,
+    "IntegralEstimate": 0.3333282470703125,
+    "IntegralReference": 0.3333333333333333,
+    "IntegralTolerance": 1e-05
+  }
+}
