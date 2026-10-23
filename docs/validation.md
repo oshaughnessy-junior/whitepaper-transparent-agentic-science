@@ -23,3 +23,11 @@ The public edition excludes private source hashes, memory filenames, host paths 
 - Updated the numerical checker for the approved REVTeX declaration and bibliographic metadata. Added undefined/duplicate citation-key failure checks; these do not certify literature relevance.
 - `make check`: all eleven tests passed. `git diff --check`: passed. Ancillary-paper identifier sweep: no matches in the current tree.
 - The revised main source compiled successfully with the Codex desktop compiler. The existing editor was retained; no separate PDF was generated. Visual layout inspection and final human approval remain separate checks.
+
+## Capability baseline and concrete bug-finding revision
+
+- Added the human-specified convention: latest available OpenAI model at Sol scale, or comparable Claude Opus capability, unless otherwise noted; comparable capability is recommended for scientific work.
+- Stated the human's developer/operator assessment that adversarial review at this capability already matches or exceeds typical human performance at finding and diagnosing errors in ordinary scientific workflows. This is an operational assessment supported by multiple project examples, not a newly measured comparative benchmark.
+- Expanded the reliability discussion with solver comparison, interface/caller audits, stale-cache diagnosis, run-to-manuscript tracing, and the recorded sample-identity and launcher-configuration cases.
+- Added a verified public source describing AI-generated fuzz tests finding previously unknown defects in mature, extensively tested software. No private source identifiers or raw project memory were added.
+- Numerical/citation consistency check and `git diff --check` passed. The final main source compiled successfully with the desktop editor compiler; no separate PDF was generated.
