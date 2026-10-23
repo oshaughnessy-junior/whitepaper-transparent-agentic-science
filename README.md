@@ -4,7 +4,7 @@ A single entry point for the O'Shaughnessy research workflow: reproducible compu
 
 **PUBLIC, work in progress. This repository is entirely assembled with AI, based on previous work with a human. All commits are performed by AI agents.** Human direction and approval remain distinct from AI execution; an AI commit is not human scientific sign-off.
 
-Start with [the technical note](paper/main.tex), then [the workflow](docs/workflow.md), [source provenance](PROVENANCE.md), [cardassia lessons](docs/cardassia-lessons.md), and [evidence status](cases/README.md).
+Start with [the PRD-style scientific note](paper/main.tex). The earlier operational draft is preserved as [main_for_agents.tex](paper/main_for_agents.tex). Then consult [the workflow](docs/workflow.md), [source provenance](PROVENANCE.md), [cardassia lessons](docs/cardassia-lessons.md), and [evidence status](cases/README.md).
 
 ## Reproduce the tooling case
 
@@ -12,7 +12,7 @@ Requires Python 3.10+ and Make; no scientific Python packages are required.
 
 ```
 make check
-make paper                  # requires a LaTeX installation
+make paper                  # requires a LaTeX installation with REVTeX 4.2
 make submission             # builds an arXiv-source candidate, not an upload
 ```
 
@@ -21,7 +21,7 @@ The synthetic tooling case computes a known integral by two routes and generates
 ## Scope
 
 - Evidence source: `agent-skills`, with the canonical writing procedures followed into `research-skills`.
-- Example papers: the two manuscript trees `paper/` and `paper2_with_ns/` in `gwk-hierarchical-initial`.
+- Example papers: the main papers in [popsynth_hyperpipe_paper](https://github.com/oshaughnessy-junior/popsynth_hyperpipe_paper) and [gwk-hierarchical-initial](https://github.com/oshaughnessy-junior/gwk-hierarchical-initial). Both repositories currently require access; their main preprints are public.
 - These source repositories are private at the time of inspection. This public repository contains newly written procedure summaries, a public source map, and an original synthetic demonstration; it does not redistribute their unpublished results or full contents.
 - Case studies are not certified replications until their run records, checks, and suitable public evidence are attached.
 

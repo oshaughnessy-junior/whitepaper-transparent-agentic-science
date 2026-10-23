@@ -44,6 +44,14 @@ class EvidenceTests(unittest.TestCase):
     def test_untracked_include_fails(self):
         with (self.root/'paper/main.tex').open('a') as f:f.write(r'\input{untracked.tex}')
         with self.assertRaisesRegex(ValueError,'source contract'):evidence.check(self.root)
+    def test_unknown_citation_fails(self):
+        with (self.root/'paper/main.tex').open('a') as f:f.write(r'\cite{InventedKey}')
+        with self.assertRaisesRegex(ValueError,'undefined citation'):evidence.check(self.root)
+    def test_duplicate_citation_key_fails(self):
+        path=self.root/'paper/main.tex'
+        text=path.read_text().replace(r'\end{thebibliography}',r'\bibitem{APS2026} duplicate\end{thebibliography}')
+        path.write_text(text)
+        with self.assertRaisesRegex(ValueError,'duplicate bibliography'):evidence.check(self.root)
     def test_wrong_computation_fails(self):
         config=json.loads((self.root/'cases/tooling/input.json').read_text())
         with self.assertRaisesRegex(ValueError,'acceptance failed'):evidence.calculate(config,broken=True)

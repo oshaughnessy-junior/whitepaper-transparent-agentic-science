@@ -12,7 +12,7 @@ Source descriptions establish inspected practices, not independent scientific re
 
 ## Public scientific grounding
 
-The methods-paper counterpart is publicly available at https://arxiv.org/html/2609.06728v1 . Selected relevant passages were inspected. The second manuscript example has no verified public identifier in this task. Public textual grounding and rerunning a scientific computation are different evidence levels.
+The methods-paper counterpart is publicly available at https://arxiv.org/html/2609.06728v1 . Selected relevant passages were inspected. The other example is the main synthetic-universe paper, https://arxiv.org/abs/2609.05996 . Only the main papers in their respective repositories are in scope. Public textual grounding and rerunning a scientific computation are different evidence levels.
 
 ## Method attribution
 

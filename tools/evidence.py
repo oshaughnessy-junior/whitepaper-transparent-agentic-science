@@ -85,11 +85,23 @@ def check(root):
     uses.update(re.findall(r'\\result\{([^}]+)\}',table))
     if uses-set(values):
         raise ValueError('undefined result key: '+str(sorted(uses-set(values))))
-    # Only the date is exempt from numeric-literal inspection. No regex is a TeX proof.
+    # Citation-key integrity is mechanical; source existence and relevance require retrieval.
+    definitions = re.findall(r'\\bibitem(?:\[[^]]*\])?\{([^}]+)\}', source)
+    if len(definitions) != len(set(definitions)):
+        raise ValueError('duplicate bibliography key')
+    cited = set()
+    for group in re.findall(r'\\cite(?:t|p)?\{([^}]+)\}', source):
+        cited.update(key.strip() for key in group.split(','))
+    if cited-set(definitions):
+        raise ValueError('undefined citation key: '+str(sorted(cited-set(definitions))))
+    # Approved structural constants and bibliographic metadata are not measured results.
+    # No regex checker is a proof for unrestricted TeX.
     clean = re.sub(r'(?m)(?<!\\)%.*$', '', source)
     clean = re.sub(r'\\href\{[^}]*\}', '', clean)  # URL targets are identifiers, not printed results
+    clean = re.sub(r'\\cite(?:t|p)?\{[^}]*\}', '', clean)  # checked citation identifiers
     clean = re.sub(r'\\date\{[^}]*\}', '', clean)
-    clean = clean.replace(r'\texttt{paper2\_with\_ns/}', '')  # registered manuscript-tree identifier
+    clean = clean.replace(r'\documentclass[aps,prd,reprint,nofootinbib]{revtex4-2}', '')
+    clean = re.sub(r'\\begin\{thebibliography\}\{[^}]*\}.*?\\end\{thebibliography\}', '', clean, flags=re.S)
     clean = clean.replace(r'I=\int_{0}^{1}x^2\,\mathrm{d}x', '')  # mathematical specification, not a computed result
     if re.search(r'\d',clean):
         raise ValueError('bare numeric literal in authored manuscript; use words for exposition and generated keys for results')
