@@ -23,6 +23,7 @@ The synthetic tooling case computes a known integral by two routes and generates
 - Evidence source: `agent-skills`, with the canonical writing procedures followed into `research-skills`.
 - Example papers: the main papers in [popsynth_hyperpipe_paper](https://github.com/oshaughnessy-junior/popsynth_hyperpipe_paper) and [gwk-hierarchical-initial](https://github.com/oshaughnessy-junior/gwk-hierarchical-initial). Both repositories currently require access; their main preprints are public.
 - These source repositories are private at the time of inspection. This public repository contains newly written procedure summaries, a public source map, and an original synthetic demonstration; it does not redistribute their unpublished results or full contents.
+- Additional example: the [RIFT development PR sequence](https://github.com/oshaughnessy-junior/research-projects-RIT/pulls), with concrete merged repairs linked in the note and [case inventory](cases/README.md), and the public [third-generation RIFT main paper](https://arxiv.org/abs/2609.37393). Follow-on studies are identified as future work.
 - Case studies are not certified replications until their run records, checks, and suitable public evidence are attached.
 
 ## Skills

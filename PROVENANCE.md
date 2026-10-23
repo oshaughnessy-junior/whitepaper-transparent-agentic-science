@@ -21,3 +21,7 @@ Selected acceptance, independence, planted-truth and referee methods have a Boot
 ## Limits
 
 Statements about agent strengths and weak scientific writing are observations from this human--agent collaboration, not controlled performance measurements. Submission rules must be checked against official guidance when preparing an actual submission. Private instructions are not treated as authoritative venue policy.
+
+## RIFT example added at the user's request
+
+The user explicitly authorized links to the RIFT PR sequence and the third-generation paper. The public summary therefore cites the selected merged PR records in the access-restricted research-projects-RIT repository and the public main paper arXiv:2609.37393. Only qualitative diagnoses, evidence boundaries and public bibliographic details are included; no raw memory, run locations or private revision hashes are exported. See cases/README.md.

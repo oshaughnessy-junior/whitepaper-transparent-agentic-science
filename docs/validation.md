@@ -31,3 +31,10 @@ The public edition excludes private source hashes, memory filenames, host paths 
 - Expanded the reliability discussion with solver comparison, interface/caller audits, stale-cache diagnosis, run-to-manuscript tracing, and the recorded sample-identity and launcher-configuration cases.
 - Added a verified public source describing AI-generated fuzz tests finding previously unknown defects in mature, extensively tested software. No private source identifiers or raw project memory were added.
 - Numerical/citation consistency check and `git diff --check` passed. The final main source compiled successfully with the desktop editor compiler; no separate PDF was generated.
+
+## RIFT review-sequence evidence
+
+- Read metadata and descriptions for the merged RIFT PRs 234, 266 and 459 through the GitHub connector. Added direct access-restricted links and qualitative failure mechanisms; no private commit hashes or run locations are exported.
+- Checked the main third-generation RIFT title and author list against the source and the public arXiv record, 2609.37393. It is cited as a posted preprint, not as an unpublished forthcoming paper. Follow-on studies remain future work; later PRs are not attributed automatically to that preprint version.
+- Added the evidence inventory in cases/README.md. Underlying RIFT numerical campaigns were not rerun here. No quantitative PR results were transcribed into manuscript prose.
+- Numerical/citation consistency check and whitespace validation passed. The final main source compiled successfully in the existing desktop editor.
