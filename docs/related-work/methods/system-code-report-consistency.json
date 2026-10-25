@@ -1,0 +1,40 @@
+{
+  "id": "system-code-report-consistency",
+  "source_ids": [
+    "S6"
+  ],
+  "observed": "Inputs: claimed benchmark scores, actual program and outputs; transformation: author team manually verifies code and output correspondence; output: checked reported accuracies despite repair/hallucination failures.",
+  "hypothesized_transfer": "Before a physics result enters prose, confirm the intended calculation remains implemented and its run record supports the number.",
+  "constraints": "Logs alone can be fabricated; author inspection is not independent replication.",
+  "cheapest_validation": "Audit one existing public result from claim through code path to stored numerical artifact, without launching new science. Proposed only.",
+  "path": "docs/related-work/methods/system-code-report-consistency.json",
+  "schema": "openclaw.deep-research.method.v1",
+  "method_id": "system-code-report-consistency",
+  "name": "Code report consistency",
+  "observed_in": [
+    "S6"
+  ],
+  "source_locator": [
+    {
+      "source_id": "S6",
+      "title": "AgentRxiv: Towards Collaborative Autonomous Research",
+      "url": "https://arxiv.org/html/2503.18102v1",
+      "locator": "Abstract; Figure 1; sections 3.1–3.3 and 4.1"
+    }
+  ],
+  "evidence": "Inputs: claimed benchmark scores, actual program and outputs; transformation: author team manually verifies code and output correspondence; output: checked reported accuracies despite repair/hallucination failures.",
+  "operational_primitive": {
+    "inputs": "claimed benchmark scores, actual program and outputs",
+    "transformation": "author team manually verifies code and output correspondence",
+    "outputs": "checked reported accuracies despite repair/hallucination failures."
+  },
+  "reuse_hypothesis": "Before a physics result enters prose, confirm the intended calculation remains implemented and its run record supports the number.",
+  "implementation_burden": "unknown",
+  "prevalence_signal": "unknown",
+  "novelty_scope": "field-novelty-unverified",
+  "validation_status": "test-proposed",
+  "next_test": "Audit one existing public result from claim through code path to stored numerical artifact, without launching new science. Proposed only.",
+  "confidence": "medium",
+  "word_count_convention": "Whitespace-separated tokens in recursive string values; excludes word_count and this convention; excludes JSON keys.",
+  "word_count": 186
+}

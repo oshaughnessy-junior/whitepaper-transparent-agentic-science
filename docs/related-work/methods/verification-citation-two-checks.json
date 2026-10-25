@@ -1,0 +1,35 @@
+{
+  "schema": "openclaw.deep-research.method.v1",
+  "method_id": "verification-citation-two-checks",
+  "name": "Verify citation identity before evaluating claim support",
+  "observed_in": [
+    "walters2023"
+  ],
+  "source_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10484980/ (Methods: Data compilation and analysis)",
+  "evidence": "The authors checked title/author matches through multiple databases and publisher records, then assessed bibliographic errors.",
+  "operational_primitive": {
+    "inputs": [
+      "citation",
+      "claim using it"
+    ],
+    "transformation": "First resolve source identity and metadata; then read the relevant passage against the bounded claim.",
+    "outputs": [
+      "verified identity",
+      "passage locator",
+      "support/limit decision"
+    ]
+  },
+  "constraints": [
+    "The semantic second stage is a transfer hypothesis, not an evaluated component of the Walters audit."
+  ],
+  "reuse_hypothesis": "Keep bibliography correction separate from scientific evidence checking to prevent a real DOI being treated as sufficient support.",
+  "implementation_burden": "low",
+  "prevalence_signal": "recurring",
+  "novelty_scope": "known-to-team",
+  "validation_status": "test-proposed",
+  "next_test": "Audit five existing key claims for both identity and passage support, retaining unsupported scope expansions.",
+  "confidence": "medium",
+  "confidence_detail": "high identity-check observation; moderate transfer",
+  "word_count_convention": "Whitespace-separated tokens in recursive string values; excludes word_count and this convention; excludes JSON keys.",
+  "word_count": 115
+}

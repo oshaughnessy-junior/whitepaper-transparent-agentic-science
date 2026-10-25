@@ -1,0 +1,412 @@
+{
+  "schema": "openclaw.deep-research.worker.v1",
+  "artifact_id": "related-work-systems-2026-10-25",
+  "task_id": "transparent-agentic-science-related-work-systems",
+  "lane": [
+    "evidence",
+    "methods"
+  ],
+  "objective": "Locate primary evidence on nearby autonomous research systems while distinguishing their domains, delegated tasks, human roles and evaluations from a human-guided physics reproducibility practice guide. Sources public by 2026-10-25; no experiments performed.",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery",
+      "authors": "Chris Lu, Cong Lu, Robert Tjarko Lange, Jakob Foerster, Jeff Clune, David Ha",
+      "url": "https://arxiv.org/html/2408.06292v1",
+      "date": "2024-08-12",
+      "version": "arXiv:2408.06292v1",
+      "source_type": "original_research_preprint",
+      "locator": "Abstract; sections 3, 6, 8",
+      "retrieved": "2026-10-25"
+    },
+    {
+      "id": "S2",
+      "title": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search",
+      "authors": "Yutaro Yamada et al.",
+      "url": "https://arxiv.org/html/2504.08066v1",
+      "date": "2025-04-10",
+      "version": "arXiv:2504.08066v1",
+      "source_type": "original_research_preprint",
+      "locator": "Sections 3–5; Appendix C team manuscript and code reviews",
+      "retrieved": "2026-10-25"
+    },
+    {
+      "id": "S3",
+      "title": "Towards end-to-end automation of AI research",
+      "authors": "Chris Lu et al.",
+      "url": "https://www.nature.com/articles/s41586-026-10265-5",
+      "date": "2026-03-25",
+      "version": "Nature 651, 914–919; version of record 2026-03-25; DOI 10.1038/s41586-026-10265-5",
+      "source_type": "original_research_journal_article",
+      "locator": "Abstract; Methods, Template-based AI Scientist and Template-free AI Scientist; ethics discussion; author contributions",
+      "retrieved": "2026-10-25",
+      "access_note": "Direct open redirected to inaccessible Nature authorization endpoint; primary publisher indexed text supplied abstract, methods, contributions and bibliographic dates. Do not imply full supplementary review."
+    },
+    {
+      "id": "S4",
+      "title": "Evaluating Sakana’s AI Scientist for Autonomous Research: Wishful Thinking or an Emerging Reality Towards ‘Artificial Research Intelligence’ (ARI)?",
+      "authors": "Joeran Beel, Min-Yen Kan, Moritz Baumgart",
+      "url": "https://arxiv.org/html/2502.14297v2",
+      "date": "2025-02-22",
+      "version": "arXiv:2502.14297v2",
+      "source_type": "independent_empirical_evaluation_preprint",
+      "locator": "Abstract; sections 2.1, 2.4–2.8",
+      "retrieved": "2026-10-25"
+    },
+    {
+      "id": "S5",
+      "title": "Agent Laboratory: Using LLM Agents as Research Assistants",
+      "authors": "Samuel Schmidgall et al.",
+      "url": "https://arxiv.org/html/2501.04227v1",
+      "date": "2025-01-08",
+      "version": "arXiv:2501.04227v1; historical version pinned, not asserted latest",
+      "source_type": "original_research_preprint",
+      "locator": "Sections 3.3.1, 4.2.2, 4.4 and 5",
+      "retrieved": "2026-10-25"
+    },
+    {
+      "id": "S6",
+      "title": "AgentRxiv: Towards Collaborative Autonomous Research",
+      "authors": "Samuel Schmidgall, Michael Moor",
+      "url": "https://arxiv.org/html/2503.18102v1",
+      "date": "2025-03-23",
+      "version": "arXiv:2503.18102v1; historical version pinned",
+      "source_type": "original_research_preprint",
+      "locator": "Abstract; Figure 1; sections 3.1–3.3 and 4.1",
+      "retrieved": "2026-10-25"
+    },
+    {
+      "id": "S7",
+      "title": "Accelerating scientific discovery with Co-Scientist",
+      "authors": "Juraj Gottweis et al.",
+      "url": "https://www.nature.com/articles/s41586-026-10644-y",
+      "date": "2026-05-19",
+      "version": "Nature 655, 487–496; version of record 2026-07-01; DOI 10.1038/s41586-026-10644-y",
+      "source_type": "original_research_journal_article",
+      "locator": "Key contributions; System analysis and evaluation; expert workflow; Data availability; Code availability",
+      "retrieved": "2026-10-25",
+      "access_note": "Primary publisher search response included detailed article text. arXiv abstract independently verifies revised title and v2 date; HTML v2 fetch returned 404."
+    },
+    {
+      "id": "S8",
+      "title": "Accelerating scientific discovery with Co-Scientist",
+      "authors": "Juraj Gottweis et al.",
+      "url": "https://arxiv.org/abs/2502.18864",
+      "date": "2026-06-29",
+      "version": "arXiv:2502.18864v2; original v1 2025-02-26 titled Towards an AI co-scientist",
+      "source_type": "original_research_preprint_metadata",
+      "locator": "Submission history and title",
+      "retrieved": "2026-10-25"
+    },
+    {
+      "id": "S9",
+      "title": "Kosmos: An AI Scientist for Autonomous Discovery",
+      "authors": "Ludovico Mitchener et al.",
+      "url": "https://arxiv.org/html/2511.02824v2",
+      "date": "2025-11-05",
+      "version": "arXiv:2511.02824v2; initial v1 2025-11-04",
+      "source_type": "original_research_preprint",
+      "locator": "Section 2.1 and Figure 1; sections 3.1–3.2; Methods 4.1.1",
+      "retrieved": "2026-10-25"
+    },
+    {
+      "id": "S10",
+      "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+      "authors": "Alexander Novikov et al.",
+      "url": "https://arxiv.org/html/2506.13131v1",
+      "date": "2025-06-16",
+      "version": "arXiv:2506.13131v1",
+      "source_type": "original_research_whitepaper",
+      "locator": "Introduction; sections 2.1, 2.4 and 3; associated mathematical-results notebook",
+      "retrieved": "2026-10-25"
+    },
+    {
+      "id": "S11",
+      "title": "Research Assistant: AstraZeneca’s Agentic System for R&D",
+      "authors": "Piotr Grabowski et al.",
+      "url": "https://arxiv.org/html/2608.12395v1",
+      "date": "2026-08-06",
+      "version": "arXiv:2608.12395v1",
+      "source_type": "first_party_deployment_technical_note",
+      "locator": "Introduction; sections 2.2, 2.3.5, 3 and 5",
+      "retrieved": "2026-10-25",
+      "discovery_note": "Discovered through public aiXiv reference list; claims checked against original paper. aiXiv posting is not evidence for these results."
+    }
+  ],
+  "confidence": "high",
+  "evidence_extracts": [
+    {
+      "id": "SYS-E1",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "locator": "S1 Abstract/sections 3,6; S2 sections 3–5/Appendix C; S3 Abstract/Methods/contributions",
+      "observed_claim": "AI Scientist v1 executed ML experiments and generated manuscripts from human-provided topic templates in diffusion, language modelling and learning dynamics; its conference-threshold assessment used an automated reviewer. V2 removed topic-code templates, added experiment management/tree search and vision feedback, and submitted three unedited generated manuscripts to an ICLR workshop; one achieved mean review score 6.33. The 2026 journal article describes the result as passing first-round workshop review, with a 70% workshop acceptance rate.",
+      "actual_execution": "Computational research and manuscript production were executed; extending the approach to physics or biology in v1 was a suggested application, not its demonstration.",
+      "human_role_and_independence": "Humans chose the domain/setup and selected submissions; the later article explicitly credits human reading, validation and implementation checks. External workshop review differs from the internal automated reviewer.",
+      "limitations": "Manuscripts were withdrawn by advance protocol. Do not describe the generated workshop manuscript as a published Nature scientific discovery. V2's own team reports possible dataset overlap, unclear method descriptions and caption errors; workshop evidence is a small selected sample.",
+      "whitepaper_use": "Gentle prior-work citation for broader automation ambitions, explicitly separated from this guide's human-directed physics workflow.",
+      "source": [
+        {
+          "source_id": "S1",
+          "title": "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery",
+          "url": "https://arxiv.org/html/2408.06292v1",
+          "locator": "Abstract; sections 3, 6, 8"
+        },
+        {
+          "source_id": "S2",
+          "title": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search",
+          "url": "https://arxiv.org/html/2504.08066v1",
+          "locator": "Sections 3–5; Appendix C team manuscript and code reviews"
+        },
+        {
+          "source_id": "S3",
+          "title": "Towards end-to-end automation of AI research",
+          "url": "https://www.nature.com/articles/s41586-026-10265-5",
+          "locator": "Abstract; Methods, Template-based AI Scientist and Template-free AI Scientist; ethics discussion; author contributions"
+        }
+      ],
+      "evidence": "AI Scientist v1 executed ML experiments and generated manuscripts from human-provided topic templates in diffusion, language modelling and learning dynamics; its conference-threshold assessment used an automated reviewer. V2 removed topic-code templates, added experiment management/tree search and vision feedback, and submitted three unedited generated manuscripts to an ICLR workshop; one achieved mean review score 6.33. The 2026 journal article describes the result as passing first-round workshop review, with a 70% workshop acceptance rate.",
+      "observation": "Gentle prior-work citation for broader automation ambitions, explicitly separated from this guide's human-directed physics workflow.",
+      "confidence": "high"
+    },
+    {
+      "id": "SYS-E2",
+      "source_ids": [
+        "S4"
+      ],
+      "locator": "Abstract; sections 2.1,2.4–2.8",
+      "observed_claim": "An independent execution study of the original AI Scientist found five of twelve proposed experiments failed with code errors; other outputs included misleading goal/metric relationships and invented numerical results in manuscripts. It documents setup effort as well as complete manuscript generation.",
+      "actual_execution": "Third-party system execution, not an opinion-only critique.",
+      "human_role_and_independence": "Evaluation performed by researchers outside the originating team; setup and execution carried out by their third author, a Python-proficient bachelor student.",
+      "limitations": "One domain (green recommender systems), MovieLens-100k, one template and fixed seed ideas. This is counterevidence about that original configuration; it cannot establish failure rates for v2, the 2026 system, other domains or current frontier models.",
+      "whitepaper_use": "Supports checking methods, code and numerical claims separately from fluency; cite with its narrow denominator.",
+      "source": [
+        {
+          "source_id": "S4",
+          "title": "Evaluating Sakana’s AI Scientist for Autonomous Research: Wishful Thinking or an Emerging Reality Towards ‘Artificial Research Intelligence’ (ARI)?",
+          "url": "https://arxiv.org/html/2502.14297v2",
+          "locator": "Abstract; sections 2.1, 2.4–2.8"
+        }
+      ],
+      "evidence": "An independent execution study of the original AI Scientist found five of twelve proposed experiments failed with code errors; other outputs included misleading goal/metric relationships and invented numerical results in manuscripts. It documents setup effort as well as complete manuscript generation.",
+      "observation": "Supports checking methods, code and numerical claims separately from fluency; cite with its narrow denominator.",
+      "confidence": "high"
+    },
+    {
+      "id": "SYS-E3",
+      "source_ids": [
+        "S5"
+      ],
+      "locator": "Sections 3.3.1 and 4.2.2, particularly external evaluation and comparison with autonomous mode",
+      "observed_claim": "Agent Laboratory takes a human research idea through literature review, experimentation and report/code production, with autonomous and co-pilot modes. External evaluators scored co-pilot papers 0.58 points higher overall than autonomous papers; gains were larger in quality and soundness than contribution or significance.",
+      "actual_execution": "Research pipeline and human feedback sessions were executed; the separate MLE-Bench evaluation concerns its code solver, not independent validity of whole papers.",
+      "human_role_and_independence": "Humans supply ideas and optional phase feedback; external paper reviewers assess outcomes. Model self-review and researcher self-assessment are additional, distinct measurements.",
+      "limitations": "Small research-study ratings and selected topics do not establish universal human-feedback causality or equal performance across scientific domains. Overall co-pilot external score was 4.38/10, so improvement should not be paraphrased as conference-quality research.",
+      "whitepaper_use": "Direct precedent for useful human guidance without asserting that all research must be fully autonomous.",
+      "source": [
+        {
+          "source_id": "S5",
+          "title": "Agent Laboratory: Using LLM Agents as Research Assistants",
+          "url": "https://arxiv.org/html/2501.04227v1",
+          "locator": "Sections 3.3.1, 4.2.2, 4.4 and 5"
+        }
+      ],
+      "evidence": "Agent Laboratory takes a human research idea through literature review, experimentation and report/code production, with autonomous and co-pilot modes. External evaluators scored co-pilot papers 0.58 points higher overall than autonomous papers; gains were larger in quality and soundness than contribution or significance.",
+      "observation": "Direct precedent for useful human guidance without asserting that all research must be fully autonomous.",
+      "confidence": "high"
+    },
+    {
+      "id": "SYS-E4",
+      "source_ids": [
+        "S6"
+      ],
+      "locator": "Abstract/Figure1; sections 3 and 4.1",
+      "observed_claim": "AgentRxiv lets agent laboratories upload/retrieve reports and build on prior runs. Authors report 13.7% relative improvement over baseline MATH-500 accuracy with multiple sharing labs; this tests reasoning/prompting research, not general science.",
+      "actual_execution": "Collaborative computational runs executed. Humans provided initial direction and detailed instructions.",
+      "human_role_and_independence": "Authors manually verified each reported program output and corresponding code before reporting accuracy.",
+      "limitations": "Authors observed code repair removing core functionality or printing realistic-looking results without the intended computation, and manuscript numbers mismatching experiments. Novelty remained uncertain. A shared report server supports communication but does not supply independent verification; collaborators can propagate the same error.",
+      "whitepaper_use": "Useful author-reported failure mechanisms behind a requirement to inspect executable evidence; acknowledge the measured collaboration gain.",
+      "source": [
+        {
+          "source_id": "S6",
+          "title": "AgentRxiv: Towards Collaborative Autonomous Research",
+          "url": "https://arxiv.org/html/2503.18102v1",
+          "locator": "Abstract; Figure 1; sections 3.1–3.3 and 4.1"
+        }
+      ],
+      "evidence": "AgentRxiv lets agent laboratories upload/retrieve reports and build on prior runs. Authors report 13.7% relative improvement over baseline MATH-500 accuracy with multiple sharing labs; this tests reasoning/prompting research, not general science.",
+      "observation": "Useful author-reported failure mechanisms behind a requirement to inspect executable evidence; acknowledge the measured collaboration gain.",
+      "confidence": "high"
+    },
+    {
+      "id": "SYS-E5",
+      "source_ids": [
+        "S7",
+        "S8"
+      ],
+      "locator": "S7 Key contributions/System analysis/expert workflow/Code availability; S8 version history",
+      "observed_claim": "Co-Scientist generates, debates, ranks and evolves hypotheses and experimental proposals under scientist objectives. The 2026 article reports wet-laboratory validation in drug repurposing, liver fibrosis targets and antimicrobial resistance. It evaluates generated hypotheses on 15 expert-curated goals using its own Elo metric, alongside limited expert assessment.",
+      "actual_execution": "Hypothesis generation plus subsequent laboratory validation occurred; the system's autonomous output is a proposal, not autonomous laboratory operation.",
+      "human_role_and_independence": "Experts define goals, review and select proposals and conduct experiments. AML setup took under one expert hour and final selection about three hours, excluding laboratory work.",
+      "limitations": "Elo is an internal ranking measure; it is not empirical truth or general human-scientist equivalence. Full source is unavailable, though prompts/pseudocode are provided. Laboratory validation of selected examples does not validate every generated hypothesis.",
+      "whitepaper_use": "Cite as a complementary collaborative workflow with explicit external experimental grounding; use the 2026 title/version rather than treating the 2025 announcement as the endpoint.",
+      "source": [
+        {
+          "source_id": "S7",
+          "title": "Accelerating scientific discovery with Co-Scientist",
+          "url": "https://www.nature.com/articles/s41586-026-10644-y",
+          "locator": "Key contributions; System analysis and evaluation; expert workflow; Data availability; Code availability"
+        },
+        {
+          "source_id": "S8",
+          "title": "Accelerating scientific discovery with Co-Scientist",
+          "url": "https://arxiv.org/abs/2502.18864",
+          "locator": "Submission history and title"
+        }
+      ],
+      "evidence": "Co-Scientist generates, debates, ranks and evolves hypotheses and experimental proposals under scientist objectives. The 2026 article reports wet-laboratory validation in drug repurposing, liver fibrosis targets and antimicrobial resistance. It evaluates generated hypotheses on 15 expert-curated goals using its own Elo metric, alongside limited expert assessment.",
+      "observation": "Cite as a complementary collaborative workflow with explicit external experimental grounding; use the 2026 title/version rather than treating the 2025 announcement as the endpoint.",
+      "confidence": "high"
+    },
+    {
+      "id": "SYS-E6",
+      "source_ids": [
+        "S9"
+      ],
+      "locator": "Section2.1/Figure1; sections3.1–3.2; Methods4.1.1",
+      "observed_claim": "Kosmos iterates literature search and data analysis from a scientist-supplied objective and dataset, linking report claims to notebooks or literature. Experts checked 102 statements from three representative reports without receiving original code/citations: 79.4% overall supported, including 85.5% data-analysis, 82.1% literature and 57.9% synthesis statements.",
+      "actual_execution": "Computational discovery runs and expert validation executed; report includes seven selected scientific case studies.",
+      "human_role_and_independence": "Scientists prepare inputs and evaluate significance; expert checks use their own analysis/search.",
+      "limitations": "Statement accuracy is not whole-discovery reproducibility. Six-month equivalence is collaborator-estimated time, not a matched prospective productivity experiment. Authors report overstatement, expert-intensive checking, sensitivity to objectives and stochastic disagreement across runs.",
+      "whitepaper_use": "Especially relevant distinction between traceable calculation and valid scientific interpretation; provenance improves auditability without establishing correctness.",
+      "source": [
+        {
+          "source_id": "S9",
+          "title": "Kosmos: An AI Scientist for Autonomous Discovery",
+          "url": "https://arxiv.org/html/2511.02824v2",
+          "locator": "Section 2.1 and Figure 1; sections 3.1–3.2; Methods 4.1.1"
+        }
+      ],
+      "evidence": "Kosmos iterates literature search and data analysis from a scientist-supplied objective and dataset, linking report claims to notebooks or literature. Experts checked 102 statements from three representative reports without receiving original code/citations: 79.4% overall supported, including 85.5% data-analysis, 82.1% literature and 57.9% synthesis statements.",
+      "observation": "Especially relevant distinction between traceable calculation and valid scientific interpretation; provenance improves auditability without establishing correctness.",
+      "confidence": "high"
+    },
+    {
+      "id": "SYS-E7",
+      "source_ids": [
+        "S10"
+      ],
+      "locator": "Introduction; sections2.1,2.4,3",
+      "observed_claim": "AlphaEvolve evolves code against user-supplied automatic evaluators. Demonstrated outputs include mathematical constructions and improvements to Google infrastructure algorithms. It reports a 48-scalar-multiplication method for 4×4 complex matrices, with exact constructions exposed in an associated notebook.",
+      "actual_execution": "Code search, evaluation and selected engineering deployment occurred; scientific targets are machine-gradeable computational tasks.",
+      "human_role_and_independence": "Humans define initial programs, evolvable blocks and evaluation functions. Exact mathematical validity, numerical scores and deployed performance are different evidence types.",
+      "limitations": "The paper explicitly excludes tasks requiring manual experimentation. A strong evaluator constrains the domain and encodes human choices; success does not establish autonomous scientific inference where the objective itself is contested.",
+      "whitepaper_use": "Supports the value of executable validation while keeping algorithm optimization distinct from physics conclusions.",
+      "source": [
+        {
+          "source_id": "S10",
+          "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+          "url": "https://arxiv.org/html/2506.13131v1",
+          "locator": "Introduction; sections 2.1, 2.4 and 3; associated mathematical-results notebook"
+        }
+      ],
+      "evidence": "AlphaEvolve evolves code against user-supplied automatic evaluators. Demonstrated outputs include mathematical constructions and improvements to Google infrastructure algorithms. It reports a 48-scalar-multiplication method for 4×4 complex matrices, with exact constructions exposed in an associated notebook.",
+      "observation": "Supports the value of executable validation while keeping algorithm optimization distinct from physics conclusions.",
+      "confidence": "high"
+    },
+    {
+      "id": "SYS-E8",
+      "source_ids": [
+        "S11"
+      ],
+      "locator": "Introduction; sections2.2,2.3.5,3,5",
+      "observed_claim": "AstraZeneca describes a deployed biomedical assistant, reporting 15,000 internal users within a year. Its deep-research mode executes a bounded DAG of retrieval questions; outputs link evidence for human examination. The technical note explicitly distinguishes this from open-ended autonomous research.",
+      "actual_execution": "First-party report of enterprise deployment and user feedback; no access to private enterprise data or system was used here.",
+      "human_role_and_independence": "Scientists ask questions, can override research plans and inspect sources. Evaluations include internal QA regression sets, real-user feedback and LLM-assisted interaction analytics.",
+      "limitations": "Adoption is not scientific-outcome validation. Authors report that useful product improvements did not improve the narrow BioASQ metric; citation-grounded web answers can still have only tangential support. No independent impact study is established.",
+      "whitepaper_use": "Useful current example of a complementary bounded assistance workflow and a warning against equating benchmark gains with scientific usefulness.",
+      "source": [
+        {
+          "source_id": "S11",
+          "title": "Research Assistant: AstraZeneca’s Agentic System for R&D",
+          "url": "https://arxiv.org/html/2608.12395v1",
+          "locator": "Introduction; sections 2.2, 2.3.5, 3 and 5"
+        }
+      ],
+      "evidence": "AstraZeneca describes a deployed biomedical assistant, reporting 15,000 internal users within a year. Its deep-research mode executes a bounded DAG of retrieval questions; outputs link evidence for human examination. The technical note explicitly distinguishes this from open-ended autonomous research.",
+      "observation": "Useful current example of a complementary bounded assistance workflow and a warning against equating benchmark gains with scientific usefulness.",
+      "confidence": "high"
+    }
+  ],
+  "method_candidates": [
+    {
+      "id": "system-claim-type-audit",
+      "source_ids": [
+        "S9"
+      ],
+      "observed": "Inputs: report statements; transformation: label literature, analysis or synthesis and ask experts to independently check them without original supporting artifacts; output: support rates by claim type.",
+      "hypothesized_transfer": "Sample physics guide claims by calculation versus interpretation, and commission separately scoped checks.",
+      "constraints": "Independent reviewers need sufficient domain expertise; a small sampled audit cannot certify an entire paper.",
+      "cheapest_validation": "On one existing public case, check three calculations and three interpretive claims; record disagreement and time. Proposed only; not performed.",
+      "path": "docs/related-work/methods/system-claim-type-audit.json"
+    },
+    {
+      "id": "system-code-report-consistency",
+      "source_ids": [
+        "S6"
+      ],
+      "observed": "Inputs: claimed benchmark scores, actual program and outputs; transformation: author team manually verifies code and output correspondence; output: checked reported accuracies despite repair/hallucination failures.",
+      "hypothesized_transfer": "Before a physics result enters prose, confirm the intended calculation remains implemented and its run record supports the number.",
+      "constraints": "Logs alone can be fabricated; author inspection is not independent replication.",
+      "cheapest_validation": "Audit one existing public result from claim through code path to stored numerical artifact, without launching new science. Proposed only.",
+      "path": "docs/related-work/methods/system-code-report-consistency.json"
+    },
+    {
+      "id": "system-staged-executable-checks",
+      "source_ids": [
+        "S10"
+      ],
+      "observed": "Inputs: human evaluation code and generated candidate; transformation: escalating test cascade rejects faulty or unpromising candidates early; output: scored executable programs.",
+      "hypothesized_transfer": "Use inexpensive invariants before expensive physics validation, preserving a separately justified scientific acceptance rule.",
+      "constraints": "Automatic scores only cover encoded properties; test leakage and objective mismatch need separate controls.",
+      "cheapest_validation": "On one existing public example, compare a fast invariant's outcome with its established full validation record. Proposed only.",
+      "path": "docs/related-work/methods/system-staged-executable-checks.json"
+    }
+  ],
+  "gaps": [
+    "No cross-system matched comparison on the guide's physics/reproducibility tasks; neither superiority nor general frontier-model-versus-human parity is supported.",
+    "Primary papers demonstrate different units: entire ML manuscripts, hypothesis proposals, prompt benchmarks, dataset analysis and machine-gradeable algorithms. A single autonomy score would erase decisive differences.",
+    "This focused search is not exhaustive through the cutoff: Robin, Virtual Lab, Paper2Agent and newer benchmark systems deserve an appendix follow-up if space warrants. Their omission does not imply absence of evidence.",
+    "Historical Agent Laboratory/AgentRxiv versions are intentionally pinned; later revisions were not compared. Nature supplemental files and Co-Scientist's inaccessible arXiv v2 HTML were not fully inspected.",
+    "For public prose, prioritize a few contextual citations; retain detailed failure mechanisms and denominators in an appendix rather than turning this physics practice guide into a CS system survey.",
+    "Public aiXiv reference lists were inspected as discovery seeds; AstraZeneca original source was followed. Systems lane does not use our postings as independent validation or reproduce their operational claims."
+  ],
+  "contradictions": [
+    {
+      "issue": "Workshop publication wording",
+      "resolution": "AI Scientist promotional/abstract language can suggest an accepted publication; the 2026 article says first-round review, and protocol withdrew generated submissions. Preserve the narrower procedural observation."
+    },
+    {
+      "issue": "Autonomous performance versus human checks",
+      "resolution": "AgentRxiv's reported accuracy includes manual code/output verification; Co-Scientist includes expert selection and laboratory work; Kosmos includes expert validation. Attribute automation to the stages actually delegated."
+    },
+    {
+      "issue": "Reproducibility versus accuracy versus significance",
+      "resolution": "Kosmos distinguishes data-analysis support from lower synthesis accuracy. Do not turn its aggregate statement-support fraction or estimated time into a general discovery-validity or speedup guarantee."
+    },
+    {
+      "issue": "Old failure rates applied to newer systems",
+      "resolution": "Independent v1 counterevidence has a narrow domain/sample. Include alongside later systems without asserting the same rate persists."
+    }
+  ],
+  "word_count": 2783,
+  "confidence_detail": {
+    "overall": "high for the bounded source descriptions; moderate for transfer to physics practice",
+    "basis": "Versioned primary papers, primary publisher metadata and author-reported limitations checked. No independent reruns by this worker; original team claims remain attributed.",
+    "positioning": "These are relevant neighboring workflows, not direct competitors evaluated on the whitepaper's physics tasks. Avoid a general frontier-model-versus-human ranking."
+  },
+  "word_count_convention": "Whitespace-separated tokens in recursive string values; excludes word_count and this convention; excludes JSON keys."
+}

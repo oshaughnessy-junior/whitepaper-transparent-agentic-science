@@ -1,0 +1,251 @@
+{
+  "schema": "openclaw.deep-research.dispatcher.v1",
+  "artifact_id": "transparent-science-related-work-2026-10-25",
+  "foundation": "docs/related-work/research-plan.md",
+  "worker_artifacts": [
+    "docs/related-work/workers/practice.json",
+    "docs/related-work/workers/systems.json",
+    "docs/related-work/workers/verification.json",
+    "docs/related-work/workers/astronomy.json"
+  ],
+  "contradictions": [
+    {
+      "lane": "practice",
+      "issue": "Traceability versus correctness",
+      "resolution": "Kosmos can attach source/code provenance while synthesis claims remain less reliable; provenance and independent verification address different questions."
+    },
+    {
+      "lane": "practice",
+      "issue": "Autonomous branding versus scientific validation",
+      "resolution": "Product labels and generated reports coexist with expert agenda-setting, claim review and follow-up experiments. Describe the demonstrated workflow rather than adjudicating a universal autonomy label."
+    },
+    {
+      "lane": "practice",
+      "issue": "Multi-agent gains versus independent evidence",
+      "resolution": "Breadth can improve report preference or retrieval coverage while also increasing leakage exposure. Separate search capacity, compute budget and evidence independence."
+    },
+    {
+      "lane": "practice",
+      "issue": "Removing harnesses versus engineering a platform",
+      "resolution": "Edison’s language concerns replacing bespoke tool interfaces with code; its own architecture still uses sandboxes, proxies and persistent storage."
+    },
+    {
+      "lane": "systems",
+      "issue": "Workshop publication wording",
+      "resolution": "AI Scientist promotional/abstract language can suggest an accepted publication; the 2026 article says first-round review, and protocol withdrew generated submissions. Preserve the narrower procedural observation."
+    },
+    {
+      "lane": "systems",
+      "issue": "Autonomous performance versus human checks",
+      "resolution": "AgentRxiv's reported accuracy includes manual code/output verification; Co-Scientist includes expert selection and laboratory work; Kosmos includes expert validation. Attribute automation to the stages actually delegated."
+    },
+    {
+      "lane": "systems",
+      "issue": "Reproducibility versus accuracy versus significance",
+      "resolution": "Kosmos distinguishes data-analysis support from lower synthesis accuracy. Do not turn its aggregate statement-support fraction or estimated time into a general discovery-validity or speedup guarantee."
+    },
+    {
+      "lane": "systems",
+      "issue": "Old failure rates applied to newer systems",
+      "resolution": "Independent v1 counterevidence has a narrow domain/sample. Include alongside later systems without asserting the same rate persists."
+    },
+    {
+      "lane": "verification",
+      "apparent_conflict": "Impressive benchmark performance versus METR 2025 developer slowdown",
+      "resolution": "Different task contexts, success criteria, scaffolds and human interaction; no direct contradiction or universal ranking."
+    },
+    {
+      "lane": "verification",
+      "apparent_conflict": "METR 2025 slowdown versus 2026 suggested improvement",
+      "resolution": "Later observations are selection-biased and explicitly weak evidence for effect size; preserve temporal and design limits."
+    },
+    {
+      "lane": "verification",
+      "apparent_conflict": "A reproduced output versus an incorrect scientific result",
+      "resolution": "NASEM explicitly notes that rerunning erroneous code reproduces an error; independent reasoning and validation remain necessary."
+    },
+    {
+      "lane": "astronomy",
+      "issue": "ReplicationBench abstract/body numerical mismatch",
+      "resolution": "Do not quote a score; describe evaluation design and dated scope."
+    }
+  ],
+  "gaps": [
+    {
+      "lane": "practice",
+      "gap": "The October 2026 biological project is a current and relevant initiative, but its linked bioRxiv paper returned 403: https://www.biorxiv.org/content/10.64898/2026.10.15.759436v1. The public report supports only the qualified project claims recorded above."
+    },
+    {
+      "lane": "practice",
+      "gap": "No included source supplies a representative frontier-model-versus-human comparison for physical-science research. Estimated months saved and blinded report preferences are different outcomes."
+    },
+    {
+      "lane": "practice",
+      "gap": "The current Prism announcement contains later page furniture and an undated shutdown banner. Publication date alone does not date every current page element."
+    },
+    {
+      "lane": "practice",
+      "gap": "Edison’s May 2026 post links a Nature lab-in-the-loop campaign; that scientific campaign was not inspected here and is not evidence for this packet."
+    },
+    {
+      "lane": "practice",
+      "gap": "Context engineering has a directly inspected September 29, 2025 Anthropic report, but it was omitted from the eight-source packet to prioritize the October 2026 project; no extra empirical context-window claims are imported."
+    },
+    {
+      "lane": "practice",
+      "gap": "No primary talk added: substantive original written reports gave checkable locators. Practitioner writing policy remains a norm example, not empirical failure evidence."
+    },
+    {
+      "lane": "systems",
+      "gap": "No cross-system matched comparison on the guide's physics/reproducibility tasks; neither superiority nor general frontier-model-versus-human parity is supported."
+    },
+    {
+      "lane": "systems",
+      "gap": "Primary papers demonstrate different units: entire ML manuscripts, hypothesis proposals, prompt benchmarks, dataset analysis and machine-gradeable algorithms. A single autonomy score would erase decisive differences."
+    },
+    {
+      "lane": "systems",
+      "gap": "This focused search is not exhaustive through the cutoff: Robin, Virtual Lab, Paper2Agent and newer benchmark systems deserve an appendix follow-up if space warrants. Their omission does not imply absence of evidence."
+    },
+    {
+      "lane": "systems",
+      "gap": "Historical Agent Laboratory/AgentRxiv versions are intentionally pinned; later revisions were not compared. Nature supplemental files and Co-Scientist's inaccessible arXiv v2 HTML were not fully inspected."
+    },
+    {
+      "lane": "systems",
+      "gap": "For public prose, prioritize a few contextual citations; retain detailed failure mechanisms and denominators in an appendix rather than turning this physics practice guide into a CS system survey."
+    },
+    {
+      "lane": "systems",
+      "gap": "Public aiXiv reference lists were inspected as discovery seeds; AstraZeneca original source was followed. Systems lane does not use our postings as independent validation or reproduce their operational claims."
+    },
+    {
+      "lane": "verification",
+      "gap": "No controlled evidence here that multiple agents provide statistically independent scientific review; different model names do not establish independence."
+    },
+    {
+      "lane": "verification",
+      "gap": "No general frontier-model-versus-human comparison follows across physics, ML replication and software productivity settings."
+    },
+    {
+      "lane": "verification",
+      "gap": "Citation existence and correct bibliography are distinct from semantic support; this audit directly tests only the former and bibliographic correctness."
+    },
+    {
+      "lane": "verification",
+      "gap": "Bug discovery is valuable local evidence; these sources do not quantify how bug detection changes a complete physical inference."
+    },
+    {
+      "lane": "verification",
+      "gap": "Stodden full methods remain a retrieval gap; manuscript may cite the abstract-bounded finding with that limitation, or obtain full text before discussing estimators."
+    },
+    {
+      "lane": "verification",
+      "gap": "aiXiv seeds also identify ReScience, PROV, CWLProv and RO-Crate; not independently source-checked in this bounded eight-source lane. Treat those as leads, not evidence."
+    },
+    {
+      "lane": "astronomy",
+      "gap": "No independent execution of these systems in this research."
+    },
+    {
+      "lane": "astronomy",
+      "gap": "Ting slide deck and Rutgers talk were discovery/context sources, not primary support for model performance."
+    },
+    {
+      "lane": "astronomy",
+      "gap": "Not an exhaustive survey of autonomous science."
+    }
+  ],
+  "method_radar": [
+    {
+      "method_id": "astronomy-masked-replication",
+      "path": "docs/related-work/methods/astronomy-masked-replication.json",
+      "validation_status": "test-proposed"
+    },
+    {
+      "method_id": "astronomy-target-evidence",
+      "path": "docs/related-work/methods/astronomy-target-evidence.json",
+      "validation_status": "test-proposed"
+    },
+    {
+      "method_id": "practice-bounded-handoff",
+      "path": "docs/related-work/methods/practice-bounded-handoff.json",
+      "validation_status": "test-proposed"
+    },
+    {
+      "method_id": "practice-claim-class-review",
+      "path": "docs/related-work/methods/practice-claim-class-review.json",
+      "validation_status": "test-proposed"
+    },
+    {
+      "method_id": "practice-leakage-audit",
+      "path": "docs/related-work/methods/practice-leakage-audit.json",
+      "validation_status": "test-proposed"
+    },
+    {
+      "method_id": "practice-writing-ownership",
+      "path": "docs/related-work/methods/practice-writing-ownership.json",
+      "validation_status": "test-proposed"
+    },
+    {
+      "method_id": "system-claim-type-audit",
+      "path": "docs/related-work/methods/system-claim-type-audit.json",
+      "validation_status": "test-proposed"
+    },
+    {
+      "method_id": "system-code-report-consistency",
+      "path": "docs/related-work/methods/system-code-report-consistency.json",
+      "validation_status": "test-proposed"
+    },
+    {
+      "method_id": "system-staged-executable-checks",
+      "path": "docs/related-work/methods/system-staged-executable-checks.json",
+      "validation_status": "test-proposed"
+    },
+    {
+      "method_id": "verification-citation-two-checks",
+      "path": "docs/related-work/methods/verification-citation-two-checks.json",
+      "validation_status": "test-proposed"
+    },
+    {
+      "method_id": "verification-fresh-reproduction",
+      "path": "docs/related-work/methods/verification-fresh-reproduction.json",
+      "validation_status": "test-proposed"
+    },
+    {
+      "method_id": "verification-result-provenance",
+      "path": "docs/related-work/methods/verification-result-provenance.json",
+      "validation_status": "test-proposed"
+    },
+    {
+      "method_id": "verification-scoped-certificate",
+      "path": "docs/related-work/methods/verification-scoped-certificate.json",
+      "validation_status": "test-proposed"
+    }
+  ],
+  "metrics": {
+    "worker_count": 3,
+    "worker_cap": 3,
+    "source_count": 35,
+    "evidence_extract_count": 32,
+    "evidence_density": 0.914,
+    "unsupported_claim_count": 0,
+    "method_candidate_count": 13,
+    "method_candidates_by_stage": {
+      "test-proposed": 13
+    },
+    "contradiction_count": 12,
+    "gap_count": 21,
+    "strategist_context_estimate_words": 7306,
+    "revision_count": 1
+  },
+  "strategist_decisions": [
+    "Preserve every original manuscript line, title and abstract.",
+    "Four brief main-text additions, one comparative appendix; detailed survey retained outside manuscript.",
+    "Pin versions and distinguish proposal, teaching material, first-party report and empirical demonstration.",
+    "No benchmark percentage transferred to current frontier-model review; retain original experience-based assessment.",
+    "Use aiXiv references only as discovery leads, reading original sources.",
+    "No candidate method adopted; proposed tests do not authorize new science campaigns."
+  ],
+  "metric_notes": "source_count counts versioned source records, not unique studies; root astronomy packet included in records, worker_count counts the three delegated research lanes. Context estimate counts all packet string values, a conservative artifact-size estimate rather than live context telemetry. Unsupported claim count concerns consequential claims promoted to manuscript, not all unresolved leads."
+}

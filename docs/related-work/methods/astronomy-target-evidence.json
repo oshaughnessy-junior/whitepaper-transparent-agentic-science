@@ -1,0 +1,23 @@
+{
+  "schema": "openclaw.deep-research.method.v1",
+  "method_id": "astronomy-target-evidence",
+  "name": "Link selected claims to evidence and acceptance rules",
+  "observed_in": [
+    "https://arxiv.org/html/2607.02134v2"
+  ],
+  "source_locator": "Introduction; workflow Section 2.3; discussion of completed runs",
+  "evidence": "Coding-agent skill links selected targets, evidence, comparisons, report coverage and a workspace completion gate.",
+  "operational_primitive": {
+    "inputs": "Paper, selected target set and run outputs",
+    "transformation": "Record per-target method, acceptance rule and producing artifact; require report coverage before completion",
+    "outputs": "Auditable target/evidence matrix"
+  },
+  "constraints": "Agent-defined targets and acceptance rules can weaken completion meaning.",
+  "reuse_hypothesis": "Could make a future physics replication review more discriminating; effectiveness not established here.",
+  "implementation_burden": "unknown",
+  "prevalence_signal": "recurring",
+  "novelty_scope": "known-to-team",
+  "validation_status": "test-proposed",
+  "next_test": "Fix targets and acceptance rules before a small public replication, then compare with agent-defined targets; proposed only.",
+  "confidence": "medium"
+}

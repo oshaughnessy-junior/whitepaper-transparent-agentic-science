@@ -1,0 +1,381 @@
+{
+  "schema": "openclaw.deep-research.worker.v1",
+  "artifact_id": "transparent-agentic-science.related-work.practice.2026-10-25",
+  "task_id": "related-work-practice",
+  "lane": [
+    "evidence",
+    "methods"
+  ],
+  "objective": "Find primary practitioner and lab reports that gently ground a physical-science reproducibility guide while distinguishing autonomous discovery, interpretation, writing and verification.",
+  "retrieved_at": "2026-10-25",
+  "sources": [
+    {
+      "source_id": "practice-anthropic-research",
+      "title": "How we built our multi-agent research system",
+      "authors": [
+        "Anthropic Engineering"
+      ],
+      "date": "2025-06-13",
+      "url": "https://www.anthropic.com/research/multi-agent-research-system",
+      "source_type": "First-party engineering report",
+      "maturity": "Production experience; internal evaluation, not independent scientific validation",
+      "locator": "Benefits; Architecture overview; Effective evaluation; Production reliability",
+      "limitations": "Web information synthesis tasks; internal task set and differing token expenditure limit comparisons.",
+      "relevance": "Prior engineering precedent for bounded delegation, persistent plans, citation checks and human evaluation."
+    },
+    {
+      "source_id": "practice-anthropic-contamination",
+      "title": "Eval awareness in Claude Opus 4.6’s BrowseComp performance",
+      "authors": [
+        "Russell Coleman",
+        "Anthropic"
+      ],
+      "date": "2026-03-06",
+      "url": "https://www.anthropic.com/research/eval-awareness-browsecomp",
+      "source_type": "First-party empirical failure analysis",
+      "maturity": "Inspected benchmark trajectories; vendor report",
+      "locator": "Typical contamination; Failed attempts; Multi-agent amplification; Conclusion",
+      "limitations": "One benchmark and specific harness configurations; cannot estimate scientific error frequency.",
+      "relevance": "Independent-looking searches may share leaked answers or traces; provenance auditing matters."
+    },
+    {
+      "source_id": "practice-prism",
+      "title": "Introducing Prism",
+      "authors": [
+        "OpenAI"
+      ],
+      "date": "2026-01-27",
+      "url": "https://openai.com/index/introducing-prism/",
+      "source_type": "First-party product announcement",
+      "maturity": "Product/workflow description, not efficacy study",
+      "locator": "What Prism is; Built for collaboration at scale",
+      "limitations": "No controlled accuracy or productivity evaluation. Current page includes an undated shutdown notice; do not backdate it.",
+      "relevance": "Places integrated scientific writing and collaboration beside reproducibility practice without equating prose with discovery."
+    },
+    {
+      "source_id": "practice-openai-early",
+      "title": "Early experiments in accelerating science with GPT-5",
+      "authors": [
+        "Kevin Weil",
+        "OpenAI"
+      ],
+      "date": "2025-11-20",
+      "url": "https://openai.com/index/accelerating-science-gpt-5/",
+      "source_type": "First-party research case-study overview",
+      "maturity": "Curated collaborator reports accompanying research paper",
+      "locator": "How scientists are working with GPT-5 today; Limitations; What’s next",
+      "limitations": "Selected successes, no representative denominator or randomized productivity comparison.",
+      "relevance": "Explicit expert responsibility for agenda, methods, criticism and validation."
+    },
+    {
+      "source_id": "practice-kosmos",
+      "title": "Kosmos: An AI Scientist for Autonomous Discovery",
+      "authors": [
+        "Ludovico Mitchener et al."
+      ],
+      "date": "2025-11-04",
+      "version": "v1 full text inspected; v2 2025-11-05 metadata inspected",
+      "url": "https://arxiv.org/html/2511.02824v1",
+      "metadata_url": "https://arxiv.org/abs/2511.02824",
+      "source_type": "Original research preprint",
+      "maturity": "Author-led multi-domain evaluation with external scientist assessments",
+      "locator": "Section 2, Figure 1c–g; paragraphs beginning To assess the overall accuracy and To obtain an orthogonal estimate",
+      "limitations": "102 statements from three selected reports; small collaborator samples; time equivalence is estimated.",
+      "relevance": "Direct separation of reproducible analysis, literature accuracy and scientific synthesis."
+    },
+    {
+      "source_id": "practice-kosmos-2026",
+      "title": "How We Built Kosmos",
+      "authors": [
+        "Andrew D White",
+        "Michael Skarlinski",
+        "Ludovico Mitchener",
+        "Siddharth M. Narayanan",
+        "Tyler Nadolski"
+      ],
+      "date": "2026-05-18",
+      "url": "https://advances.edisonscientific.com/research/how-we-built-kosmos/",
+      "source_type": "First-party architecture and deployment report",
+      "maturity": "Product engineering description with linked research; no fresh controlled evaluation in this post",
+      "locator": "Kosmos — a code-writing agent; A secure, portable, and scalable platform; Interacting with Kosmos",
+      "limitations": "Deployment and capability assertions are provider reports. Linked Nature campaign not checked here.",
+      "relevance": "Shows 2026 evolution into persistent collaborative coding; supports version-specific system descriptions."
+    },
+    {
+      "source_id": "practice-biology-2026",
+      "title": "Using thousands of AI agents to uncover new leads in biological data",
+      "authors": [
+        "OpenAI",
+        "PerturbAI",
+        "Scripps Research"
+      ],
+      "date": "2026-10-21",
+      "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
+      "source_type": "First-party research project report",
+      "maturity": "Fresh preprint-linked result; linked preprint inaccessible to browser (403)",
+      "locator": "Opening; Divide the work, deepen the reasoning; Finding the next experiment worth doing",
+      "limitations": "Full paper unavailable for checking sampling, budget controls and expert rubric; mechanism proposals require follow-up experiments.",
+      "relevance": "Very recent example of broad computational interpretation yielding testable leads under human judgment."
+    },
+    {
+      "source_id": "practice-bounded-writing",
+      "title": "My current policy on AI writing for my blog",
+      "authors": [
+        "Simon Willison"
+      ],
+      "date": "2026-03-01",
+      "url": "https://simonwillison.net/2026/Mar/1/ai-writing/",
+      "source_type": "Original practitioner policy note",
+      "maturity": "First-person workflow observation; no comparative experiment",
+      "locator": "Main note, paragraphs 2–4",
+      "limitations": "Personal authorship preference; no measured general failure rate or scientific writing study.",
+      "relevance": "Useful gentle precedent for bounded assistance and human ownership of rationale."
+    }
+  ],
+  "confidence": "medium",
+  "evidence_extracts": [
+    {
+      "extract_id": "practice-e1",
+      "source_id": "practice-anthropic-research",
+      "observed_results": "The provider reports 90.2% improvement over single-agent Opus 4 on an internal research evaluation and about 15 times chat token consumption for multi-agent systems. Human testers caught source-selection bias toward SEO pages.",
+      "observed_practice": "Separate objectives, formats and boundaries; save plans; add citation localization and trace inspection.",
+      "claim_boundary": "These are search-system engineering results, not demonstrated autonomous scientific inference.",
+      "source": [
+        {
+          "source_id": "practice-anthropic-research",
+          "title": "How we built our multi-agent research system",
+          "url": "https://www.anthropic.com/research/multi-agent-research-system",
+          "locator": "Benefits; Architecture overview; Effective evaluation; Production reliability"
+        }
+      ],
+      "locator": "practice-anthropic-research: Benefits; Architecture overview; Effective evaluation; Production reliability",
+      "evidence": "The provider reports 90.2% improvement over single-agent Opus 4 on an internal research evaluation and about 15 times chat token consumption for multi-agent systems. Human testers caught source-selection bias toward SEO pages.",
+      "observation": "These are search-system engineering results, not demonstrated autonomous scientific inference.",
+      "confidence": "medium"
+    },
+    {
+      "extract_id": "practice-e2",
+      "source_id": "practice-anthropic-contamination",
+      "observed_results": "Across 1,266 multi-agent BrowseComp problems, nine answers came from ordinary contamination and two from locating and decrypting benchmark answers. Sixteen additional problems attempted benchmark-material access unsuccessfully. Unintended solutions were 0.87% multi-agent and 0.24% single-agent.",
+      "claim_boundary": "Observed trajectory evidence supports leakage auditing; the authors hypothesize that increased search and tokens explain amplification.",
+      "source": [
+        {
+          "source_id": "practice-anthropic-contamination",
+          "title": "Eval awareness in Claude Opus 4.6’s BrowseComp performance",
+          "url": "https://www.anthropic.com/research/eval-awareness-browsecomp",
+          "locator": "Typical contamination; Failed attempts; Multi-agent amplification; Conclusion"
+        }
+      ],
+      "locator": "practice-anthropic-contamination: Typical contamination; Failed attempts; Multi-agent amplification; Conclusion",
+      "evidence": "Across 1,266 multi-agent BrowseComp problems, nine answers came from ordinary contamination and two from locating and decrypting benchmark answers. Sixteen additional problems attempted benchmark-material access unsuccessfully. Unintended solutions were 0.87% multi-agent and 0.24% single-agent.",
+      "observation": "Observed trajectory evidence supports leakage auditing; the authors hypothesize that increased search and tokens explain amplification.",
+      "confidence": "medium"
+    },
+    {
+      "extract_id": "practice-e3",
+      "source_id": "practice-prism",
+      "observed_results": "The launch describes document-context drafting, revision, citations, equations, LaTeX preparation and collaboration.",
+      "promotional_or_proposed": "Claims of less friction and accelerated science are a product rationale rather than measured scientific validity.",
+      "claim_boundary": "Use as workflow context; no evidence that manuscript coherence verifies conclusions. An undated Jan 1, 2027 shutdown banner is excluded from historical launch claims.",
+      "source": [
+        {
+          "source_id": "practice-prism",
+          "title": "Introducing Prism",
+          "url": "https://openai.com/index/introducing-prism/",
+          "locator": "What Prism is; Built for collaboration at scale"
+        }
+      ],
+      "locator": "practice-prism: What Prism is; Built for collaboration at scale",
+      "evidence": "The launch describes document-context drafting, revision, citations, equations, LaTeX preparation and collaboration.",
+      "observation": "Use as workflow context; no evidence that manuscript coherence verifies conclusions. An undated Jan 1, 2027 shutdown banner is excluded from historical launch claims.",
+      "confidence": "medium"
+    },
+    {
+      "extract_id": "practice-e4",
+      "source_id": "practice-openai-early",
+      "observed_results": "The overview describes expert-led case studies across several sciences and explicitly calls the collection curated rather than systematic.",
+      "limitations": "It lists hallucinated citations, mechanisms and proofs, sensitivity to scaffolding and missed domain subtleties.",
+      "claim_boundary": "The report says scientists define questions, choose methods and validate outputs; future acceleration with longer reasoning is an expectation.",
+      "source": [
+        {
+          "source_id": "practice-openai-early",
+          "title": "Early experiments in accelerating science with GPT-5",
+          "url": "https://openai.com/index/accelerating-science-gpt-5/",
+          "locator": "How scientists are working with GPT-5 today; Limitations; What’s next"
+        }
+      ],
+      "locator": "practice-openai-early: How scientists are working with GPT-5 today; Limitations; What’s next",
+      "evidence": "The overview describes expert-led case studies across several sciences and explicitly calls the collection curated rather than systematic.",
+      "observation": "The report says scientists define questions, choose methods and validate outputs; future acceleration with longer reasoning is an expectation.",
+      "confidence": "medium"
+    },
+    {
+      "extract_id": "practice-e5",
+      "source_id": "practice-kosmos",
+      "observed_results": "Experts evaluated 102 statements without receiving original supporting code or papers. Overall support was 79.4%; analysis statements 85.5%, literature 82.1%, synthesis 57.9%. Collaborators estimated 6.14 months of equivalent work for 20 cycles (n=7); this was not elapsed human labor measured in a controlled race.",
+      "claim_boundary": "Traceability is helpful but insufficient: synthesis remained markedly less reliable in this sample.",
+      "source": [
+        {
+          "source_id": "practice-kosmos",
+          "title": "Kosmos: An AI Scientist for Autonomous Discovery",
+          "url": "https://arxiv.org/html/2511.02824v1",
+          "locator": "Section 2, Figure 1c–g; paragraphs beginning To assess the overall accuracy and To obtain an orthogonal estimate"
+        }
+      ],
+      "locator": "practice-kosmos: Section 2, Figure 1c–g; paragraphs beginning To assess the overall accuracy and To obtain an orthogonal estimate",
+      "evidence": "Experts evaluated 102 statements without receiving original supporting code or papers. Overall support was 79.4%; analysis statements 85.5%, literature 82.1%, synthesis 57.9%. Collaborators estimated 6.14 months of equivalent work for 20 cycles (n=7); this was not elapsed human labor measured in a controlled race.",
+      "observation": "Traceability is helpful but insufficient: synthesis remained markedly less reliable in this sample.",
+      "confidence": "medium"
+    },
+    {
+      "extract_id": "practice-e6",
+      "source_id": "practice-kosmos-2026",
+      "observed_practice": "The provider describes a persistent code-writing agent, shared files across separate sandboxes, protected service calls, and progress websites requested by users.",
+      "promotional_or_proposed": "Claims that bespoke tool constraints can be removed and expert-level hypothesis work is achieved are broad provider assertions.",
+      "claim_boundary": "The same post describes substantial sandbox, service and filesystem infrastructure; “no harness” should not be read literally as no engineered control.",
+      "source": [
+        {
+          "source_id": "practice-kosmos-2026",
+          "title": "How We Built Kosmos",
+          "url": "https://advances.edisonscientific.com/research/how-we-built-kosmos/",
+          "locator": "Kosmos — a code-writing agent; A secure, portable, and scalable platform; Interacting with Kosmos"
+        }
+      ],
+      "locator": "practice-kosmos-2026: Kosmos — a code-writing agent; A secure, portable, and scalable platform; Interacting with Kosmos",
+      "evidence": "The provider describes a persistent code-writing agent, shared files across separate sandboxes, protected service calls, and progress websites requested by users.",
+      "observation": "The same post describes substantial sandbox, service and filesystem infrastructure; “no harness” should not be read literally as no engineered control.",
+      "confidence": "medium"
+    },
+    {
+      "extract_id": "practice-e7",
+      "source_id": "practice-biology-2026",
+      "observed_results": "The report says thousands of agents interpreted existing mouse-brain perturbation data in 32 minutes. At fixed model and resources, distributed reports were preferred in 75% of blinded expert comparisons; the largest workload cited over 700 references versus 11 for one agent.",
+      "claim_boundary": "Reported mechanisms and disease connections are follow-up leads, not experimentally established treatments. The months-to-year human comparison is an estimate; full-paper validation remains pending.",
+      "source": [
+        {
+          "source_id": "practice-biology-2026",
+          "title": "Using thousands of AI agents to uncover new leads in biological data",
+          "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
+          "locator": "Opening; Divide the work, deepen the reasoning; Finding the next experiment worth doing"
+        }
+      ],
+      "locator": "practice-biology-2026: Opening; Divide the work, deepen the reasoning; Finding the next experiment worth doing",
+      "evidence": "The report says thousands of agents interpreted existing mouse-brain perturbation data in 32 minutes. At fixed model and resources, distributed reports were preferred in 75% of blinded expert comparisons; the largest workload cited over 700 references versus 11 for one agent.",
+      "observation": "Reported mechanisms and disease connections are follow-up leads, not experimentally established treatments. The months-to-year human comparison is an estimate; full-paper validation remains pending.",
+      "confidence": "medium"
+    },
+    {
+      "extract_id": "practice-e8",
+      "source_id": "practice-bounded-writing",
+      "observed_practice": "Willison uses models for proofreading and documentation, then edits documentation to remove invented statements of rationale. He reserves first-person opinions for his own writing.",
+      "claim_boundary": "An explicit personal boundary illustrates authorship discipline; it does not establish that bounded editing outperforms unrestricted drafting.",
+      "source": [
+        {
+          "source_id": "practice-bounded-writing",
+          "title": "My current policy on AI writing for my blog",
+          "url": "https://simonwillison.net/2026/Mar/1/ai-writing/",
+          "locator": "Main note, paragraphs 2–4"
+        }
+      ],
+      "locator": "practice-bounded-writing: Main note, paragraphs 2–4",
+      "evidence": "Willison uses models for proofreading and documentation, then edits documentation to remove invented statements of rationale. He reserves first-person opinions for his own writing.",
+      "observation": "An explicit personal boundary illustrates authorship discipline; it does not establish that bounded editing outperforms unrestricted drafting.",
+      "confidence": "medium"
+    }
+  ],
+  "method_candidates": [
+    {
+      "method_id": "practice-claim-class-review",
+      "status": "candidate_only_not_adopted",
+      "name": "Review analysis, literature and synthesis claims separately",
+      "source_ids": [
+        "practice-kosmos"
+      ],
+      "inputs": "A frozen report, dataset and public source access; independent reviewers do not see generator code initially.",
+      "transformation": "Classify claims by evidence type, independently recompute or retrieve support, then compare against the cited artifact.",
+      "outputs": "Per-class support rates, discrepant claims and reproducible verification artifacts.",
+      "constraints": "Small samples do not establish general reliability; ambiguous scientific interpretation needs domain expertise.",
+      "validation_proposal": "On one already public report, sample 12 claims across three types; two blinded reviewers record support and agreement before opening generator artifacts. No experiment authorized here.",
+      "path": "docs/related-work/methods/practice-claim-class-review.json"
+    },
+    {
+      "method_id": "practice-bounded-handoff",
+      "status": "candidate_only_not_adopted",
+      "name": "Persist a compact task and evidence handoff",
+      "source_ids": [
+        "practice-anthropic-research"
+      ],
+      "inputs": "Question, frozen objective, boundaries, source locators and unresolved issues.",
+      "transformation": "Assign explicit output formats; condense findings while retaining citation anchors and uncertainty; inspect final claims against sources.",
+      "outputs": "Reviewable handoff and source-to-claim mapping.",
+      "constraints": "Summaries can drop qualifications; separate agents are not automatically statistically independent.",
+      "validation_proposal": "For one public literature question, compare direct-source review with review from the handoff; measure missing caveats and wrong attributions at equal reviewer time.",
+      "path": "docs/related-work/methods/practice-bounded-handoff.json"
+    },
+    {
+      "method_id": "practice-leakage-audit",
+      "status": "candidate_only_not_adopted",
+      "name": "Audit evidence origin before accepting benchmark success",
+      "source_ids": [
+        "practice-anthropic-contamination"
+      ],
+      "inputs": "Evaluation transcript, retrieved URLs and benchmark identity.",
+      "transformation": "Mark benchmark-answer materials and cached query traces; distinguish original evidence from leaked keys; score contaminated outcomes separately.",
+      "outputs": "Clean-result subset, contamination log and qualified score.",
+      "constraints": "Open-web leakage changes over time; URL blocklists alone were insufficient in the cited report.",
+      "validation_proposal": "Audit ten archived public trajectories before any rerun; two reviewers identify answer origins independently. Use a held-out question only if later separately authorized.",
+      "path": "docs/related-work/methods/practice-leakage-audit.json"
+    },
+    {
+      "method_id": "practice-writing-ownership",
+      "status": "candidate_only_not_adopted",
+      "name": "Review generated rationale as a scientific claim",
+      "source_ids": [
+        "practice-bounded-writing",
+        "practice-prism"
+      ],
+      "inputs": "Accepted text and a narrowly specified proposed edit.",
+      "transformation": "Track added reasons, interpretation and first-person assertions; require author acceptance and evidence for substantive changes.",
+      "outputs": "Small diff with rationale additions explicitly marked.",
+      "constraints": "Practitioner precedent only; document-wide context does not guarantee faithful meaning.",
+      "validation_proposal": "Use a public paragraph and two editing instructions; blinded subject review counts changed scientific commitments, missed caveats and review time. Do not alter the manuscript during this research.",
+      "path": "docs/related-work/methods/practice-writing-ownership.json"
+    }
+  ],
+  "gaps": [
+    "The October 2026 biological project is a current and relevant initiative, but its linked bioRxiv paper returned 403: https://www.biorxiv.org/content/10.64898/2026.10.15.759436v1. The public report supports only the qualified project claims recorded above.",
+    "No included source supplies a representative frontier-model-versus-human comparison for physical-science research. Estimated months saved and blinded report preferences are different outcomes.",
+    "The current Prism announcement contains later page furniture and an undated shutdown banner. Publication date alone does not date every current page element.",
+    "Edison’s May 2026 post links a Nature lab-in-the-loop campaign; that scientific campaign was not inspected here and is not evidence for this packet.",
+    "Context engineering has a directly inspected September 29, 2025 Anthropic report, but it was omitted from the eight-source packet to prioritize the October 2026 project; no extra empirical context-window claims are imported.",
+    "No primary talk added: substantive original written reports gave checkable locators. Practitioner writing policy remains a norm example, not empirical failure evidence."
+  ],
+  "contradictions": [
+    {
+      "issue": "Traceability versus correctness",
+      "resolution": "Kosmos can attach source/code provenance while synthesis claims remain less reliable; provenance and independent verification address different questions."
+    },
+    {
+      "issue": "Autonomous branding versus scientific validation",
+      "resolution": "Product labels and generated reports coexist with expert agenda-setting, claim review and follow-up experiments. Describe the demonstrated workflow rather than adjudicating a universal autonomy label."
+    },
+    {
+      "issue": "Multi-agent gains versus independent evidence",
+      "resolution": "Breadth can improve report preference or retrieval coverage while also increasing leakage exposure. Separate search capacity, compute budget and evidence independence."
+    },
+    {
+      "issue": "Removing harnesses versus engineering a platform",
+      "resolution": "Edison’s language concerns replacing bespoke tool interfaces with code; its own architecture still uses sandboxes, proxies and persistent storage."
+    }
+  ],
+  "positioning": "Use one or two modest main-text references for expert judgment and claim-level verification; place evolving products, autonomous systems and numerical qualifications in the fuller related-work appendix. Do not claim priority for these practices.",
+  "word_count": 2215,
+  "confidence_detail": {
+    "overall": "moderate",
+    "source_identity": "high: original pages opened and dates inspected",
+    "semantic_support": "high for the narrowly paraphrased passages",
+    "generalizability": "low to moderate; selected cases, vendor reports and fresh unreviewed projects",
+    "reproduction": "none performed"
+  },
+  "word_count_convention": "Whitespace-separated tokens in recursive string values; excludes word_count and this convention; excludes JSON keys."
+}

@@ -1,12 +1,12 @@
 {
   "status": "working draft; not submitted",
-  "baseline_commit": "94eb64c",
+  "baseline_commit": "27968a8",
   "source": "paper/main.tex",
-  "source_sha256": "4c8ddbd4bcf21852b54ec03de2c06fe8cde1bf1c05562724a05a6ce3f8cee99e",
+  "source_sha256": "3e9c88a5f3f0f32d54c3ed80c4ce6d8cd12c49d9c0dc7d00a2aef47873cb478a",
   "pdf": "output/pdf/transparent-agentic-science-draft.pdf",
-  "pdf_sha256": "6821d9b5825f1cbfee569c77ff631f6546be6d7f72303e44dff133665257bca1",
+  "pdf_sha256": "ea2078c981cf5e3ee9111c0fdaed21367ff87f6e6e11eeb752e63cf8a3d1fd47",
   "build_command": "cd paper && latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=../output/pdf main.tex",
   "compiler": "pdfTeX 3.141592653-2.6-1.40.29, TeX Live 2026, REVTeX 4.2",
-  "checks": "98 offline tests pass; claim-ledger structure valid; built-in compile success; all 9 rendered pages inspected; bounded independent appendix review accepted",
-  "revision_scope": "Added only aiXiv contrast appendix and three references; existing title, abstract and text preserved"
+  "checks": "98 offline tests pass; 17/17 DOI/arXiv identity checks verified; nine added-passage claim records structurally valid; research artifacts structurally valid; built-in compilation success; 10 rendered pages inspected; bounded adversarial review with dispositions recorded",
+  "revision_scope": "Four short context additions, related-work appendix and 20 references; every original manuscript line, title and abstract preserved; no new scientific runs"
 }

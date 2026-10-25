@@ -1,0 +1,35 @@
+{
+  "schema": "openclaw.deep-research.method.v1",
+  "method_id": "verification-fresh-reproduction",
+  "name": "Separate artifact creation from clean reproduction",
+  "observed_in": [
+    "paperbench2025"
+  ],
+  "source_locator": "https://arxiv.org/html/2504.01848v1#S2.SS2",
+  "evidence": "PaperBench copies a submission into a fresh VM, executes its entrypoint, and uses resulting logs/files in grading.",
+  "operational_primitive": {
+    "inputs": [
+      "frozen repository",
+      "declared environment and entrypoint"
+    ],
+    "transformation": "Execute in a fresh environment; retain newly generated files and logs separately from task-time claims.",
+    "outputs": [
+      "execution log",
+      "regenerated evidence",
+      "explicit failure record"
+    ]
+  },
+  "constraints": [
+    "A matching output can still reflect a wrong model or code; environment and compute costs matter."
+  ],
+  "reuse_hypothesis": "A separate reproduction packet could make a physics reviewer’s inspection cheaper; effectiveness is untested here.",
+  "implementation_burden": "medium",
+  "prevalence_signal": "recurring",
+  "novelty_scope": "known-to-team",
+  "validation_status": "test-proposed",
+  "next_test": "On one existing small result, ask a reviewer to run the pinned entrypoint in a clean environment and record missing assumptions; no new scientific campaign.",
+  "confidence": "medium",
+  "confidence_detail": "high observation; moderate transfer",
+  "word_count_convention": "Whitespace-separated tokens in recursive string values; excludes word_count and this convention; excludes JSON keys.",
+  "word_count": 120
+}

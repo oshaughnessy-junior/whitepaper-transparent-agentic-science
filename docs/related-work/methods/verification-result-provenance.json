@@ -1,0 +1,36 @@
+{
+  "schema": "openclaw.deep-research.method.v1",
+  "method_id": "verification-result-provenance",
+  "name": "Attach an executable provenance path to each reported result",
+  "observed_in": [
+    "sandve2013",
+    "nasem2019"
+  ],
+  "source_locator": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285 (Rules 1–4)",
+  "evidence": "Sandve recommends recording full workflows and exact inputs, versions and parameters, preferably as executable specifications.",
+  "operational_primitive": {
+    "inputs": [
+      "result identifier",
+      "inputs",
+      "code/dependency versions",
+      "parameters"
+    ],
+    "transformation": "Map the result to a versioned executable workflow and preserve its execution context.",
+    "outputs": [
+      "inspectable result-to-workflow record"
+    ]
+  },
+  "constraints": [
+    "Logs may omit human choices; executable provenance does not validate scientific assumptions."
+  ],
+  "reuse_hypothesis": "Map selected manuscript results to compact evidence records rather than asking reviewers to read full agent transcripts.",
+  "implementation_burden": "low",
+  "prevalence_signal": "common",
+  "novelty_scope": "known-to-team",
+  "validation_status": "test-proposed",
+  "next_test": "Have one colleague reconstruct one existing figure from its provenance record; log ambiguities and required human explanations.",
+  "confidence": "medium",
+  "confidence_detail": "high observation; moderate transfer",
+  "word_count_convention": "Whitespace-separated tokens in recursive string values; excludes word_count and this convention; excludes JSON keys.",
+  "word_count": 108
+}

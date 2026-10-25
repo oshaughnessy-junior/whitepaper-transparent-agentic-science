@@ -1,0 +1,54 @@
+{
+  "schema": "openclaw.deep-research.method.v1",
+  "artifact_id": "practice-writing-ownership",
+  "task_id": "related-work-practice",
+  "method_id": "practice-writing-ownership",
+  "status": "candidate_only_not_adopted",
+  "name": "Review generated rationale as a scientific claim",
+  "source_ids": [
+    "practice-bounded-writing",
+    "practice-prism"
+  ],
+  "inputs": "Accepted text and a narrowly specified proposed edit.",
+  "transformation": "Track added reasons, interpretation and first-person assertions; require author acceptance and evidence for substantive changes.",
+  "outputs": "Small diff with rationale additions explicitly marked.",
+  "constraints": "Practitioner precedent only; document-wide context does not guarantee faithful meaning.",
+  "validation_proposal": "Use a public paragraph and two editing instructions; blinded subject review counts changed scientific commitments, missed caveats and review time. Do not alter the manuscript during this research.",
+  "original_schema": "openclaw.deep-research.method-candidate.v1",
+  "observed_in": [
+    "practice-bounded-writing",
+    "practice-prism"
+  ],
+  "source_locator": [
+    {
+      "source_id": "practice-bounded-writing",
+      "title": "My current policy on AI writing for my blog",
+      "url": "https://simonwillison.net/2026/Mar/1/ai-writing/",
+      "locator": "Main note, paragraphs 2–4"
+    },
+    {
+      "source_id": "practice-prism",
+      "title": "Introducing Prism",
+      "url": "https://openai.com/index/introducing-prism/",
+      "locator": "What Prism is; Built for collaboration at scale"
+    }
+  ],
+  "evidence": [
+    "The launch describes document-context drafting, revision, citations, equations, LaTeX preparation and collaboration.",
+    "Willison uses models for proofreading and documentation, then edits documentation to remove invented statements of rationale. He reserves first-person opinions for his own writing."
+  ],
+  "operational_primitive": {
+    "inputs": "Accepted text and a narrowly specified proposed edit.",
+    "transformation": "Track added reasons, interpretation and first-person assertions; require author acceptance and evidence for substantive changes.",
+    "outputs": "Small diff with rationale additions explicitly marked."
+  },
+  "reuse_hypothesis": "Review generated rationale as a scientific claim. Track added reasons, interpretation and first-person assertions; require author acceptance and evidence for substantive changes.",
+  "implementation_burden": "unknown",
+  "prevalence_signal": "unknown",
+  "novelty_scope": "field-novelty-unverified",
+  "validation_status": "test-proposed",
+  "next_test": "Use a public paragraph and two editing instructions; blinded subject review counts changed scientific commitments, missed caveats and review time. Do not alter the manuscript during this research.",
+  "confidence": "medium",
+  "word_count_convention": "Whitespace-separated tokens in recursive string values; excludes word_count and this convention; excludes JSON keys.",
+  "word_count": 233
+}

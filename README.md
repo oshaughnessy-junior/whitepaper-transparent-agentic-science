@@ -41,3 +41,5 @@ The nine portable packages in `skills/` cover **result provenance**, **simulatio
 The note is a working draft for eventual human revision and arXiv preparation. Authorship, evidence completion, reference verification, complete scientific review, and human submission approval remain open. A scoped [adversarial review](docs/reviews/adversarial-review-01.md) covers this guide and its synthetic checker; it does not certify the cited scientific campaigns. No arXiv submission has been made. See [the release checklist](docs/release-checklist.md).
 
 New code is MIT licensed; newly written prose and skills are CC BY 4.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE.md) for scope and attribution.
+
+The [related-work evidence map](docs/related-work/README.md) records checked primary sources, Ting’s astronomy resources, autonomous-science comparisons, and the scope of the paper’s related-work appendix.

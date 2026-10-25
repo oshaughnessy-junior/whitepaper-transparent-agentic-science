@@ -1,0 +1,177 @@
+{
+  "schema": "openclaw.claim-ledger.v1",
+  "artifact": "paper/main.tex: related-work additions against 27968a8",
+  "identity_method": "Public original source pages and version metadata inspected by root/research workers; automated identity results separately recorded, never substituted for source reading.",
+  "claims": [
+    {
+      "id": "related-01",
+      "claim": "Related work spans reproducible computation, research assistants, and autonomous discovery. Systems such as AI Scientist pursue an end-to-end research cycle, particularly in machine learning~\\cite{AIScientist,AIResearch2026}, while astronomy applications and perspectives emphasize domain tools and scientific judgment~\\cite{Mephisto,TingUnderstanding}. Our contribution is a guide to verifiable human--agent work in physical science, with adversarial review, provenance, and human-guided interpretation and writing. Appendix~\\ref{app:related} places these practices alongside current systems, evaluations, and proposals.",
+      "claim_type": "attribution",
+      "consequence_level": "medium",
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex; source-reading root and research workers",
+      "human_required": false,
+      "sources": [
+        "https://arxiv.org/html/2408.06292v1",
+        "https://www.nature.com/articles/s41586-026-10265-5",
+        "https://arxiv.org/html/2510.08354v1",
+        "https://arxiv.org/html/2601.10038v2"
+      ],
+      "source_locator": "AIScientist: Abstract; sections 3, 6, 8; AIResearch2026: Abstract; Methods, Template-based AI Scientist and Template-free AI Scientist; ethics discussion; author contributions; Mephisto: Sections I–III; CIGALE tool interface and diagnostic feedback; TingUnderstanding: Understanding beyond equations; Narratives of science; Problem-solving versus problem-finding",
+      "evidence": "AI Scientist v1 executed ML experiments and generated manuscripts from human-provided topic templates in diffusion, language modelling and learning dynamics; its conference-threshold assessment used an automated reviewer. V2 removed topic-code templates, added experiment management/tree search and vision feedback, and submitted three unedited generated manuscripts to an ICLR workshop; one achieved mean review score 6.33. The 2026 journal article describes the result as passing first-round workshop review, with a 70% workshop acceptance rate. | AlphaEvolve evolves code against user-supplied automatic evaluators. Demonstrated outputs include mathematical constructions and improvements to Google infrastructure algorithms. It reports a 48-scalar-multiplication method for 4×4 complex matrices, with exact constructions exposed in an associated notebook. | AstraZeneca describes a deployed biomedical assistant, reporting 15,000 internal users within a year. Its deep-research mode executes a bounded DAG of retrieval questions; outputs link evidence for human examination. The technical note explicitly distinguishes this from open-ended autonomous research. | AI Scientist v1 executed ML experiments and generated manuscripts from human-provided topic templates in diffusion, language modelling and learning dynamics; its conference-threshold assessment used an automated reviewer. V2 removed topic-code templates, added experiment management/tree search and vision feedback, and submitted three unedited generated manuscripts to an ICLR workshop; one achieved mean review score 6.33. The 2026 journal article describes the result as passing first-round workshop review, with a 70% workshop acceptance rate. | Agent selects physical components for galaxy SED modeling using a scientific code, structured numerical diagnostics and accumulated experience. | Perspective distinguishes prediction and problem-solving from contextual scientific explanation and choosing worthwhile problems.",
+      "supported_scope": "Attributed description of cited work and bounded comparison; no independent rerun or current-model performance estimate."
+    },
+    {
+      "id": "related-02",
+      "claim": "These requirements extend established computational-research practice: preserving the path from results to inputs and software~\\cite{Sandve2013}, and enabling an independent person to execute the computation~\\cite{CODECHECK}. Independent execution is a valuable check, but does not by itself establish that the method answers the scientific question.",
+      "claim_type": "attribution",
+      "consequence_level": "medium",
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex; source-reading root and research workers",
+      "human_required": false,
+      "sources": [
+        "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285",
+        "https://doi.org/10.12688/f1000research.51738.2"
+      ],
+      "source_locator": "Sandve2013: Rules 1–4; CODECHECK: pp. 3–5: workflow Steps 3–6; p. 7: core principles",
+      "evidence": "Rules recommend executable workflows, exact program/input/parameter records, archived dependencies and version-controlled scripts. | CODECHECK reports 25 reproductions and separates independent execution from traditional peer review. Step 3 explicitly limits its check to workflow mechanics, excluding whether the right algorithm solves the research problem.",
+      "supported_scope": "Attributed description of cited work and bounded comparison; no independent rerun or current-model performance estimate."
+    },
+    {
+      "id": "related-03",
+      "claim": "Audits of earlier ChatGPT versions documented both fabricated references and errors in real entries~\\cite{Walters2023}. Those results motivate verification; their historical error rates are not estimates for current retrieval-equipped agents.",
+      "claim_type": "attribution",
+      "consequence_level": "medium",
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex; source-reading root and research workers",
+      "human_required": false,
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10484980/"
+      ],
+      "source_locator": "Walters2023: Methods: Paper topics and prompts; Data compilation and analysis; Tables 3–4",
+      "evidence": "An April 2023 audit of 636 references across 84 generated reviews found fabricated works and bibliographic errors in real works; the investigators searched databases and publisher records.",
+      "supported_scope": "Attributed description of cited work and bounded comparison; no independent rerun or current-model performance estimate."
+    },
+    {
+      "id": "related-04",
+      "claim": "The distinction between producing an answer and constructing a scientific explanation also appears in Ting, Curtis-Trudel, and Yao's perspective on AI in astronomy~\\cite{TingUnderstanding}. Their emphasis on context and narrative helps explain why correct local calculations do not automatically supply a paper's central argument.",
+      "claim_type": "attribution",
+      "consequence_level": "medium",
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex; source-reading root and research workers",
+      "human_required": false,
+      "sources": [
+        "https://arxiv.org/html/2601.10038v2"
+      ],
+      "source_locator": "TingUnderstanding: Understanding beyond equations; Narratives of science; Problem-solving versus problem-finding",
+      "evidence": "Perspective distinguishes prediction and problem-solving from contextual scientific explanation and choosing worthwhile problems.",
+      "supported_scope": "Attributed description of cited work and bounded comparison; no independent rerun or current-model performance estimate."
+    },
+    {
+      "id": "related-05",
+      "claim": "\\textbf{Reproducibility and agent provenance.} CODECHECK organizes independent execution during review and explicitly separates checking execution from judging the scientific method~\\cite{CODECHECK}. PROV-AGENT extends workflow provenance to connect agent prompts, responses, and decisions with downstream computations~\\cite{PROVAGENT}. Such records make a result inspectable; they do not make an incorrect calculation correct. Hans and Bilionis's \\emph{Paper-replication} implements a related coding-agent skill: selected claims become targets linked to executed evidence, comparisons, and report coverage, with a completion gate~\\cite{PaperReplication}. Passing that gate concerns the recorded target set; their repeated runs still differ in numerical fidelity and acceptance rules. These approaches complement our emphasis on generated numerical macros, figure recipes, and adversarial review.",
+      "claim_type": "attribution",
+      "consequence_level": "medium",
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex; source-reading root and research workers",
+      "human_required": false,
+      "sources": [
+        "https://doi.org/10.12688/f1000research.51738.2",
+        "https://arxiv.org/html/2508.02866v3",
+        "https://arxiv.org/html/2607.02134v2"
+      ],
+      "source_locator": "CODECHECK: pp. 3–5: workflow Steps 3–6; p. 7: core principles; PROVAGENT: Provenance model and implementation sections; PaperReplication: Introduction; workflow Section 2.3; discussion of completed runs",
+      "evidence": "CODECHECK reports 25 reproductions and separates independent execution from traditional peer review. Step 3 explicitly limits its check to workflow mechanics, excluding whether the right algorithm solves the research problem. | Extends W3C PROV to connect prompts, responses and agent decisions with downstream workflow data and computation. | Coding-agent skill links selected targets, evidence, comparisons, report coverage and a workspace completion gate.",
+      "supported_scope": "Attributed description of cited work and bounded comparison; no independent rerun or current-model performance estimate."
+    },
+    {
+      "id": "related-06",
+      "claim": "\\textbf{Autonomous research in computer science.} AI Scientist automates idea generation, experiments, and manuscript preparation within a supplied research environment; subsequent work develops the end-to-end AI-research program~\\cite{AIScientist,AIResearch2026}. Agent Laboratory instead explicitly explores research assistance and human feedback~\\cite{AgentLab}. AlphaEvolve evolves executable programs using human-supplied automatic evaluators~\\cite{AlphaEvolve}. These are substantive demonstrations, with different scopes of autonomy. A machine-evaluable objective provides a particularly effective feedback loop, but the choice and scientific adequacy of that objective remain consequential. Our guide addresses how scientists make the resulting work verifiable and interpretable; it does not claim to demonstrate autonomous discovery.",
+      "claim_type": "attribution",
+      "consequence_level": "medium",
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex; source-reading root and research workers",
+      "human_required": false,
+      "sources": [
+        "https://arxiv.org/html/2408.06292v1",
+        "https://www.nature.com/articles/s41586-026-10265-5",
+        "https://arxiv.org/html/2501.04227v1",
+        "https://arxiv.org/html/2506.13131v1"
+      ],
+      "source_locator": "AIScientist: Abstract; sections 3, 6, 8; AIResearch2026: Abstract; Methods, Template-based AI Scientist and Template-free AI Scientist; ethics discussion; author contributions; AgentLab: Sections 3.3.1, 4.2.2, 4.4 and 5; AlphaEvolve: Introduction; sections 2.1, 2.4 and 3; associated mathematical-results notebook",
+      "evidence": "AI Scientist v1 executed ML experiments and generated manuscripts from human-provided topic templates in diffusion, language modelling and learning dynamics; its conference-threshold assessment used an automated reviewer. V2 removed topic-code templates, added experiment management/tree search and vision feedback, and submitted three unedited generated manuscripts to an ICLR workshop; one achieved mean review score 6.33. The 2026 journal article describes the result as passing first-round workshop review, with a 70% workshop acceptance rate. | AlphaEvolve evolves code against user-supplied automatic evaluators. Demonstrated outputs include mathematical constructions and improvements to Google infrastructure algorithms. It reports a 48-scalar-multiplication method for 4×4 complex matrices, with exact constructions exposed in an associated notebook. | AstraZeneca describes a deployed biomedical assistant, reporting 15,000 internal users within a year. Its deep-research mode executes a bounded DAG of retrieval questions; outputs link evidence for human examination. The technical note explicitly distinguishes this from open-ended autonomous research. | AI Scientist v1 executed ML experiments and generated manuscripts from human-provided topic templates in diffusion, language modelling and learning dynamics; its conference-threshold assessment used an automated reviewer. V2 removed topic-code templates, added experiment management/tree search and vision feedback, and submitted three unedited generated manuscripts to an ICLR workshop; one achieved mean review score 6.33. The 2026 journal article describes the result as passing first-round workshop review, with a 70% workshop acceptance rate. | Agent Laboratory takes a human research idea through literature review, experimentation and report/code production, with autonomous and co-pilot modes. External evaluators scored co-pilot papers 0.58 points higher overall than autonomous papers; gains were larger in quality and soundness than contribution or significance. | AlphaEvolve evolves code against user-supplied automatic evaluators. Demonstrated outputs include mathematical constructions and improvements to Google infrastructure algorithms. It reports a 48-scalar-multiplication method for 4×4 complex matrices, with exact constructions exposed in an associated notebook.",
+      "supported_scope": "Attributed description of cited work and bounded comparison; no independent rerun or current-model performance estimate."
+    },
+    {
+      "id": "related-07",
+      "claim": "\\textbf{Domain science and human validation.} Agentic systems also support domain science with differing human roles. Mephisto applies an agent to physical-component selection in galaxy spectral-energy-distribution modeling, using a domain code, structured diagnostics, and accumulated experience~\\cite{Mephisto}. Co-Scientist generates and debates biological hypotheses, with experts selecting candidates and conducting experimental validation~\\cite{CoScientist}. Kosmos combines literature search and data analysis, with traceable reports and sampled expert checks that distinguish analysis, literature, and synthesis claims~\\cite{Kosmos}. Those distinctions matter: a retrieved citation, a reproduced calculation, and a plausible interpretation require different checks. Ting's hands-on astronomy course provides a complementary teaching route through tool execution, retrieval, agent memory, and safety~\\cite{TingCourse}; it is instructional material rather than a performance study.",
+      "claim_type": "attribution",
+      "consequence_level": "medium",
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex; source-reading root and research workers",
+      "human_required": false,
+      "sources": [
+        "https://arxiv.org/html/2510.08354v1",
+        "https://arxiv.org/abs/2502.18864",
+        "https://arxiv.org/html/2511.02824v2",
+        "https://tingyuansen.github.io/Agents_for_Astronomy/",
+        "https://www.nature.com/articles/s41586-026-10644-y"
+      ],
+      "source_locator": "Mephisto: Sections I–III; CIGALE tool interface and diagnostic feedback; CoScientist: Nature article, Key contributions; System analysis and evaluation; expert workflow; Data/Code availability; Kosmos: Section 2.1 and Figure 1; sections 3.1–3.2; Methods 4.1.1; TingCourse: Course homepage, chapter outline and notebook overview",
+      "evidence": "Agent selects physical components for galaxy SED modeling using a scientific code, structured numerical diagnostics and accumulated experience. | Co-Scientist generates, debates, ranks and evolves hypotheses and experimental proposals under scientist objectives. The 2026 article reports wet-laboratory validation in drug repurposing, liver fibrosis targets and antimicrobial resistance. It evaluates generated hypotheses on 15 expert-curated goals using its own Elo metric, alongside limited expert assessment. | Kosmos iterates literature search and data analysis from a scientist-supplied objective and dataset, linking report claims to notebooks or literature. Experts checked 102 statements from three representative reports without receiving original code/citations: 79.4% overall supported, including 85.5% data-analysis, 82.1% literature and 57.9% synthesis statements. | Hands-on astronomy course covers execution, retrieval, agent loops, memory, safety, MCP and skills. | Co-Scientist expert workflow: researchers set objectives and select hypotheses; laboratory experiments are performed by human collaborators (systems source S7 relevant passages).",
+      "supported_scope": "Attributed description of cited work and bounded comparison; no independent rerun or current-model performance estimate."
+    },
+    {
+      "id": "related-08",
+      "claim": "\\textbf{What an evaluation measures.} PaperBench evaluates replication of machine-learning research using graded implementation and execution evidence~\\cite{PaperBench}. ReplicationBench uses expert-designed astrophysics tasks to assess both methodological faithfulness and correctness~\\cite{ReplicationBench}. These test a broader task than finding a defect in an existing workflow. Their results depend on the dated model, harness, resources, and scoring rule; they are not measurements of the current frontier-model review capability described in this guide. Conversely, successful error diagnosis does not establish that an agent can independently choose and complete an important research program. ARA addresses another task: assessing reconstructability from the manuscript, without executing its code~\\cite{ARA}. Document assessment and demonstrated reruns must remain distinguishable.",
+      "claim_type": "attribution",
+      "consequence_level": "medium",
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex; source-reading root and research workers",
+      "human_required": false,
+      "sources": [
+        "https://arxiv.org/html/2504.01848v1",
+        "https://arxiv.org/html/2510.24591v2",
+        "https://arxiv.org/html/2605.02651v2"
+      ],
+      "source_locator": "PaperBench: Sections 2.1–2.6, 5.4, 7; ReplicationBench: Benchmark design; Sections 5.1–5.3; limitations; Appendix C masking; ARA: Introduction and Section 3 methodology",
+      "evidence": "The benchmark distinguishes code development, execution and result match; fresh-VM reproduction checks outputs separately. Code-only scores weakly correlate with the full evaluation (reported r=0.48 for o1). | Expert-designed astrophysics replication tasks assess faithfulness and correctness; observed failures differ from merely finishing a task. | Scores document reconstructability through an information graph from the manuscript.",
+      "supported_scope": "Attributed description of cited work and bounded comparison; no independent rerun or current-model performance estimate."
+    },
+    {
+      "id": "related-09",
+      "claim": "\\textbf{Fast-moving practice and proposals.} First-party engineering reports can document useful procedures before journal publication. Anthropic describes bounded delegation, evidence handling, and evaluation in a multi-agent web-research system~\\cite{AnthropicResearch}; these observations concern its own system. OpenAI, PerturbAI, and Scripps report a recent large-scale analysis of biological data yielding candidate leads~\\cite{OpenAIBiology}. Such leads should be distinguished from experimentally validated mechanisms. At the architectural level, Traxia proposes verifiable agent-native publishing, but explicitly presents a specification and partial prototype without empirical validation~\\cite{Traxia}. These sources identify active directions rather than establish that a proposed safeguard works. The recurring practical question for this guide is what evidence another scientist can inspect and challenge.",
+      "claim_type": "attribution",
+      "consequence_level": "medium",
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex; source-reading root and research workers",
+      "human_required": false,
+      "sources": [
+        "https://www.anthropic.com/research/multi-agent-research-system",
+        "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
+        "https://arxiv.org/html/2606.08256v1"
+      ],
+      "source_locator": "AnthropicResearch: Benefits; Architecture overview; Effective evaluation; Production reliability; OpenAIBiology: Opening; Divide the work, deepen the reasoning; Finding the next experiment worth doing; Traxia: Abstract and architecture/specification scope",
+      "evidence": "The provider reports 90.2% improvement over single-agent Opus 4 on an internal research evaluation and about 15 times chat token consumption for multi-agent systems. Human testers caught source-selection bias toward SEO pages. | The report says thousands of agents interpreted existing mouse-brain perturbation data in 32 minutes. At fixed model and resources, distributed reports were preferred in 75% of blinded expert comparisons; the largest workload cited over 700 references versus 11 for one agent. | Proposes verifiable agent-native publishing architecture and formal specification with partial prototype.",
+      "supported_scope": "Attributed description of cited work and bounded comparison; no independent rerun or current-model performance estimate."
+    }
+  ]
+}

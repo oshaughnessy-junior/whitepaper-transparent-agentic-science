@@ -1,0 +1,40 @@
+{
+  "id": "system-staged-executable-checks",
+  "source_ids": [
+    "S10"
+  ],
+  "observed": "Inputs: human evaluation code and generated candidate; transformation: escalating test cascade rejects faulty or unpromising candidates early; output: scored executable programs.",
+  "hypothesized_transfer": "Use inexpensive invariants before expensive physics validation, preserving a separately justified scientific acceptance rule.",
+  "constraints": "Automatic scores only cover encoded properties; test leakage and objective mismatch need separate controls.",
+  "cheapest_validation": "On one existing public example, compare a fast invariant's outcome with its established full validation record. Proposed only.",
+  "path": "docs/related-work/methods/system-staged-executable-checks.json",
+  "schema": "openclaw.deep-research.method.v1",
+  "method_id": "system-staged-executable-checks",
+  "name": "Staged executable checks",
+  "observed_in": [
+    "S10"
+  ],
+  "source_locator": [
+    {
+      "source_id": "S10",
+      "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+      "url": "https://arxiv.org/html/2506.13131v1",
+      "locator": "Introduction; sections 2.1, 2.4 and 3; associated mathematical-results notebook"
+    }
+  ],
+  "evidence": "Inputs: human evaluation code and generated candidate; transformation: escalating test cascade rejects faulty or unpromising candidates early; output: scored executable programs.",
+  "operational_primitive": {
+    "inputs": "human evaluation code and generated candidate",
+    "transformation": "escalating test cascade rejects faulty or unpromising candidates early",
+    "outputs": "scored executable programs."
+  },
+  "reuse_hypothesis": "Use inexpensive invariants before expensive physics validation, preserving a separately justified scientific acceptance rule.",
+  "implementation_burden": "unknown",
+  "prevalence_signal": "unknown",
+  "novelty_scope": "field-novelty-unverified",
+  "validation_status": "test-proposed",
+  "next_test": "On one existing public example, compare a fast invariant's outcome with its established full validation record. Proposed only.",
+  "confidence": "medium",
+  "word_count_convention": "Whitespace-separated tokens in recursive string values; excludes word_count and this convention; excludes JSON keys.",
+  "word_count": 172
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "openclaw.deep-research.method.v1",
+  "method_id": "verification-scoped-certificate",
+  "name": "Publish a scoped execution record alongside scientific review",
+  "observed_in": [
+    "codecheck2021"
+  ],
+  "source_locator": "https://f1000researchdata.s3.amazonaws.com/manuscripts/57857/20aa0bb4-8caf-4f7f-bef4-10e4e7f38489_51738_-_stephen_eglen_v2.pdf#page=4",
+  "evidence": "Steps 4–6 archive how the code was run, generated outputs and auxiliary files; the paper distinguishes mechanical verification from scientific validation.",
+  "operational_primitive": {
+    "inputs": [
+      "author instructions",
+      "code/data",
+      "independent execution outputs"
+    ],
+    "transformation": "Record exact check scope, environment, outputs and unresolved barriers; archive and link the record.",
+    "outputs": [
+      "dated execution record",
+      "artifact links",
+      "explicit boundary of assurance"
+    ]
+  },
+  "constraints": [
+    "An execution record cannot certify scientific truth; checking needs labor and may involve author clarification."
+  ],
+  "reuse_hypothesis": "A compact record could let scientific reviewers assess what an agent result actually demonstrated without interpreting a badge.",
+  "implementation_burden": "low",
+  "prevalence_signal": "recurring",
+  "novelty_scope": "known-to-team",
+  "validation_status": "test-proposed",
+  "next_test": "Draft one scoped record for an existing reproduction and ask a domain reviewer which conclusions it justifies; no new experiment.",
+  "confidence": "medium",
+  "confidence_detail": "high observation; moderate transfer",
+  "word_count_convention": "Whitespace-separated tokens in recursive string values; excludes word_count and this convention; excludes JSON keys.",
+  "word_count": 124
+}

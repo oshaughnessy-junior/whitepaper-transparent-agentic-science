@@ -1,0 +1,23 @@
+{
+  "schema": "openclaw.deep-research.method.v1",
+  "method_id": "astronomy-masked-replication",
+  "name": "Mask target answers during replication",
+  "observed_in": [
+    "https://arxiv.org/html/2510.24591v2"
+  ],
+  "source_locator": "Benchmark design; Sections 5.1–5.3; limitations; Appendix C masking",
+  "evidence": "Expert-designed astrophysics replication tasks assess faithfulness and correctness; observed failures differ from merely finishing a task.",
+  "operational_primitive": {
+    "inputs": "Paper and public data",
+    "transformation": "Hide target numerical answers while retaining methodological specifications; compare recomputation under a fixed rubric",
+    "outputs": "Faithfulness and correctness record"
+  },
+  "constraints": "Masking can remove necessary methodological context; benchmark leakage must be audited.",
+  "reuse_hypothesis": "Could make a future physics replication review more discriminating; effectiveness not established here.",
+  "implementation_burden": "unknown",
+  "prevalence_signal": "recurring",
+  "novelty_scope": "known-to-team",
+  "validation_status": "test-proposed",
+  "next_test": "Test one public example with and without target values at fixed model/harness; no such experiment performed.",
+  "confidence": "medium"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "openclaw.deep-research.method.v1",
+  "artifact_id": "practice-claim-class-review",
+  "task_id": "related-work-practice",
+  "method_id": "practice-claim-class-review",
+  "status": "candidate_only_not_adopted",
+  "name": "Review analysis, literature and synthesis claims separately",
+  "source_ids": [
+    "practice-kosmos"
+  ],
+  "inputs": "A frozen report, dataset and public source access; independent reviewers do not see generator code initially.",
+  "transformation": "Classify claims by evidence type, independently recompute or retrieve support, then compare against the cited artifact.",
+  "outputs": "Per-class support rates, discrepant claims and reproducible verification artifacts.",
+  "constraints": "Small samples do not establish general reliability; ambiguous scientific interpretation needs domain expertise.",
+  "validation_proposal": "On one already public report, sample 12 claims across three types; two blinded reviewers record support and agreement before opening generator artifacts. No experiment authorized here.",
+  "original_schema": "openclaw.deep-research.method-candidate.v1",
+  "observed_in": [
+    "practice-kosmos"
+  ],
+  "source_locator": [
+    {
+      "source_id": "practice-kosmos",
+      "title": "Kosmos: An AI Scientist for Autonomous Discovery",
+      "url": "https://arxiv.org/html/2511.02824v1",
+      "locator": "Section 2, Figure 1c–g; paragraphs beginning To assess the overall accuracy and To obtain an orthogonal estimate"
+    }
+  ],
+  "evidence": [
+    "Experts evaluated 102 statements without receiving original supporting code or papers. Overall support was 79.4%; analysis statements 85.5%, literature 82.1%, synthesis 57.9%. Collaborators estimated 6.14 months of equivalent work for 20 cycles (n=7); this was not elapsed human labor measured in a controlled race."
+  ],
+  "operational_primitive": {
+    "inputs": "A frozen report, dataset and public source access; independent reviewers do not see generator code initially.",
+    "transformation": "Classify claims by evidence type, independently recompute or retrieve support, then compare against the cited artifact.",
+    "outputs": "Per-class support rates, discrepant claims and reproducible verification artifacts."
+  },
+  "reuse_hypothesis": "Review analysis, literature and synthesis claims separately. Classify claims by evidence type, independently recompute or retrieve support, then compare against the cited artifact.",
+  "implementation_burden": "unknown",
+  "prevalence_signal": "unknown",
+  "novelty_scope": "field-novelty-unverified",
+  "validation_status": "test-proposed",
+  "next_test": "On one already public report, sample 12 claims across three types; two blinded reviewers record support and agreement before opening generator artifacts. No experiment authorized here.",
+  "confidence": "medium",
+  "word_count_convention": "Whitespace-separated tokens in recursive string values; excludes word_count and this convention; excludes JSON keys.",
+  "word_count": 260
+}

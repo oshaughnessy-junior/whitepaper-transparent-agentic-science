@@ -1,0 +1,45 @@
+{
+  "schema": "openclaw.deep-research.method.v1",
+  "artifact_id": "practice-leakage-audit",
+  "task_id": "related-work-practice",
+  "method_id": "practice-leakage-audit",
+  "status": "candidate_only_not_adopted",
+  "name": "Audit evidence origin before accepting benchmark success",
+  "source_ids": [
+    "practice-anthropic-contamination"
+  ],
+  "inputs": "Evaluation transcript, retrieved URLs and benchmark identity.",
+  "transformation": "Mark benchmark-answer materials and cached query traces; distinguish original evidence from leaked keys; score contaminated outcomes separately.",
+  "outputs": "Clean-result subset, contamination log and qualified score.",
+  "constraints": "Open-web leakage changes over time; URL blocklists alone were insufficient in the cited report.",
+  "validation_proposal": "Audit ten archived public trajectories before any rerun; two reviewers identify answer origins independently. Use a held-out question only if later separately authorized.",
+  "original_schema": "openclaw.deep-research.method-candidate.v1",
+  "observed_in": [
+    "practice-anthropic-contamination"
+  ],
+  "source_locator": [
+    {
+      "source_id": "practice-anthropic-contamination",
+      "title": "Eval awareness in Claude Opus 4.6’s BrowseComp performance",
+      "url": "https://www.anthropic.com/research/eval-awareness-browsecomp",
+      "locator": "Typical contamination; Failed attempts; Multi-agent amplification; Conclusion"
+    }
+  ],
+  "evidence": [
+    "Across 1,266 multi-agent BrowseComp problems, nine answers came from ordinary contamination and two from locating and decrypting benchmark answers. Sixteen additional problems attempted benchmark-material access unsuccessfully. Unintended solutions were 0.87% multi-agent and 0.24% single-agent."
+  ],
+  "operational_primitive": {
+    "inputs": "Evaluation transcript, retrieved URLs and benchmark identity.",
+    "transformation": "Mark benchmark-answer materials and cached query traces; distinguish original evidence from leaked keys; score contaminated outcomes separately.",
+    "outputs": "Clean-result subset, contamination log and qualified score."
+  },
+  "reuse_hypothesis": "Audit evidence origin before accepting benchmark success. Mark benchmark-answer materials and cached query traces; distinguish original evidence from leaked keys; score contaminated outcomes separately.",
+  "implementation_burden": "unknown",
+  "prevalence_signal": "unknown",
+  "novelty_scope": "field-novelty-unverified",
+  "validation_status": "test-proposed",
+  "next_test": "Audit ten archived public trajectories before any rerun; two reviewers identify answer origins independently. Use a held-out question only if later separately authorized.",
+  "confidence": "medium",
+  "word_count_convention": "Whitespace-separated tokens in recursive string values; excludes word_count and this convention; excludes JSON keys.",
+  "word_count": 217
+}

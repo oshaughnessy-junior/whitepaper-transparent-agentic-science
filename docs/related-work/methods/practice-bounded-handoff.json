@@ -1,0 +1,45 @@
+{
+  "schema": "openclaw.deep-research.method.v1",
+  "artifact_id": "practice-bounded-handoff",
+  "task_id": "related-work-practice",
+  "method_id": "practice-bounded-handoff",
+  "status": "candidate_only_not_adopted",
+  "name": "Persist a compact task and evidence handoff",
+  "source_ids": [
+    "practice-anthropic-research"
+  ],
+  "inputs": "Question, frozen objective, boundaries, source locators and unresolved issues.",
+  "transformation": "Assign explicit output formats; condense findings while retaining citation anchors and uncertainty; inspect final claims against sources.",
+  "outputs": "Reviewable handoff and source-to-claim mapping.",
+  "constraints": "Summaries can drop qualifications; separate agents are not automatically statistically independent.",
+  "validation_proposal": "For one public literature question, compare direct-source review with review from the handoff; measure missing caveats and wrong attributions at equal reviewer time.",
+  "original_schema": "openclaw.deep-research.method-candidate.v1",
+  "observed_in": [
+    "practice-anthropic-research"
+  ],
+  "source_locator": [
+    {
+      "source_id": "practice-anthropic-research",
+      "title": "How we built our multi-agent research system",
+      "url": "https://www.anthropic.com/research/multi-agent-research-system",
+      "locator": "Benefits; Architecture overview; Effective evaluation; Production reliability"
+    }
+  ],
+  "evidence": [
+    "Separate objectives, formats and boundaries; save plans; add citation localization and trace inspection."
+  ],
+  "operational_primitive": {
+    "inputs": "Question, frozen objective, boundaries, source locators and unresolved issues.",
+    "transformation": "Assign explicit output formats; condense findings while retaining citation anchors and uncertainty; inspect final claims against sources.",
+    "outputs": "Reviewable handoff and source-to-claim mapping."
+  },
+  "reuse_hypothesis": "Persist a compact task and evidence handoff. Assign explicit output formats; condense findings while retaining citation anchors and uncertainty; inspect final claims against sources.",
+  "implementation_burden": "unknown",
+  "prevalence_signal": "unknown",
+  "novelty_scope": "field-novelty-unverified",
+  "validation_status": "test-proposed",
+  "next_test": "For one public literature question, compare direct-source review with review from the handoff; measure missing caveats and wrong attributions at equal reviewer time.",
+  "confidence": "medium",
+  "word_count_convention": "Whitespace-separated tokens in recursive string values; excludes word_count and this convention; excludes JSON keys.",
+  "word_count": 192
+}

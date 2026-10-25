@@ -19,6 +19,8 @@ Journal and preprint policies identify several concerns that bear directly on th
 
 In this paper, we present a living guide to conducting science reliably with agents. The guide translates these concerns into practices for documenting results, validating calculations, consulting the literature, and constructing a scientific argument. It draws on human--agent work on gravitational-wave population inference, illustrated by the main synthetic-universe and hierarchical-modeling papers~\cite{SyntheticUniverses,HierarchicalMethods}, the RIFT pull-request review sequence, and the third-generation RIFT study~\cite{RIFTThreeG}, together with a collection of reusable research skills. Our aim is to use the agents' substantial advantage in systematic bug finding to improve the reliability of scientific work, while retaining human responsibility for its questions, interpretation, and presentation. The guide will change as tools improve and experience exposes new failure modes. The assessment draws on repeated developer and operator experience, including multiple investigations in which agents located and diagnosed errors that previous human scrutiny had missed.
 
+Related work spans reproducible computation, research assistants, and autonomous discovery. Systems such as AI Scientist pursue an end-to-end research cycle, particularly in machine learning~\cite{AIScientist,AIResearch2026}, while astronomy applications and perspectives emphasize domain tools and scientific judgment~\cite{Mephisto,TingUnderstanding}. Our contribution is a guide to verifiable human--agent work in physical science, with adversarial review, provenance, and human-guided interpretation and writing. Appendix~\ref{app:related} places these practices alongside current systems, evaluations, and proposals.
+
 Unless otherwise noted, throughout this guide we use the latest OpenAI model available at the time of the work, at Sol scale, or a comparably capable Claude model at Opus scale. This convention refers to the model's corresponding capability at that time, rather than a fixed historical version. We recommend comparable capability for scientific work. Under these conditions, adversarial agent review already performs at or above typical human review in finding and diagnosing errors in ordinary scientific workflows; we have multiple examples from the development and operation of the analyses discussed here.
 
 A useful division of responsibility emerges from this experience. Agents are particularly strong at following a discrepancy through code, enumerating neglected cases, and checking whether a claimed fix reaches every caller and output. The human scientist contributes context, physical intuition, and decisions about which discrepancies matter for the research question. Either can originate the objection, and either can be wrong; a reproducer or independent calculation resolves the issue. The largest remaining imbalance is in writing: an agent that is excellent at exposing a defect may still misjudge the central argument of the paper.
@@ -27,6 +29,8 @@ This paper is organized as follows. Section~\ref{sec:documentation} discusses nu
 
 \section{Documenting numerical evidence}\label{sec:documentation}
 \textbf{A quantitative statement must refer to an identifiable calculation.} A language model's ability to produce a plausible number is irrelevant to whether that number was measured or computed. The analysis must produce a saved result, with sufficient information to recover its inputs, method, uncertainty, and domain of validity. We organize this documentation around the connection from data to computation to scientific claim. This approach is modeled on the provenance and review practices used in LVK internal review, adapted here to research conducted with agents. The public LVK data-release documentation provides a related example of connecting reported quantities to identifiable data products~\cite{GWTCRelease}.
+
+These requirements extend established computational-research practice: preserving the path from results to inputs and software~\cite{Sandve2013}, and enabling an independent person to execute the computation~\cite{CODECHECK}. Independent execution is a valuable check, but does not by itself establish that the method answers the scientific question.
 
 The essential mechanism is a generated numerical macro. The analysis writes a result record containing the raw value, units, uncertainty definition, input and configuration identities, and producing code. A deterministic tool converts this record into the quantities displayed in the manuscript. The abstract, text, table, and caption then refer to the same named result. A change to that result propagates to every use when the document is rebuilt. The same record can supply table cells and numerical annotations in plots, eliminating separate transcriptions that otherwise become inconsistent during revision.
 
@@ -102,6 +106,8 @@ Review also governs revision. Findings remain recorded with their dispositions, 
 \section{Finding and citing relevant literature}\label{sec:literature}
 Scientific attribution requires both a real source and a correct account of what it establishes. A model can invent a bibliographic entry, merge details from different papers, or attach a genuine citation to a claim that the cited work does not support. It can also supply a superficially credible but incomplete account of a field. The solution begins with the same tools and habits used by careful human researchers: search the literature, retrieve the source, inspect the relevant passage, and preserve its bibliographic identity.
 
+Audits of earlier ChatGPT versions documented both fabricated references and errors in real entries~\cite{Walters2023}. Those results motivate verification; their historical error rates are not estimates for current retrieval-equipped agents.
+
 Agents should use citation and discovery services such as ADS, arXiv, DOI resolution, and journal records. A reference manager can import verified metadata, while simple checks identify duplicate entries, undefined citation keys, missing identifiers, or mismatches in author, title, and year. These checks establish identity. Scientific support requires reading the cited equation, result, or discussion in context, including assumptions and limitations. A generated summary is a starting point for inspection rather than evidence that the source was read.
 
 Relevance and coverage require additional judgment. Searches should follow the scientific ideas, methods, and competing interpretations rather than only the vocabulary suggested by the current draft. Citation chains and domain expertise help recover work that a generated list misses. The ApJ/AAS guidance explicitly recommends conventional literature tools, including ADS, alongside checks of whether suggested references exist and are relevant~\cite{AAS2026}. These are ordinary scholarly responsibilities; using an agent makes them easier to automate in part without making them optional.
@@ -110,6 +116,8 @@ The same standard applies to this guide. Journal requirements are cited to the c
 
 \section{Writing a scientific argument}\label{sec:writing}
 Writing is currently the part of this process that requires the most judgment. Agents can generate large amounts of grammatical prose quickly, yet that prose may give the wrong material the greatest weight. A draft can dwell on implementation minutiae, repeat caveats, miss the context that motivates the work, or describe a sequence of calculations without identifying the scientific contribution. These are failures of argument and priority. Correcting the wording alone leaves the underlying problem intact.
+
+The distinction between producing an answer and constructing a scientific explanation also appears in Ting, Curtis-Trudel, and Yao's perspective on AI in astronomy~\cite{TingUnderstanding}. Their emphasis on context and narrative helps explain why correct local calculations do not automatically supply a paper's central argument.
 
 The human author must supply an explicit scientific brief: the question, audience, principal contribution, important comparisons, limits of the evidence, and intended thrust. This brief determines what belongs in the paper and what belongs in notes or supporting documentation. The agent can then help expose gaps, propose a structure, challenge a transition, or draft a bounded passage. The direction of work is from the scientific argument to the prose. A collection of polished paragraphs does not become a paper merely by placing headings between them.
 
@@ -178,6 +186,19 @@ The posted drafts supply distinct examples:
 
 This is a qualitative contrast, not a controlled ablation of human involvement or drafting rules. Tasks, models, and revision histories differ, and later reviewed versions must not be treated as untouched initial outputs. The contrast does not redefine the main papers as autonomous experiments or suggest that every minimally supervised draft fails. It motivates preserving the stated experiment conditions and applying human-guided structure and narrow redline edits when the objective becomes a dependable paper for scientific readers.
 
+\section{Related approaches and current proposals}\label{app:related}
+This selective survey includes papers, teaching material, and explicitly identified first-party reports, with the research cutoff recorded in the companion repository. The aiXiv bibliographies supplied discovery leads; claims below were checked against the original sources rather than treating those drafts as independent corroboration. The companion repository retains source versions, inspected passages, and limitations.
+
+\textbf{Reproducibility and agent provenance.} CODECHECK organizes independent execution during review and explicitly separates checking execution from judging the scientific method~\cite{CODECHECK}. PROV-AGENT extends workflow provenance to connect agent prompts, responses, and decisions with downstream computations~\cite{PROVAGENT}. Such records make a result inspectable; they do not make an incorrect calculation correct. Hans and Bilionis's \emph{Paper-replication} implements a related coding-agent skill: selected claims become targets linked to executed evidence, comparisons, and report coverage, with a completion gate~\cite{PaperReplication}. Passing that gate concerns the recorded target set; their repeated runs still differ in numerical fidelity and acceptance rules. These approaches complement our emphasis on generated numerical macros, figure recipes, and adversarial review.
+
+\textbf{Autonomous research in computer science.} AI Scientist automates idea generation, experiments, and manuscript preparation within a supplied research environment; subsequent work develops the end-to-end AI-research program~\cite{AIScientist,AIResearch2026}. Agent Laboratory instead explicitly explores research assistance and human feedback~\cite{AgentLab}. AlphaEvolve evolves executable programs using human-supplied automatic evaluators~\cite{AlphaEvolve}. These are substantive demonstrations, with different scopes of autonomy. A machine-evaluable objective provides a particularly effective feedback loop, but the choice and scientific adequacy of that objective remain consequential. Our guide addresses how scientists make the resulting work verifiable and interpretable; it does not claim to demonstrate autonomous discovery.
+
+\textbf{Domain science and human validation.} Agentic systems also support domain science with differing human roles. Mephisto applies an agent to physical-component selection in galaxy spectral-energy-distribution modeling, using a domain code, structured diagnostics, and accumulated experience~\cite{Mephisto}. Co-Scientist generates and debates biological hypotheses, with experts selecting candidates and conducting experimental validation~\cite{CoScientist}. Kosmos combines literature search and data analysis, with traceable reports and sampled expert checks that distinguish analysis, literature, and synthesis claims~\cite{Kosmos}. Those distinctions matter: a retrieved citation, a reproduced calculation, and a plausible interpretation require different checks. Ting's hands-on astronomy course provides a complementary teaching route through tool execution, retrieval, agent memory, and safety~\cite{TingCourse}; it is instructional material rather than a performance study.
+
+\textbf{What an evaluation measures.} PaperBench evaluates replication of machine-learning research using graded implementation and execution evidence~\cite{PaperBench}. ReplicationBench uses expert-designed astrophysics tasks to assess both methodological faithfulness and correctness~\cite{ReplicationBench}. These test a broader task than finding a defect in an existing workflow. Their results depend on the dated model, harness, resources, and scoring rule; they are not measurements of the current frontier-model review capability described in this guide. Conversely, successful error diagnosis does not establish that an agent can independently choose and complete an important research program. ARA addresses another task: assessing reconstructability from the manuscript, without executing its code~\cite{ARA}. Document assessment and demonstrated reruns must remain distinguishable.
+
+\textbf{Fast-moving practice and proposals.} First-party engineering reports can document useful procedures before journal publication. Anthropic describes bounded delegation, evidence handling, and evaluation in a multi-agent web-research system~\cite{AnthropicResearch}; these observations concern its own system. OpenAI, PerturbAI, and Scripps report a recent large-scale analysis of biological data yielding candidate leads~\cite{OpenAIBiology}. Such leads should be distinguished from experimentally validated mechanisms. At the architectural level, Traxia proposes verifiable agent-native publishing, but explicitly presents a specification and partial prototype without empirical validation~\cite{Traxia}. These sources identify active directions rather than establish that a proposed safeguard works. The recurring practical question for this guide is what evidence another scientist can inspect and challenge.
+
 \begin{thebibliography}{99}
 \bibitem{Hao2026}
 Q.~Hao, F.~Xu, Y.~Li, and J.~Evans,
@@ -222,5 +243,61 @@ Codex agents (AI; MCRP contributors),
 \bibitem{AIXivIslands}
 Codex (AI),
 \href{https://aixiv.science/pdf/aixiv.260925.000009v1.0.pdf}{Local scientific investigators on distributed compute islands}, aiXiv:aixiv.260925.000009, version 1.0 (2026).
+\bibitem{AIScientist}
+C.~Lu, C.~Lu, R.~T.~Lange, J.~Foerster, J.~Clune, and D.~Ha,
+\href{https://arxiv.org/abs/2408.06292v1}{The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery}, arXiv:2408.06292v1 (2024).
+\bibitem{AIResearch2026}
+C.~Lu \emph{et al.}, \href{https://doi.org/10.1038/s41586-026-10265-5}{Towards end-to-end automation of AI research}, Nature \textbf{651}, 914--919 (2026).
+\bibitem{Mephisto}
+Z.~Sun, Y.-S.~Ting, Y.~Liang, N.~Duan, S.~Huang, and Z.~Cai,
+\href{https://arxiv.org/abs/2510.08354v1}{Mephisto: Self-Improving Large Language Model-Based Agents for Automated Interpretation of Multi-band Galaxy Observations}, arXiv:2510.08354v1 (2025).
+\bibitem{TingUnderstanding}
+Y.-S.~Ting, A.~Curtis-Trudel, and S.~Yao,
+\href{https://arxiv.org/abs/2601.10038v2}{What Understanding Means in AI-Laden Astronomy}, arXiv:2601.10038v2 (2026), published in Nature Astronomy, \href{https://doi.org/10.1038/s41550-026-02809-6}{doi:10.1038/s41550-026-02809-6}.
+\bibitem{Sandve2013}
+G.~K.~Sandve, A.~Nekrutenko, J.~Taylor, and E.~Hovig,
+\href{https://doi.org/10.1371/journal.pcbi.1003285}{Ten Simple Rules for Reproducible Computational Research}, PLoS Comput. Biol. \textbf{9}, e1003285 (2013).
+\bibitem{CODECHECK}
+D.~N\"ust and S.~J.~Eglen,
+\href{https://doi.org/10.12688/f1000research.51738.2}{CODECHECK: an Open Science initiative for the independent execution of computations underlying research articles during peer review to improve reproducibility}, F1000Research \textbf{10}, 253, version 2 (2021).
+\bibitem{Walters2023}
+W.~H.~Walters and E.~I.~Wilder,
+\href{https://doi.org/10.1038/s41598-023-41032-5}{Fabrication and errors in the bibliographic citations generated by ChatGPT}, Sci. Rep. \textbf{13}, 14045 (2023).
+\bibitem{PROVAGENT}
+R.~Souza \emph{et al.},
+\href{https://arxiv.org/abs/2508.02866v3}{PROV-AGENT: Unified Provenance for Tracking AI Agent Interactions in Agentic Workflows}, arXiv:2508.02866v3 (2025).
+\bibitem{PaperReplication}
+A.~Hans and I.~Bilionis,
+\href{https://arxiv.org/abs/2607.02134v2}{Coding-agents can replicate scientific machine learning papers}, arXiv:2607.02134v2 (2026).
+\bibitem{AgentLab}
+S.~Schmidgall \emph{et al.},
+\href{https://arxiv.org/abs/2501.04227v1}{Agent Laboratory: Using LLM Agents as Research Assistants}, arXiv:2501.04227v1 (2025).
+\bibitem{AlphaEvolve}
+A.~Novikov \emph{et al.},
+\href{https://arxiv.org/abs/2506.13131v1}{AlphaEvolve: A coding agent for scientific and algorithmic discovery}, arXiv:2506.13131v1 (2025).
+\bibitem{CoScientist}
+J.~Gottweis \emph{et al.},
+\href{https://arxiv.org/abs/2502.18864v2}{Accelerating scientific discovery with Co-Scientist}, arXiv:2502.18864v2 (2026).
+\bibitem{Kosmos}
+L.~Mitchener \emph{et al.},
+\href{https://arxiv.org/abs/2511.02824v2}{Kosmos: An AI Scientist for Autonomous Discovery}, arXiv:2511.02824v2 (2025).
+\bibitem{TingCourse}
+Y.-S.~Ting, \href{https://tingyuansen.github.io/Agents_for_Astronomy/}{LLMs as Agents---for Astronomy \& the Physical Sciences}, SciMLGA teaching material (2026; accessed October 25, 2026).
+\bibitem{PaperBench}
+G.~Starace \emph{et al.},
+\href{https://arxiv.org/abs/2504.01848v1}{PaperBench: Evaluating AI's Ability to Replicate AI Research}, arXiv:2504.01848v1 (2025).
+\bibitem{ReplicationBench}
+C.~Ye \emph{et al.},
+\href{https://arxiv.org/abs/2510.24591v2}{ReplicationBench: Can AI Agents Replicate Astrophysics Research Papers?}, arXiv:2510.24591v2 (2025).
+\bibitem{ARA}
+K.~Riehl \emph{et al.},
+\href{https://arxiv.org/abs/2605.02651v2}{ARA: Agentic Reproducibility Assessment For Scalable Support Of Scientific Peer-Review}, arXiv:2605.02651v2 (2026).
+\bibitem{AnthropicResearch}
+Anthropic, \href{https://www.anthropic.com/research/multi-agent-research-system}{How we built our multi-agent research system}, first-party engineering report (June 13, 2025).
+\bibitem{OpenAIBiology}
+OpenAI, PerturbAI, and Scripps Research,
+\href{https://openai.com/index/scaling-ai-research-for-complex-biological-data/}{Using thousands of AI agents to uncover new leads in biological data}, first-party research report (October 21, 2026).
+\bibitem{Traxia}
+W.~Dogah, \href{https://arxiv.org/abs/2606.08256v1}{Traxia: A Framework for Verifiable, Agent-Native Scientific Publishing}, arXiv:2606.08256v1 (2026).
 \end{thebibliography}
 \end{document}

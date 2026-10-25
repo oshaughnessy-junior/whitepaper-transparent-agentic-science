@@ -1,0 +1,176 @@
+{
+  "schema": "openclaw.deep-research.worker.v1",
+  "artifact_id": "astronomy-root-2026-10-25",
+  "task_id": "transparent-agentic-science-related-work",
+  "lane": [
+    "evidence",
+    "methods"
+  ],
+  "objective": "Follow Ting astronomy resources and aiXiv bibliographic leads to original sources, preserving human-directed physical-science scope.",
+  "sources": [
+    {
+      "source_id": "ting-understanding",
+      "authors": "Yuan-Sen Ting; André Curtis-Trudel; Siyu Yao",
+      "title": "What Understanding Means in AI-Laden Astronomy",
+      "date": "2026-04-26",
+      "url": "https://arxiv.org/html/2601.10038v2",
+      "locator": "Understanding beyond equations; Narratives of science; Problem-solving versus problem-finding",
+      "access": "Relevant passages read; course limited to homepage as stated",
+      "retrieved_at": "2026-10-25"
+    },
+    {
+      "source_id": "ting-course",
+      "authors": "Yuan-Sen Ting",
+      "title": "LLMs as Agents — for Astronomy & the Physical Sciences",
+      "date": "2026",
+      "url": "https://tingyuansen.github.io/Agents_for_Astronomy/",
+      "locator": "Course homepage, chapter outline and notebook overview",
+      "access": "Relevant passages read; course limited to homepage as stated",
+      "retrieved_at": "2026-10-25"
+    },
+    {
+      "source_id": "mephisto",
+      "authors": "Zechang Sun; Yuan-Sen Ting; Yaobo Liang; Nan Duan; Song Huang; Zheng Cai",
+      "title": "Mephisto: Self-Improving Large Language Model-Based Agents for Automated Interpretation of Multi-band Galaxy Observations",
+      "date": "2025-10-09",
+      "url": "https://arxiv.org/html/2510.08354v1",
+      "locator": "Sections I–III; CIGALE tool interface and diagnostic feedback",
+      "access": "Relevant passages read; course limited to homepage as stated",
+      "retrieved_at": "2026-10-25"
+    },
+    {
+      "source_id": "replicationbench",
+      "authors": "Christine Ye et al.",
+      "title": "ReplicationBench: Can AI Agents Replicate Astrophysics Research Papers?",
+      "date": "2025-11-23",
+      "url": "https://arxiv.org/html/2510.24591v2",
+      "locator": "Benchmark design; Sections 5.1–5.3; limitations; Appendix C masking",
+      "access": "Relevant passages read; course limited to homepage as stated",
+      "retrieved_at": "2026-10-25"
+    },
+    {
+      "source_id": "prov-agent",
+      "authors": "Renan Souza et al.",
+      "title": "PROV-AGENT: Unified Provenance for Tracking AI Agent Interactions in Agentic Workflows",
+      "date": "2025-08-20",
+      "url": "https://arxiv.org/html/2508.02866v3",
+      "locator": "Provenance model and implementation sections",
+      "access": "Relevant passages read; course limited to homepage as stated",
+      "retrieved_at": "2026-10-25"
+    },
+    {
+      "source_id": "paper-replication",
+      "authors": "Atharva Hans; Ilias Bilionis",
+      "title": "Coding-agents can replicate scientific machine learning papers",
+      "date": "2026-07-10",
+      "url": "https://arxiv.org/html/2607.02134v2",
+      "locator": "Introduction; workflow Section 2.3; discussion of completed runs",
+      "access": "Relevant passages read; course limited to homepage as stated",
+      "retrieved_at": "2026-10-25"
+    },
+    {
+      "source_id": "ara",
+      "authors": "Kevin Riehl et al.",
+      "title": "ARA: Agentic Reproducibility Assessment For Scalable Support Of Scientific Peer-Review",
+      "date": "2026-05-14",
+      "url": "https://arxiv.org/html/2605.02651v2",
+      "locator": "Introduction and Section 3 methodology",
+      "access": "Relevant passages read; course limited to homepage as stated",
+      "retrieved_at": "2026-10-25"
+    },
+    {
+      "source_id": "traxia",
+      "authors": "Wisdom Dogah",
+      "title": "Traxia: A Framework for Verifiable, Agent-Native Scientific Publishing",
+      "date": "2026-06-06",
+      "url": "https://arxiv.org/html/2606.08256v1",
+      "locator": "Abstract and architecture/specification scope",
+      "access": "Relevant passages read; course limited to homepage as stated",
+      "retrieved_at": "2026-10-25"
+    }
+  ],
+  "evidence_extracts": [
+    {
+      "source": "ting-understanding",
+      "locator": "Understanding beyond equations; Narratives of science; Problem-solving versus problem-finding",
+      "evidence": "Perspective distinguishes prediction and problem-solving from contextual scientific explanation and choosing worthwhile problems.",
+      "observation": "Conceptual argument, not a controlled limit on future models.",
+      "confidence": "high"
+    },
+    {
+      "source": "ting-course",
+      "locator": "Course homepage, chapter outline and notebook overview",
+      "evidence": "Hands-on astronomy course covers execution, retrieval, agent loops, memory, safety, MCP and skills.",
+      "observation": "Homepage inspected; notebook internals not independently executed or fully inspected. Teaching resource, not an efficacy study.",
+      "confidence": "high"
+    },
+    {
+      "source": "mephisto",
+      "locator": "Sections I–III; CIGALE tool interface and diagnostic feedback",
+      "evidence": "Agent selects physical components for galaxy SED modeling using a scientific code, structured numerical diagnostics and accumulated experience.",
+      "observation": "Main experiment uses GPT-4o; task-specific physical-model selection, not general scientific autonomy.",
+      "confidence": "high"
+    },
+    {
+      "source": "replicationbench",
+      "locator": "Benchmark design; Sections 5.1–5.3; limitations; Appendix C masking",
+      "evidence": "Expert-designed astrophysics replication tasks assess faithfulness and correctness; observed failures differ from merely finishing a task.",
+      "observation": "Dated 2025 model/harness snapshots. Abstract says best under 20%, body/table report 22%; no percentage carried into manuscript.",
+      "confidence": "high"
+    },
+    {
+      "source": "prov-agent",
+      "locator": "Provenance model and implementation sections",
+      "evidence": "Extends W3C PROV to connect prompts, responses and agent decisions with downstream workflow data and computation.",
+      "observation": "Infrastructure demonstration and query support do not establish physical correctness.",
+      "confidence": "high"
+    },
+    {
+      "source": "paper-replication",
+      "locator": "Introduction; workflow Section 2.3; discussion of completed runs",
+      "evidence": "Coding-agent skill links selected targets, evidence, comparisons, report coverage and a workspace completion gate.",
+      "observation": "Completion concerns the recorded target set; runs differ in target decomposition, numerical fidelity and acceptance criteria.",
+      "confidence": "high"
+    },
+    {
+      "source": "ara",
+      "locator": "Introduction and Section 3 methodology",
+      "evidence": "Scores document reconstructability through an information graph from the manuscript.",
+      "observation": "Does not execute code or use replication artifacts. Human comparison has additional context; not equivalent to a rerun.",
+      "confidence": "high"
+    },
+    {
+      "source": "traxia",
+      "locator": "Abstract and architecture/specification scope",
+      "evidence": "Proposes verifiable agent-native publishing architecture and formal specification with partial prototype.",
+      "observation": "Explicitly no empirical results; proposal rather than demonstrated effectiveness.",
+      "confidence": "high"
+    }
+  ],
+  "method_candidates": [
+    {
+      "method_id": "astronomy-masked-replication",
+      "path": "docs/related-work/methods/astronomy-masked-replication.json",
+      "status": "test-proposed"
+    },
+    {
+      "method_id": "astronomy-target-evidence",
+      "path": "docs/related-work/methods/astronomy-target-evidence.json",
+      "status": "test-proposed"
+    }
+  ],
+  "confidence": "high",
+  "gaps": [
+    "No independent execution of these systems in this research.",
+    "Ting slide deck and Rutgers talk were discovery/context sources, not primary support for model performance.",
+    "Not an exhaustive survey of autonomous science."
+  ],
+  "contradictions": [
+    {
+      "issue": "ReplicationBench abstract/body numerical mismatch",
+      "resolution": "Do not quote a score; describe evaluation design and dated scope."
+    }
+  ],
+  "word_count_convention": "Whitespace-separated tokens in recursive string values; excludes word_count and this convention; excludes JSON keys.",
+  "word_count": 629
+}
