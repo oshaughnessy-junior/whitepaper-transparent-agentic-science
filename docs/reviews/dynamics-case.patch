@@ -2,10 +2,7 @@ diff --git a/paper/main.tex b/paper/main.tex
 index ef27366..7c06ceb 100644
 --- a/paper/main.tex
 +++ b/paper/main.tex
-@@ -92,6 +92,15 @@ The scientific context is developed in the third-generation RIFT methods paper~\
- 
- Read-only project lessons from CIT, cardassia, and sporc add an operational test: \textbf{verify the code actually imported and the workflow actually completed}. Relevant failures include repeated JAX compilation under a production resource limit, an environment importing a different checkout, a shared branch moving between validation and delivery, and a completed long job whose follow-on step never ran. These records motivate import-path and revision checks, repeated-call tests, scheduler-aware execution receipts, and revalidation on the delivered revision. They are development lessons from restricted sources, not newly reproduced campaigns or claims that all remaining validation gaps are closed.
- 
+@@ -94,0 +95,9 @@ Read-only project lessons from CIT, cardassia, and sporc add an operational test
 +\subsection{Star--black-hole encounter dynamics}
 +The main dynamics paper on star--black-hole encounters provides another example of reviewing the scientific measure, its numerical implementation, and the run that supplies the manuscript~\cite{StarBHDynamics}. Its development records support three practical lessons:
 +\begin{itemize}
@@ -15,23 +12,9 @@ index ef27366..7c06ceb 100644
 +\end{itemize}
 +The shared manuscript tooling also rejects conflicting rendered values for a shared result name across generated bundles, preventing TeX input order from silently choosing a number. These checks connect the \texttt{result-provenance}, \texttt{simulation-validation}, and \texttt{adversarial-science-review} practices to a concrete encounter calculation.
 +
- \subsection{Adversarial review and human oversight}
- Adversarial review deliberately directs the agents' bug-finding ability at an established result, including one the implementer and human reviewers believe is correct. We distinguish a science review of the claim, assumptions, and domain from a code and numerics review of the implementation and its checks. Both examine a fixed candidate and a stated scientific specification. They seek counterexamples, convention errors, confounded comparisons, and unjustified extrapolations, with enough information to reproduce the objection. A reviewer should know the question and assumptions without being primed by the implementer's preferred explanation of why the answer must be correct.
- 
-@@ -153,6 +162,8 @@ This working manuscript and its public repository were assembled with OpenAI Cod
- \section*{Data and code availability}
- The living guide, source, portable skills, and synthetic example are available in the \href{https://github.com/oshaughnessy-junior/whitepaper-transparent-agentic-science}{public companion repository}. The two scientific examples are the main papers in \href{https://github.com/oshaughnessy-junior/popsynth_hyperpipe_paper}{popsynth\_hyperpipe\_paper} and \href{https://github.com/oshaughnessy-junior/gwk-hierarchical-initial}{gwk-hierarchical-initial}; both repositories currently require permission to access. Their main preprints are publicly available~\cite{SyntheticUniverses,HierarchicalMethods}. The additional RIFT examples link to the currently access-restricted \href{https://github.com/oshaughnessy-junior/research-projects-RIT/pulls}{RIFT development PR sequence} and \href{https://github.com/oshaughnessy-junior/RIFT_roboto_paper}{RIFT methods-paper repository}; the third-generation main paper is public~\cite{RIFTThreeG}. The public \href{https://github.com/oshaughnessy-junior/NuclearMatter-Backend}{NuclearMatter-Backend} supplies the additional code example and dated validation records. The tooling source \href{https://github.com/oshaughnessy-junior/agent-skills}{agent-skills} also currently has restricted access. Public textual examples are not represented as new end-to-end replications of the scientific analyses.
- 
+@@ -155,0 +165,2 @@ The living guide, source, portable skills, and synthetic example are available i
 +The additional star--black-hole example concerns only the main dynamics paper in the \href{https://github.com/oshaughnessy-junior/starbh_paper_A-encounter-recipes}{encounter-recipes repository}, currently access restricted. The companion repository records the qualitative validation lessons without exporting the underlying project memory or unpublished numerical results.
 +
- \appendix
- \section{An executable consistency example}\label{app:tooling}
- A small synthetic example isolates the numerical documentation mechanism from the astrophysical applications. It evaluates
-@@ -299,5 +310,7 @@ OpenAI, PerturbAI, and Scripps Research,
- \href{https://openai.com/index/scaling-ai-research-for-complex-biological-data/}{Using thousands of AI agents to uncover new leads in biological data}, first-party research report (October 21, 2026).
- \bibitem{Traxia}
- W.~Dogah, \href{https://arxiv.org/abs/2606.08256v1}{Traxia: A Framework for Verifiable, Agent-Native Scientific Publishing}, arXiv:2606.08256v1 (2026).
+@@ -301,0 +313,2 @@ W.~Dogah, \href{https://arxiv.org/abs/2606.08256v1}{Traxia: A Framework for Veri
 +\bibitem{StarBHDynamics}
 +Star--black-hole encounter dynamics project, \href{https://github.com/oshaughnessy-junior/starbh_paper_A-encounter-recipes}{main dynamics manuscript and associated development records} (working draft, 2026; access restricted).
- \end{thebibliography}
- \end{document}
