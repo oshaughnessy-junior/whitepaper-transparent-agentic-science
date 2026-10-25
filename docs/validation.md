@@ -71,3 +71,13 @@ Added five portable skills and extended the original four, for nine total. Inclu
 Independent port review found and rechecked actual credential-routing, identity, stale-cache, ledger and logger defects; see reviews/skill-ports-review.md for dispositions, public file hashes and limitations. Root34 and bibliography64 tests pass, none skipped. All nine skill entrypoints passed structural validation. Hosted CI is not claimed from these local runs. No live citation API, real credential, private user cache or scientific campaign was used in tests.
 
 The manuscript receives only a bounded resource-paragraph addition naming the actual public skills and logger; title, abstract, main argument and section structure are retained. reviews/skill-resource-addition.patch records this edit. The saved source and exported draft are compiled and visually checked separately.
+
+## aiXiv contrast appendix
+
+Added only Appendix app:aixiv and its three bibliography entries; a source-level preservation assertion confirmed that removing those additions recovers the preceding manuscript byte for byte. The title, abstract, human-directed main argument and existing sections are unchanged. The redline is reviews/aixiv-appendix.patch.
+
+Inspected the public posting metadata and selected claim-bearing sections of the downloaded MCRP lifecycle v1.5, mathematical companion v1.4 and compute-islands v1.0 PDFs. cases/aixiv-postings.json records public content identities; cases/aixiv-contrast.md records source boundaries. The deliberately limited human involvement is explicit commissioning metadata, marked human-asserted in cases/aixiv-contrast-claims.json, rather than an inference from public prose. The ledger passed structural validation.
+
+The appendix distinguishes smaller local-model execution from stronger post-run review, agent-side checks from close human drafting guardrails, and current posted revisions from untouched first outputs. It does not claim an ablation, universal failure of autonomous drafting, external scientific validation or a new campaign rerun. Root34 and bibliography64 checks pass locally. The independent bounded review is recorded in reviews/aixiv-appendix-review.md; compilation and PDF inspection accompany the exported artifact.
+
+The saved final source compiled successfully with the built-in compiler and local REVTeX export. All nine rendered PDF pages were inspected without visible clipping or overlap. The independent appendix reviewer accepted the exact source candidate; PDF rendering was author-agent verification. No arXiv submission was made.

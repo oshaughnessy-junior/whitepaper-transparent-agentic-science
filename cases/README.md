@@ -43,3 +43,7 @@ These are records of development, not reruns performed for the white paper. Curr
 | sporc | Editable installs can import a different checkout; shared dependency pins and branches can move during a session | Project-memory reports inspected through the existing connection; no environment or queue mutation |
 
 The resulting prescription is to record imported-module identity inside the run, validate the delivered revision in its real environment, preserve immutable input/output identities, and separate completed evidence from plans. Raw memory, private file paths, session identifiers, revision hashes and unpublished numerical results are excluded from this public inventory.
+
+## Deliberately low-human-involvement contrast
+
+The [aiXiv contrast record](aixiv-contrast.md) covers the separate, intentionally minimally supervised capability exercises requested for the appendix. Its public sources, pinned versions, human-asserted experiment conditions and limits are recorded separately from the closely guided main-paper cases. It is not a controlled comparison or certification of the experiments.

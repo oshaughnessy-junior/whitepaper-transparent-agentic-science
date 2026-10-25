@@ -1,0 +1,26 @@
+{
+  "scope": "Public posted drafts inspected for qualitative contrast; commissioning conditions are human-asserted separately",
+  "sources": [
+    {
+      "identifier": "aixiv.260925.000008",
+      "version": "1.5",
+      "url": "https://aixiv.science/pdf/aixiv.260925.000008v1.5.pdf",
+      "sha256": "8bc63f5e220665fb877c176a67e0b13bc3c439ee857a45aa27eef252843e8812",
+      "inspection": "Public posting metadata and selected claim-bearing PDF sections; no scientific rerun"
+    },
+    {
+      "identifier": "aixiv.260925.000007",
+      "version": "1.4",
+      "url": "https://aixiv.science/pdf/aixiv.260925.000007v1.4.pdf",
+      "sha256": "c6642b2d7506069d84caf3a8d5a015eab8c6533eb71066195b5079e7ee5dea68",
+      "inspection": "Public posting metadata and selected claim-bearing PDF sections; no scientific rerun"
+    },
+    {
+      "identifier": "aixiv.260925.000009",
+      "version": "1.0",
+      "url": "https://aixiv.science/pdf/aixiv.260925.000009v1.0.pdf",
+      "sha256": "bd2e625c72623f36ddd6d85a22a59ac1bac164c3c2829756053e20c4f87611f3",
+      "inspection": "Public posting metadata and selected claim-bearing PDF sections; no scientific rerun"
+    }
+  ]
+}

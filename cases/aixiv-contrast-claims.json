@@ -1,0 +1,71 @@
+{
+  "schema": "openclaw.claim-ledger.v1",
+  "artifact": "paper/main.tex, Appendix app:aixiv",
+  "claims": [
+    {
+      "id": "experiment-design",
+      "claim": "These exercises intentionally used only high-level human direction and did not apply the drafting guidelines of this guide.",
+      "claim_type": "fact",
+      "consequence_level": "medium",
+      "sources": [
+        "Direct commissioning instruction in this task"
+      ],
+      "identity_status": "not-applicable",
+      "support_status": "human-verified",
+      "disposition": "human-asserted",
+      "reviewer": "OpenAI Codex",
+      "human_required": false,
+      "source_locator": "Human instruction commissioning the contrast appendix",
+      "evidence": "The commissioning human explicitly states the limited-human-involvement design.",
+      "human_verifier": "Commissioning human in this task"
+    },
+    {
+      "id": "mcrp-evidence",
+      "claim": "The MCRP draft withdraws unrecoverable historical test counts and distinguishes synthetic checks from proposed independent evaluation.",
+      "claim_type": "fact",
+      "consequence_level": "medium",
+      "sources": [
+        "https://aixiv.science/pdf/aixiv.260925.000008v1.5.pdf"
+      ],
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex",
+      "human_required": false,
+      "source_locator": "Abstract; limitations and research agenda; computational evidence and history",
+      "evidence": "The posted draft explicitly withdraws the historical count mapping and identifies the remaining independent study as future work."
+    },
+    {
+      "id": "contracts-domain",
+      "claim": "The mathematical companion provides conditional models and synthetic checks rather than real-world reviewer calibration.",
+      "claim_type": "fact",
+      "consequence_level": "medium",
+      "sources": [
+        "https://aixiv.science/pdf/aixiv.260925.000007v1.4.pdf"
+      ],
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex",
+      "human_required": false,
+      "source_locator": "Abstract; interface as a modeling boundary; intended audience and adjacent work",
+      "evidence": "The contribution is explicitly aligned established mathematics and executable counterexamples, with empirical efficacy unestablished."
+    },
+    {
+      "id": "islands-interpretation",
+      "claim": "A resident Gemma model executed experiment choices; a Codex post-run equivalence test rejected its formation-channel interpretation.",
+      "claim_type": "fact",
+      "consequence_level": "medium",
+      "sources": [
+        "https://aixiv.science/pdf/aixiv.260925.000009v1.0.pdf"
+      ],
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex",
+      "human_required": false,
+      "source_locator": "Sections 4.5 and 4.6; Data, code, and draft status",
+      "evidence": "The paper separates the local model, Codex workflow/claim review and the corresponding human. Identical direct/remnant envelopes defeat the channel-identification claim."
+    }
+  ]
+}

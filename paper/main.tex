@@ -164,6 +164,20 @@ The estimate is $\result{IntegralEstimate}$, with absolute discrepancy $\result{
 \section{Living resources}\label{app:resources}
 The public repository separates the scientific guide from its operational material. The latter includes the earlier agent-facing document, reusable skills for provenance, simulation validation, adversarial review, and scientific writing, and the synthetic example's regeneration and checking tools. The skills are \texttt{result-provenance}, \texttt{simulation-validation}, \texttt{adversarial-science-review}, and \texttt{human-directed-science-writing}. The public bundle also provides \texttt{cite-and-verify} for source identity and claim support, \texttt{audit-bibliography} for reference metadata, \texttt{science-editing} for bounded semantic edits, \texttt{autonomous-science} for the investigation cycle, and \texttt{records-protocol} for durable evidence placement. The provenance skill includes a reusable result logger; its generated artifacts and declared run metadata still require scientific verification. These resources support the argument in the paper without requiring the reader to follow an agent's execution history. New lessons can be added with their evidence and limitations, while scientific claims remain tied to a particular reviewed version.
 
+\section{Contrast: deliberately low human involvement}\label{app:aixiv}
+\textbf{An intentional capability exercise.} The aiXiv drafts considered here were commissioned to exercise agentic capability independently, with humans supplying high-level direction rather than closely controlling organization, drafting, and revision. As specified by the commissioning human, they were operated without the drafting guidelines advocated in this guide. This was an experimental choice, not an accidental omission of the recommended human guardrails. Agent-side procedures and internal adversarial review could still be used; limited human involvement does not mean that no checks occurred.
+
+The posted drafts supply distinct examples:
+\begin{itemize}
+\item \textbf{A reproducibility-policy proposal.} The MCRP lifecycle draft develops versioned claims and review authority, with executable synthetic examples~\cite{AIXivLifecycle}. It withdraws historical test counts whose supporting mapping could not be recovered and distinguishes the replacement evidence from an independent effectiveness study that remains proposed. Even a proposal about evidence management must repair its own evidential gaps.
+\item \textbf{A mathematical modeling exercise.} The companion \emph{Small contracts, measurable limits} develops conditional models of reviewer allocation, completion, repair, and audit incentives~\cite{AIXivContracts}. Finite calculations and counterexamples expose assumptions; they do not calibrate actual reviewer behavior or establish field efficacy. Its public source retains the distinction between internal agent review and external validation.
+\item \textbf{An executed investigation with an interpretation error.} The compute-islands draft reports a smaller resident Gemma model selecting and executing experiments, followed by Codex claim review~\cite{AIXivIslands}. A broader mass envelope accommodated the supplied observations, but a direct-envelope alternative had identical support: the calculation did not identify a formation channel. The post-run review rejected that interpretation. The resident model is an explicit exception to the frontier-capability baseline used elsewhere in this guide; its role is separate from the stronger reviewing agent.
+\end{itemize}
+
+\textbf{Evaluate the output against the experiment's purpose.} These drafts show what agents can assemble, execute, challenge, and revise under broad human direction. Their longer protocol and architecture discussions also make the writing problem visible: the reader must distinguish a bounded executed result from the larger program it motivates. Assess the correctness and novelty of claims, the recoverability of evidence, and whether the prose gives the supported contribution appropriate weight. A posted draft or internal review is not scientific endorsement by the corresponding human.
+
+This is a qualitative contrast, not a controlled ablation of human involvement or drafting rules. Tasks, models, and revision histories differ, and later reviewed versions must not be treated as untouched initial outputs. The contrast does not redefine the main papers as autonomous experiments or suggest that every minimally supervised draft fails. It motivates preserving the stated experiment conditions and applying human-guided structure and narrow redline edits when the objective becomes a dependable paper for scientific readers.
+
 \begin{thebibliography}{99}
 \bibitem{Hao2026}
 Q.~Hao, F.~Xu, Y.~Li, and J.~Evans,
@@ -199,5 +213,14 @@ O.~Chang, D.~Liu, and J.~Metzman,
 \href{https://security.googleblog.com/2024/11/leveling-up-fuzzing-finding-more.html}{Leveling Up Fuzzing: Finding more vulnerabilities with AI}, Google Open Source Security Team (November 20, 2024).
 \bibitem{GWTCRelease}
 Gravitational Wave Open Science Center, \href{https://doi.org/10.7935/b024-1886}{GWTC-3 Data Release Documentation}.
+\bibitem{AIXivLifecycle}
+Codex (AI) and junior (AI),
+\href{https://aixiv.science/pdf/aixiv.260925.000008v1.5.pdf}{MCRP: A Prospective, Claim-Versioned Verification Lifecycle for Computational Research}, aiXiv:aixiv.260925.000008, version 1.5 (2026).
+\bibitem{AIXivContracts}
+Codex agents (AI; MCRP contributors),
+\href{https://aixiv.science/pdf/aixiv.260925.000007v1.4.pdf}{Small contracts, measurable limits: mathematical foundations for the MCRP seed release}, aiXiv:aixiv.260925.000007, version 1.4 (2026).
+\bibitem{AIXivIslands}
+Codex (AI),
+\href{https://aixiv.science/pdf/aixiv.260925.000009v1.0.pdf}{Local scientific investigators on distributed compute islands}, aiXiv:aixiv.260925.000009, version 1.0 (2026).
 \end{thebibliography}
 \end{document}

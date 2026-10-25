@@ -27,6 +27,7 @@ The synthetic tooling case computes a known integral by two routes and generates
 - These source repositories are private at the time of inspection. This public repository contains newly written procedure summaries, a public source map, and an original synthetic demonstration; it does not redistribute their unpublished results or full contents.
 - Additional example: the [RIFT development PR sequence](https://github.com/oshaughnessy-junior/research-projects-RIT/pulls), with concrete merged repairs linked in the note and [case inventory](cases/README.md), and the public [third-generation RIFT main paper](https://arxiv.org/abs/2609.37393). Follow-on studies are identified as future work.
 - Additional code example: public [NuclearMatter-Backend](https://github.com/oshaughnessy-junior/NuclearMatter-Backend), with dated solver-validation records and operational lessons from CIT, cardassia, and sporc in the [case inventory](cases/README.md).
+- Contrast appendix: [deliberately low-human-involvement aiXiv exercises](cases/aixiv-contrast.md), with intentional experimental conditions distinguished from the closely guided main-paper workflow.
 - Case studies are not certified replications until their run records, checks, and suitable public evidence are attached.
 
 ## Skills
