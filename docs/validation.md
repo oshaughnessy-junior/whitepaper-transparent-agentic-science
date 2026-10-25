@@ -63,3 +63,11 @@ Made only the requested attribution edits to the manuscript: the display line no
 Screened all 64 top-level agent-skills packages, the nested writing stub and incubator package, catalog/provenance information and core supporting resources. docs/skill-port-assessment.md distinguishes recommended ports, additions to existing skills, optional adapters, and out-of-scope operations. No new skills were copied or installed, and no full script/runtime audit is claimed. The filesystem/catalog discrepancy is recorded there.
 
 Twelve tests pass and the saved source compiles with the built-in compiler. The downloadable draft PDF was rebuilt; its source/output receipt was updated after rendered-page inspection. Previous adversarial verdicts remain tied to their stated candidates; this narrow attribution change is not represented as a new independent scientific review.
+
+## Authorized essential skill ports
+
+Added five portable skills and extended the original four, for nine total. Included selected citation/bibliography tooling and a general provenance logger, with adapted source boundaries and retained licenses. docs/skill-ports.md records exact scope and tests. Publication screening of the selected skill source files found no unresolved configured private-path/host/secret patterns; existing backlinks to the already public lessons document were classified as such. Raw caches, runtime state, project maps and unpublished examples were excluded.
+
+Independent port review found and rechecked actual credential-routing, identity, stale-cache, ledger and logger defects; see reviews/skill-ports-review.md for dispositions, public file hashes and limitations. Root34 and bibliography64 tests pass, none skipped. All nine skill entrypoints passed structural validation. Hosted CI is not claimed from these local runs. No live citation API, real credential, private user cache or scientific campaign was used in tests.
+
+The manuscript receives only a bounded resource-paragraph addition naming the actual public skills and logger; title, abstract, main argument and section structure are retained. reviews/skill-resource-addition.patch records this edit. The saved source and exported draft are compiled and visually checked separately.

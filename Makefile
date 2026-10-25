@@ -5,6 +5,7 @@ generate:
 check:
 	$(PYTHON) tools/evidence.py check
 	$(PYTHON) -m unittest discover -s tests -v
+	$(PYTHON) -m unittest discover -s skills/audit-bibliography/tests -v
 paper: check
 	cd paper && latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 submission: paper

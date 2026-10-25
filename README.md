@@ -31,9 +31,9 @@ The synthetic tooling case computes a known integral by two routes and generates
 
 ## Skills
 
-The [full skill-port assessment](docs/skill-port-assessment.md) screens all top-level agent-skills packages and recommends essential additions. These are recommendations; no additional packages have been ported yet.
+The [full skill-port assessment](docs/skill-port-assessment.md) screens all top-level agent-skills packages and recommends essential additions. The essential, sanitized additions are now included; see the [port record](docs/skill-ports.md) for tools, licenses, tests and scope.
 
-The portable packages in `skills/` cover **result provenance**, **simulation validation**, **adversarial scientific review**, and **scientific writing**. The note maps these skills to the supporting practices, including paper-example reproduction, previous-code and literature comparisons, and production-environment checks. They are deliberately separate from machine-specific access, runtime memory, credentials, and submission policies.
+The nine portable packages in `skills/` cover **result provenance**, **simulation validation**, **adversarial scientific review**, **scientific writing**, **bounded editing**, **citation verification**, **bibliography auditing**, **research cycles**, and **durable records**. The note maps these skills to the supporting practices, including paper-example reproduction, previous-code and literature comparisons, and production-environment checks. They are deliberately separate from machine-specific access, runtime memory, credentials, and submission policies.
 
 ## Publication status
 

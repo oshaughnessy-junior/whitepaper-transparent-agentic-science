@@ -1,6 +1,6 @@
 # Essential skill ports: assessment of agent-skills
 
-This is a recommendation, not a claim that additional skills have been ported or behaviorally validated. The four public skills remain the installed scope. The manuscript change accompanying this assessment is restricted to draft attribution; the paper has not been reorganized around this inventory.
+This records the assessment before the subsequent user-authorized ports. At that assessment stage the public bundle contained four skills. The implementation and validation status is now recorded separately in [skill-ports.md](skill-ports.md). The manuscript change accompanying this assessment is restricted to draft attribution; the paper has not been reorganized around this inventory.
 
 ## Scope
 
@@ -116,4 +116,4 @@ The following records a disposition for every top-level package, rather than onl
 | web_search | Exclude from the core scientific-method bundle |
 | writing-plans | Conditional support; not an additional core requirement |
 
-The nested paper-writing stub is an alias/distribution aid, not another procedure. The incubator paper-comprehender is unfinished and not a core port recommendation. No new skill packages were copied or installed during this assessment.
+The nested paper-writing stub is an alias/distribution aid, not another procedure. The incubator paper-comprehender is unfinished and not a core port recommendation. No new skill packages were copied during the assessment itself; the subsequent authorized implementation is recorded in skill-ports.md.

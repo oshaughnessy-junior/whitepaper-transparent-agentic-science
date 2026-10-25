@@ -1,0 +1,16 @@
+{
+  "schema": "openclaw.claim-ledger.v1",
+  "artifact": "synthetic-example.md",
+  "claims": [{
+    "id": "example-only",
+    "claim": "A proposed scientific implication still needs source support.",
+    "claim_type": "interpretation",
+    "consequence_level": "high",
+    "sources": [],
+    "identity_status": "not-applicable",
+    "support_status": "unsupported",
+    "disposition": "blocked",
+    "reviewer": "example-reviewer",
+    "human_required": true
+  }]
+}

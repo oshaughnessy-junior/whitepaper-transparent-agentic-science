@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenClaw Claim Ledger",
+  "type": "object",
+  "required": ["schema", "claims"],
+  "properties": {
+    "schema": {"const": "openclaw.claim-ledger.v1"},
+    "artifact": {"type": ["string", "null"]},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id", "claim", "claim_type", "consequence_level", "identity_status",
+          "support_status", "disposition", "reviewer", "human_required"
+        ],
+        "properties": {
+          "id": {"type": "string"},
+          "claim": {"type": "string"},
+          "claim_type": {"enum": ["fact", "number", "attribution", "interpretation", "recommendation"]},
+          "consequence_level": {"enum": ["low", "medium", "high"]},
+          "sources": {"type": "array", "items": {"type": "string"}},
+          "identity_status": {"enum": ["verified", "low-confidence", "not-found", "error", "skipped", "not-applicable"]},
+          "support_status": {"enum": ["supported", "partial", "unsupported", "human-verified"]},
+          "source_locator": {"type": ["string", "null"]},
+          "evidence": {"type": ["string", "null"]},
+          "disposition": {"enum": ["verified", "human-asserted", "blocked"]},
+          "reviewer": {"type": "string"},
+          "human_required": {"type": "boolean"},
+          "human_verifier": {"type": ["string", "null"]},
+          "notes": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}
+

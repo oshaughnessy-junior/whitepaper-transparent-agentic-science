@@ -8,7 +8,7 @@ The user explicitly identified `agent-skills` as the tooling evidence source and
 
 Read-only inspection of project memory and run-side documentation informed the lessons summarized in docs/cardassia-lessons.md. Private source revisions, memory filenames, host paths, transcripts, corrective-history identifiers and unpublished numerical findings are excluded from this public edition. A detailed audit record remains local for human review and any later explicitly approved evidence release.
 
-Source descriptions establish inspected practices, not independent scientific replication. Deprecated writing instructions were followed to their canonical maintained counterpart; no private skill implementation was copied.
+Source descriptions establish inspected practices, not independent scientific replication. Deprecated writing instructions were followed to their canonical maintained counterpart; at initial assembly no private skill implementation was copied.
 
 ## Public scientific grounding
 
@@ -25,3 +25,7 @@ Statements about agent strengths and weak scientific writing are observations fr
 ## RIFT example added at the user's request
 
 The user explicitly authorized links to the RIFT PR sequence and the third-generation paper. The public summary therefore cites the selected merged PR records in the access-restricted research-projects-RIT repository and the public main paper arXiv:2609.37393. Only qualitative diagnoses, evidence boundaries and public bibliographic details are included; no raw memory, run locations or private revision hashes are exported. See cases/README.md.
+
+## Subsequent authorized skill ports
+
+After the initial procedure-only assembly, the user explicitly authorized essential skill ports that exclude private information. Selected tooling and newly written portable procedure adaptations are now included; docs/skill-ports.md lists their scope, attribution, changes, tests and limits. The initial procedure-only release and these later authorized adaptations have distinct scopes. No source repository history, raw project memory, credentials, runtime state or unpublished research output accompanies the ports.
