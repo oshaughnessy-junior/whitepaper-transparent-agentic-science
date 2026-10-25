@@ -73,10 +73,17 @@ def check(root):
                 raise ValueError('stale or corrupt generated artifact: '+name)
     source = (root/'paper/main.tex').read_text()
     # Restricted authored-source contract: no additional includes or embedded data.
-    includes = re.findall(r'\\(?:input|include)\{([^}]+)\}',source)
+    # Permit whitespace/comment-separated braced includes, then require every
+    # include command to be recognized. Unbraced and conditional forms are outside
+    # this deliberately restricted grammar.
+    include_source = re.sub(r'(?m)(?<!\\)%[^\n]*', '', source)
+    commands = re.findall(r'\\(?:input|include)\b', include_source)
+    includes = re.findall(r'\\(?:input|include)\s*\{([^}]+)\}', include_source)
+    if len(commands) != len(includes):
+        raise ValueError('unsupported TeX source contract syntax')
     if sorted(includes) != ['generated/comparison_table.tex','generated/macros_results.tex']:
         raise ValueError('unexpected TeX source contract')
-    if re.search(r'\\(?:includegraphics|newcommand|def|csname|catcode|write|openout)\b',source):
+    if re.search(r'\\(?:includegraphics|InputIfFileExists|IfFileExists|newcommand|def|csname|catcode|write|openout)\b',source):
         raise ValueError('unsupported TeX construction; extend checker before use')
     values = json.loads((root/'paper/generated/results.json').read_text())['values']
     source = re.sub(r'\\verb(.).*?\1', '', source)

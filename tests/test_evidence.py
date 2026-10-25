@@ -42,8 +42,22 @@ class EvidenceTests(unittest.TestCase):
         with (self.root/'paper/main.tex').open('a') as f:f.write('Measured value 0.333.')
         with self.assertRaisesRegex(ValueError,'bare numeric'):evidence.check(self.root)
     def test_untracked_include_fails(self):
-        with (self.root/'paper/main.tex').open('a') as f:f.write(r'\input{untracked.tex}')
-        with self.assertRaisesRegex(ValueError,'source contract'):evidence.check(self.root)
+        path=self.root/'paper/main.tex'
+        original=path.read_text()
+        variants=[r'\input{untracked.tex}', r'\input {untracked.tex}',
+                  '\\include\n{untracked.tex}', '\\input% comment\n {untracked.tex}',
+                  r'\input untracked.tex', r'\InputIfFileExists{untracked.tex}{}{}']
+        (self.root/'paper/untracked.tex').write_text('Measured value 99.0.')
+        for variant in variants:
+            with self.subTest(variant=variant):
+                path.write_text(original.replace(r'\end{document}',variant+'\n'+r'\end{document}'))
+                with self.assertRaisesRegex(ValueError,'source contract|unsupported TeX'):
+                    evidence.check(self.root)
+    def test_registered_include_whitespace_is_supported(self):
+        path=self.root/'paper/main.tex'
+        path.write_text(path.read_text().replace(r'\input{generated/macros_results.tex}',
+                                                '\\input% comment\n {generated/macros_results.tex}'))
+        evidence.check(self.root)
     def test_unknown_citation_fails(self):
         with (self.root/'paper/main.tex').open('a') as f:f.write(r'\cite{InventedKey}')
         with self.assertRaisesRegex(ValueError,'undefined citation'):evidence.check(self.root)

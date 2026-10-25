@@ -1,6 +1,6 @@
 # Transparent Agentic Science
 
-A single entry point for the O'Shaughnessy research workflow: reproducible computation, generated numerical evidence, adversarial review, and human-directed scientific writing.
+A single entry point for the O'Shaughnessy research workflow, built around **adversarial review**, **CI checks for code**, and **provenance for every result and figure**.
 
 **PUBLIC, work in progress. This repository is entirely assembled with AI, based on previous work with a human. All commits are performed by AI agents.** Human direction and approval remain distinct from AI execution; an AI commit is not human scientific sign-off.
 
@@ -24,14 +24,15 @@ The synthetic tooling case computes a known integral by two routes and generates
 - Example papers: the main papers in [popsynth_hyperpipe_paper](https://github.com/oshaughnessy-junior/popsynth_hyperpipe_paper) and [gwk-hierarchical-initial](https://github.com/oshaughnessy-junior/gwk-hierarchical-initial). Both repositories currently require access; their main preprints are public.
 - These source repositories are private at the time of inspection. This public repository contains newly written procedure summaries, a public source map, and an original synthetic demonstration; it does not redistribute their unpublished results or full contents.
 - Additional example: the [RIFT development PR sequence](https://github.com/oshaughnessy-junior/research-projects-RIT/pulls), with concrete merged repairs linked in the note and [case inventory](cases/README.md), and the public [third-generation RIFT main paper](https://arxiv.org/abs/2609.37393). Follow-on studies are identified as future work.
+- Additional code example: public [NuclearMatter-Backend](https://github.com/oshaughnessy-junior/NuclearMatter-Backend), with dated solver-validation records and operational lessons from CIT, cardassia, and sporc in the [case inventory](cases/README.md).
 - Case studies are not certified replications until their run records, checks, and suitable public evidence are attached.
 
 ## Skills
 
-The portable packages in `skills/` cover result provenance, simulation validation, adversarial scientific review, and scientific writing. They are deliberately separate from machine-specific access, runtime memory, credentials, and submission policies.
+The portable packages in `skills/` cover **result provenance**, **simulation validation**, **adversarial scientific review**, and **scientific writing**. The note maps these skills to the supporting practices, including paper-example reproduction, previous-code and literature comparisons, and production-environment checks. They are deliberately separate from machine-specific access, runtime memory, credentials, and submission policies.
 
 ## Publication status
 
-The note is a working draft for eventual human revision and arXiv preparation. Authorship, evidence completion, reference verification, independent review, and human submission approval remain open. No arXiv submission has been made. See [the release checklist](docs/release-checklist.md).
+The note is a working draft for eventual human revision and arXiv preparation. Authorship, evidence completion, reference verification, complete scientific review, and human submission approval remain open. A scoped [adversarial review](docs/reviews/adversarial-review-01.md) covers this guide and its synthetic checker; it does not certify the cited scientific campaigns. No arXiv submission has been made. See [the release checklist](docs/release-checklist.md).
 
 New code is MIT licensed; newly written prose and skills are CC BY 4.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE.md) for scope and attribution.
