@@ -32,3 +32,7 @@ Final reviewer verdict: **“accepted. No remaining actionable findings in this 
 ## Limits
 
 The reviewer did not rerun the population or RIFT/matter-backend scientific campaigns, independently verify remote host histories, inspect the rendered PDF, or authorize submission. Host-memory lessons remain attributed inspected records, not independently reproduced incidents. Acceptance is for a human-facing working guide within this scope. It is not a performance benchmark or a universal TeX guarantee. Full scientific review and human approval remain necessary before submission.
+
+## Version boundary
+
+This verdict applies to the manuscript hash above. A subsequent human-directed revision restored the earlier framing and added bounded guardrails; the prior acceptance does not certify that later manuscript. See incremental-revision.patch and validation.md.

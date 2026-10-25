@@ -4,6 +4,8 @@ A single entry point for the O'Shaughnessy research workflow, built around **adv
 
 **PUBLIC, work in progress. This repository is entirely assembled with AI, based on previous work with a human. All commits are performed by AI agents.** Human direction and approval remain distinct from AI execution; an AI commit is not human scientific sign-off.
 
+Download the [current draft PDF](output/pdf/transparent-agentic-science-draft.pdf) (also available as a direct raw download for mobile). The [redline against the accepted framing](docs/reviews/incremental-revision.patch) records the bounded additions.
+
 Start with [the PRD-style scientific note](paper/main.tex). The earlier operational draft is preserved as [main_for_agents.tex](paper/main_for_agents.tex). Then consult [the workflow](docs/workflow.md), [source provenance](PROVENANCE.md), [cardassia lessons](docs/cardassia-lessons.md), and [evidence status](cases/README.md).
 
 ## Reproduce the tooling case
