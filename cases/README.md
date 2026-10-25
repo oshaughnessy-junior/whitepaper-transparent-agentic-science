@@ -47,3 +47,7 @@ The resulting prescription is to record imported-module identity inside the run,
 ## Deliberately low-human-involvement contrast
 
 The [aiXiv contrast record](aixiv-contrast.md) covers the separate, intentionally minimally supervised capability exercises requested for the appendix. Its public sources, pinned versions, human-asserted experiment conditions and limits are recorded separately from the closely guided main-paper cases. It is not a controlled comparison or certification of the experiments.
+
+## Star–black-hole dynamics
+
+The user-selected [main dynamics paper](https://github.com/oshaughnessy-junior/starbh_paper_A-encounter-recipes) adds a restricted-access main-paper case. The [sanitized case record](starbh-dynamics.md) covers complete-estimator normalization review, dependency-sensitive seeded regressions, run/manuscript provenance and shared result namespaces. Local project memory and cardassia run records informed this addition; selected archived code/output identities were checked, without rerunning the scientific grids.

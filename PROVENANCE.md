@@ -29,3 +29,7 @@ The user explicitly authorized links to the RIFT PR sequence and the third-gener
 ## Subsequent authorized skill ports
 
 After the initial procedure-only assembly, the user explicitly authorized essential skill ports that exclude private information. Selected tooling and newly written portable procedure adaptations are now included; docs/skill-ports.md lists their scope, attribution, changes, tests and limits. The initial procedure-only release and these later authorized adaptations have distinct scopes. No source repository history, raw project memory, credentials, runtime state or unpublished research output accompanies the ports.
+
+## Main dynamics example added at the user’s request
+
+The user explicitly selected the main Star–BH dynamics paper and authorized read-only inspection of local project memory and cardassia. The addition contains newly written qualitative procedure summaries and a link to the restricted repository. Selected archived code/output identities were checked against their run manifest; no encounter grid was rerun. The detailed source and run locators remain in a separate local restricted audit, outside this public repository. Other manuscripts sharing the source project are not additional scientific cases here.

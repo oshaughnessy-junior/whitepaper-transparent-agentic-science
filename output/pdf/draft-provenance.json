@@ -1,12 +1,12 @@
 {
   "status": "working draft; not submitted",
-  "baseline_commit": "27968a8",
+  "baseline_commit": "c371d76",
   "source": "paper/main.tex",
-  "source_sha256": "3e9c88a5f3f0f32d54c3ed80c4ce6d8cd12c49d9c0dc7d00a2aef47873cb478a",
+  "source_sha256": "ac2ed3992b4924640e858bfb0b5ad24a6ec401ae9001a643e07caae5440ef615",
   "pdf": "output/pdf/transparent-agentic-science-draft.pdf",
-  "pdf_sha256": "ea2078c981cf5e3ee9111c0fdaed21367ff87f6e6e11eeb752e63cf8a3d1fd47",
+  "pdf_sha256": "84b24134c6632b01edd692bc958c90e00a5f7d9189aa0befb9ef19ca09a08874",
   "build_command": "cd paper && latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=../output/pdf main.tex",
   "compiler": "pdfTeX 3.141592653-2.6-1.40.29, TeX Live 2026, REVTeX 4.2",
-  "checks": "98 offline tests pass; 17/17 DOI/arXiv identity checks verified; nine added-passage claim records structurally valid; research artifacts structurally valid; built-in compilation success; 10 rendered pages inspected; bounded adversarial review with dispositions recorded",
-  "revision_scope": "Four short context additions, related-work appendix and 20 references; every original manuscript line, title and abstract preserved; no new scientific runs"
+  "checks": "98 offline tests pass; five dynamics-case claims structurally valid; selected remote archived code/output identities and local consumed kernel checked; built-in compile success; 11 rendered pages inspected; independent bounded dynamics-case review accepted",
+  "revision_scope": "Added only a main dynamics-paper case subsection, availability paragraph and project reference; original manuscript lines, title and abstract preserved. Source project and simulations unchanged."
 }

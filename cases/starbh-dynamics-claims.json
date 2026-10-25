@@ -1,0 +1,92 @@
+{
+  "schema": "openclaw.claim-ledger.v1",
+  "artifact": "paper/main.tex: dynamics subsection and cases/starbh-dynamics.md",
+  "manuscript_sha256": "ac2ed3992b4924640e858bfb0b5ad24a6ec401ae9001a643e07caae5440ef615",
+  "claims": [
+    {
+      "id": "dynamics-1",
+      "claim": "The main dynamics paper on star--black-hole encounters provides another example of reviewing the scientific measure, its numerical implementation, and the run that supplies the manuscript~\\cite{StarBHDynamics}. Its development records support three practical lessons:",
+      "claim_type": "attribution",
+      "consequence_level": "medium",
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex; read-only source and archived-identity inspection",
+      "human_required": false,
+      "sources": [
+        "https://github.com/oshaughnessy-junior/starbh_paper_A-encounter-recipes"
+      ],
+      "source_locator": "Main dynamics manuscript, estimator construction and development review records",
+      "evidence": "User selected this main paper; source identity and restricted access confirmed. Only qualitative procedures described.",
+      "scope": "Source-supported procedural description, not an independent rerun or publication of scientific outcomes. Detailed private reconstruction locators retained separately."
+    },
+    {
+      "id": "dynamics-2",
+      "claim": "\\item \\textbf{Follow the complete estimator.} Review of the Hill encounter kernel traced incoming flux through proposal and inclusion weights, the denominator counting all proposals, and the conditional encounter distribution. An apparent normalization discrepancy canceled elsewhere in the population calculation. Changing an isolated prefactor would have changed a consistent rate. Analytic limiting cases and archived solver comparisons supplied additional checks.",
+      "claim_type": "attribution",
+      "consequence_level": "medium",
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex; read-only source and archived-identity inspection",
+      "human_required": false,
+      "sources": [
+        "https://github.com/oshaughnessy-junior/starbh_paper_A-encounter-recipes"
+      ],
+      "source_locator": "Main dynamics estimator description; incoming-flux and importance-sampling implementation; population entry-rate and conditional sampling; recorded normalization review",
+      "evidence": "The inspected implementation applies inclusion-probability correction, normalizes over all proposal units and multiplies the population weight by a conditional entry-rate conversion; recorded review traces the apparent prefactor cancellation.",
+      "scope": "Source-supported procedural description, not an independent rerun or publication of scientific outcomes. Detailed private reconstruction locators retained separately."
+    },
+    {
+      "id": "dynamics-3",
+      "claim": "\\item \\textbf{Diagnose a changed regression before replacing it.} Seeded output hashes differed across dependency versions. Matched-environment comparisons of historical and newer code agreed, while a fixed-interpreter comparison isolated a floating-point difference in the mapping of uniform random draws across NumPy versions. Matching random bits did not ensure matching numerical samples. The appropriate response was to investigate the fixture's environment and numerical contract, rather than silently replace its expected hash.",
+      "claim_type": "attribution",
+      "consequence_level": "medium",
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex; read-only source and archived-identity inspection",
+      "human_required": false,
+      "sources": [
+        "https://github.com/oshaughnessy-junior/starbh_paper_A-encounter-recipes"
+      ],
+      "source_locator": "Recorded seeded-regression diagnosis: matched-environment historical/current code comparisons and fixed-interpreter dependency comparison",
+      "evidence": "Recorded comparisons distinguish source changes from dependency-sensitive uniform sampling; original fixture environment remains unreconstructed, so expected hashes are not silently replaced.",
+      "scope": "Source-supported procedural description, not an independent rerun or publication of scientific outcomes. Detailed private reconstruction locators retained separately."
+    },
+    {
+      "id": "dynamics-4",
+      "claim": "\\item \\textbf{Resolve the producing run.} Archived production code, kernel data, and convergence records matched their manifest identities, although a remote checkout's project note still described the initial scaffold. A familiar project directory did not identify the calculation that produced the result. Inspect the actual run artifacts and runtime, then connect them to the manuscript's generated quantities.",
+      "claim_type": "attribution",
+      "consequence_level": "medium",
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex; read-only source and archived-identity inspection",
+      "human_required": false,
+      "sources": [
+        "https://github.com/oshaughnessy-junior/starbh_paper_A-encounter-recipes"
+      ],
+      "source_locator": "Archived run manifest and producing code, kernel and convergence record; associated checkout scaffold note",
+      "evidence": "Selected archived code and output bytes match manifest identities; completion is recorded. The inspected checkout note describes the initial scaffold rather than the later producing run. No simulation rerun.",
+      "scope": "Source-supported procedural description, not an independent rerun or publication of scientific outcomes. Detailed private reconstruction locators retained separately."
+    },
+    {
+      "id": "dynamics-5",
+      "claim": "The shared manuscript tooling also rejects conflicting rendered values for a shared result name across generated bundles, preventing TeX input order from silently choosing a number. These checks connect the \\texttt{result-provenance}, \\texttt{simulation-validation}, and \\texttt{adversarial-science-review} practices to a concrete encounter calculation.",
+      "claim_type": "attribution",
+      "consequence_level": "medium",
+      "identity_status": "verified",
+      "support_status": "supported",
+      "disposition": "verified",
+      "reviewer": "OpenAI Codex; read-only source and archived-identity inspection",
+      "human_required": false,
+      "sources": [
+        "https://github.com/oshaughnessy-junior/starbh_paper_A-encounter-recipes"
+      ],
+      "source_locator": "Shared macro-bundle merge helper and manuscript build rule",
+      "evidence": "Helper compares rendered latex fields for duplicate result names and fails conflicting rendered values; equal rendering is not scientific identity.",
+      "scope": "Source-supported procedural description, not an independent rerun or publication of scientific outcomes. Detailed private reconstruction locators retained separately."
+    }
+  ]
+}
