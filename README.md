@@ -2,7 +2,7 @@
 
 A single entry point for the O'Shaughnessy research workflow, built around **adversarial review**, **CI checks for code**, and **provenance for every result and figure**.
 
-**PUBLIC, work in progress. This repository is entirely assembled with AI, based on previous work with a human. All commits are performed by AI agents.** Human direction and approval remain distinct from AI execution; an AI commit is not human scientific sign-off.
+**PUBLIC, work in progress. Draft assembled by OpenAI Codex on behalf of R. O'Shaughnessy; this is not a human authorship declaration. This repository is entirely assembled with AI, based on previous work with a human. All commits are performed by AI agents.** Human direction and approval remain distinct from AI execution; an AI commit is not human scientific sign-off.
 
 Download the [current draft PDF](output/pdf/transparent-agentic-science-draft.pdf) (also available as a direct raw download for mobile). The [redline against the accepted framing](docs/reviews/incremental-revision.patch) records the bounded additions.
 
@@ -30,6 +30,8 @@ The synthetic tooling case computes a known integral by two routes and generates
 - Case studies are not certified replications until their run records, checks, and suitable public evidence are attached.
 
 ## Skills
+
+The [full skill-port assessment](docs/skill-port-assessment.md) screens all top-level agent-skills packages and recommends essential additions. These are recommendations; no additional packages have been ported yet.
 
 The portable packages in `skills/` cover **result provenance**, **simulation validation**, **adversarial scientific review**, and **scientific writing**. The note maps these skills to the supporting practices, including paper-example reproduction, previous-code and literature comparisons, and production-environment checks. They are deliberately separate from machine-specific access, runtime memory, credentials, and submission policies.
 

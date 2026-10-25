@@ -2,10 +2,11 @@
   "status": "working draft; not submitted",
   "baseline_commit": "94eb64c",
   "source": "paper/main.tex",
-  "source_sha256": "f40a0b1cf356eacc0014eb2d4f9b70a8b1bdc7b2471155efc1fe777d4e44b951",
+  "source_sha256": "7c12f528e2b84f372fd994a1d545a249ed9aa9b539713e8c4d209918a7c88f31",
   "pdf": "output/pdf/transparent-agentic-science-draft.pdf",
-  "pdf_sha256": "13da20dcc9605e5763e4acda4708abd329de4ffd83b74f6e94dac7d072d32d6f",
+  "pdf_sha256": "20650671ec8e67fe6357210db13307cb91095b43f9266bf968862c5033f47f40",
   "build_command": "cd paper && latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=../output/pdf main.tex",
   "compiler": "pdfTeX 3.141592653-2.6-1.40.29, TeX Live 2026, REVTeX 4.2",
-  "checks": "12 tests pass; desktop compile success; all 8 rendered pages inspected"
+  "checks": "12 tests pass; desktop compile success; all 8 rendered pages inspected",
+  "revision_scope": "Attribution only: assembled by Codex on behalf of R. O'Shaughnessy; not a human authorship declaration"
 }
