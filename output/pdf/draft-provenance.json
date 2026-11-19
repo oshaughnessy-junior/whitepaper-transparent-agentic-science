@@ -1,12 +1,12 @@
 {
   "status": "working draft; not submitted",
-  "baseline_commit": "c371d76",
+  "baseline_commit": "40c8aec",
   "source": "paper/main.tex",
-  "source_sha256": "ac2ed3992b4924640e858bfb0b5ad24a6ec401ae9001a643e07caae5440ef615",
+  "source_sha256": "11abc9973f494dd952316f4fb21dd097715bd090b4ab0b680d1327c5c53213c6",
   "pdf": "output/pdf/transparent-agentic-science-draft.pdf",
-  "pdf_sha256": "84b24134c6632b01edd692bc958c90e00a5f7d9189aa0befb9ef19ca09a08874",
-  "build_command": "cd paper && latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=../output/pdf main.tex",
-  "compiler": "pdfTeX 3.141592653-2.6-1.40.29, TeX Live 2026, REVTeX 4.2",
-  "checks": "98 offline tests pass; five dynamics-case claims structurally valid; selected remote archived code/output identities and local consumed kernel checked; built-in compile success; 11 rendered pages inspected; independent bounded dynamics-case review accepted",
-  "revision_scope": "Added only a main dynamics-paper case subsection, availability paragraph and project reference; original manuscript lines, title and abstract preserved. Source project and simulations unchanged."
+  "pdf_sha256": "137a97db57877b121fdc7f5ca5119e998138cdc36fa6e1be147056f2e9e255ef",
+  "build_command": "make paper PYTHON=python3.12",
+  "compiler": "pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026/MacPorts 2026.78235_0), REVTeX 4.2",
+  "checks": "Generated evidence check, offline tests, and full LaTeX build passed; rendered text checked for the notebook revision and preserved remote sections.",
+  "revision_scope": "Integrated the lab notebook and journal policy revisions with the current draft, preserving the existing attribution, scientific cases and appendices."
 }

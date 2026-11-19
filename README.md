@@ -8,6 +8,8 @@ Download the [current draft PDF](output/pdf/transparent-agentic-science-draft.pd
 
 Start with [the PRD-style scientific note](paper/main.tex). The earlier operational draft is preserved as [main_for_agents.tex](paper/main_for_agents.tex). Then consult [the workflow](docs/workflow.md), [source provenance](PROVENANCE.md), [cardassia lessons](docs/cardassia-lessons.md), and [evidence status](cases/README.md).
 
+Read [the blog post on the research record](docs/blog-ai-research-record.md) alongside [suggestions for policy statements](docs/suggestions-for-policy-statements.md) ([PDF](docs/suggestions-for-policy-statements.pdf)) and the [APS and AAS source notes](docs/policy-sources.md).
+
 ## Reproduce the tooling case
 
 Requires Python 3.10+ and Make; no scientific Python packages are required.
